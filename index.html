@@ -6,12 +6,26 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="destyle.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+    (function(d) {
+        var config = {
+        kitId: 'vrj5kwf',
+        scriptTimeout: 3000,
+        async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+    </script>
 </head>
 <body>
-    <header>
-        <div id="header-flex">
-            <div id="header-title">株式会社北村建設興業</div>
-            <div id="header-list-flex">
+    <header class="header">
+        <picture>
+            <source srcset="image/SP_FirstView-1.jpg" media="(max-width:767px)">
+            <img src="image/FirstView01.jpg" alt="main-img">
+        </picture>
+        <div class="header-content">
+            <div class="header-title">株式会社北村建設興業</div>
+            <div class="header-list-flex">
                 <ul>
                     <li>
                         <a href="#about">ABOUT</a>
@@ -23,6 +37,9 @@
                         <a href="#works">WORKS</a>
                     </li>
                     <li>
+                        <a href="#news">NEWS</a>
+                    </li>
+                    <li>
                         <a href="#company">COMPANY</a>
                     </li>
                     <li>
@@ -31,14 +48,8 @@
                 </ul>
             </div>
         </div>
-    </header>
-    <section id="main">
-        <picture>
-            <source srcset="image/SP_FirstView-1.jpg" media="(max-width:767px)">
-            <img src="image/FirstView01.jpg" alt="main-img">
-        </picture>
         <h1>永遠も。瞬間も。<br>あなたと共に。</h1>
-    </section>
+    </header>
     <section id="about">
         <picture>
             <source srcset="image/SP_About.jpg" media="(max-width:767px)">

@@ -1,1 +1,71 @@
+@charset "utf-8";
 
+// --------------------定義--------------------
+
+// color定義 
+$main-color:#000000;
+$sb-color:#FFFFFF;
+$accent-color:#4D9600;
+$main-bg-color:#FFFFFF;
+$accent-bg-color:rgba(77, 150, 0, 0.1);
+
+// font定義
+$font-base: "yu-mincho-pr6n", sans-serif;
+
+@mixin text-style($size: 1.6rem, $lineHeight: (25/16)) {
+  font-weight: 500;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+// --------------------共通--------------------
+body {
+    margin: 0;
+    @include text-style();
+    font-family: $font-base;
+    color: $main-color;
+    background-color: $main-bg-color;
+}
+
+html { 
+    font-size: 62.5%; 
+    scroll-behavior: smooth;
+}
+
+// --------------------header--------------------
+.header {
+    color: $sb-color;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        position: absolute;
+        @include text-style(4.0rem, (70/40));
+        font-weight: 600;
+        top: (340%/8);
+        left: 50%;
+        transform: translateX(-50%);
+        letter-spacing: 0.3em;
+    }
+
+    &-content {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1080px-80px-80px;
+        width: 100%;
+        top: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include text-style(2.0rem, (33/20));
+
+    }
+
+    &-list-flex ul{
+        display: flex;
+        gap: 30px;
+    }
+}
