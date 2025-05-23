@@ -1,1 +1,58 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+  font-family: "yu-mincho-pr6n", sans-serif;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.header {
+  color: #FFFFFF;
+  position: relative;
+}
+.header img {
+  width: 100%;
+}
+.header h1 {
+  position: absolute;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 1.75;
+  font-weight: 600;
+  top: 42.5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  letter-spacing: 0.3em;
+}
+.header-content {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 920px;
+  width: 100%;
+  top: 28px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+.header-list-flex ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}/*# sourceMappingURL=style.css.map */
