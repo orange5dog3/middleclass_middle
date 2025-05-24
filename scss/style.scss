@@ -151,7 +151,8 @@ header {
 }
 
 .service-content-item {
-    position: relative;
+    display: flex;
+    flex-direction: row;
     width: 100%;
 
     p {
@@ -165,10 +166,8 @@ header {
 }
 
 .service-content-img {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 100;
+ 
+    // z-index: 100;
 
     img {
         width: (600%/9.20);
@@ -176,12 +175,8 @@ header {
 }
 
 .service-content-text {
-    position: absolute;
-    width: (500%/9.2);
-    aspect-ratio: 2 / 1;
-    z-index: 1;
-    top: 42%;
-    right: 0;
+    flex: 1;
+    // z-index: 1;
 
     h3 {
         @include text-style(2.5rem,(33/25));
