@@ -22,6 +22,7 @@ html {
 .title {
   width: 100%;
   text-align: center;
+  padding-left: 7px;
 }
 .title h2 {
   color: #4D9600;
@@ -135,7 +136,7 @@ header h1 {
 }
 
 #service {
-  padding: 80px 0;
+  padding: 80px 0 120px;
   margin: 0 auto;
 }
 #service-content {
@@ -146,14 +147,22 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 175px;
+  gap: 120px;
 }
 
 .service-content-item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
+  gap: 4.347826087%;
 }
-.service-content-item p {
+.service-content-item h4 {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5625;
@@ -164,36 +173,51 @@ header h1 {
   margin-top: 68px;
 }
 
-.service-content-img {
-  position: relative;
-  top: 0;
-  left: 0;
+.service-content-imagebox {
+  width: 65.2173913043%;
   z-index: 100;
 }
-.service-content-img img {
-  width: 65.2173913043%;
+.service-content-imagebox img {
+  width: 100%;
 }
 
 .service-content-text {
-  position: absolute;
-  width: 54.347826087%;
-  aspect-ratio: 2/1;
-  z-index: 1;
-  top: 42%;
-  right: 0;
+  margin-top: 195px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #FFFFFF;
+  z-index: 10;
 }
 .service-content-text h3 {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 1.32;
   font-weight: 600;
-  margin-top: 50px;
-  padding-left: 220px;
 }
 .service-content-text p {
   font-weight: 600;
-  margin-top: 17px;
-  padding-left: 220px;
+  margin-top: 19px;
+}
+
+.green-box-right {
+  background-color: #4D9600;
+  width: 500px;
+  height: 250px;
+  z-index: 1;
+  position: absolute;
+  top: 145px;
+  right: 0;
+}
+
+.green-box-left {
+  background-color: #4D9600;
+  width: 500px;
+  height: 250px;
+  z-index: 1;
+  position: absolute;
+  top: 145px;
+  left: 0;
 }
 
 .row-reverse {
@@ -202,8 +226,14 @@ header h1 {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.row-reverse img {
-  padding-right: 0;
+.row-reverse h4 {
+  text-align: right;
+}
+.row-reverse h3 {
+  padding-left: 40px;
+}
+.row-reverse p {
+  padding-left: 40px;
 }
 
 #works {
