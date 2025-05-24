@@ -10,7 +10,7 @@ $main-bg-color:#FFFFFF;
 $accent-bg-color:rgba(77, 150, 0, 0.1);
 
 // font定義
-$font-base: "yu-mincho-pr6n", sans-serif;
+$font-base: "YuMincho", "Noto Serif JP" ,sans-serif;
 
 @mixin text-style($size: 1.6rem, $lineHeight: (25/16)) {
   font-weight: 500;
@@ -32,8 +32,38 @@ html {
     scroll-behavior: smooth;
 }
 
+.inner {
+    max-width: 1080px-80-80+30+30;
+    padding-inline: 30px;
+    margin: 0 auto;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    letter-spacing:0.3em;
+
+    h2 {
+        color: $accent-color;
+        @include text-style(3.0rem, (33/30));
+    }
+    p {
+        @include text-style(2.0rem, (33/20));
+        margin-top: 6px;
+    }
+}
+
+.bg-green {
+    background-color: $accent-bg-color;
+}
+
+.bg-darkgreen {
+    color: $sb-color;
+    background-color: $accent-color;
+}
+
 // --------------------header--------------------
-.header {
+header {
     color: $sb-color;
     position: relative;
 
@@ -43,6 +73,7 @@ html {
 
     h1 {
         position: absolute;
+        text-align: center;
         @include text-style(4.0rem, (70/40));
         font-weight: 600;
         top: (340%/8);
@@ -50,22 +81,124 @@ html {
         transform: translateX(-50%);
         letter-spacing: 0.3em;
     }
+}
 
-    &-content {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        max-width: 1080px-80px-80px;
-        width: 100%;
-        top: 28px;
-        left: 50%;
-        transform: translateX(-50%);
+.header-content {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px-80px-80px;
+    width: 100%;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
+    &-title {
         @include text-style(2.0rem, (33/20));
-
     }
 
     &-list-flex ul{
         display: flex;
         gap: 30px;
+        @include text-style(1.8rem, (33/18));
+    }
+}
+
+// --------------------about--------------------
+#about {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    &-text-box {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-textarea {
+        writing-mode: vertical-rl;
+        position: absolute;
+        top: 23%;
+        right: 40%;
+    }
+        h3{
+            @include text-style(3.0rem, 1.18);
+            letter-spacing:4px;
+        }
+
+        p{
+            @include text-style(1.8rem, 2.74);
+            margin-right:40px;
+            letter-spacing: 3px;
+        }
+}
+
+// --------------------service--------------------
+#service {
+    padding: 80px 0;
+    margin: 0 auto;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 175px;
+    }
+}
+
+.service-content-item {
+    position: relative;
+    width: 100%;
+
+    p {
+        @include text-style();
+        margin-top: 20px;
+    }
+}
+
+.service-content-item:first-of-type{
+    margin-top: 68px;
+}
+
+.service-content-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    img {
+        width: (600%/9.20);
+    }
+}
+
+.service-content-text {
+    position: absolute;
+    width: (500%/9.2);
+    aspect-ratio: 2 / 1;
+    z-index: 1;
+    top: 42%;
+    right: 0;
+
+    h3 {
+        @include text-style(2.5rem,(33/25));
+        font-weight: 600;
+        margin-top: 50px;
+        padding-left: 220px;
+    }
+
+    p {
+        font-weight: 600;
+        margin-top: 17px;
+        padding-left: 220px;
+    }
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+
+    img {
+        padding-right: 0;
     }
 }
