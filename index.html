@@ -6,26 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="destyle.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script>
-    (function(d) {
-        var config = {
-        kitId: 'vrj5kwf',
-        scriptTimeout: 3000,
-        async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-    </script>
 </head>
 <body>
-    <header class="header">
+    <header>
         <picture>
             <source srcset="image/SP_FirstView-1.jpg" media="(max-width:767px)">
             <img src="image/FirstView01.jpg" alt="main-img">
         </picture>
         <div class="header-content">
-            <div class="header-title">株式会社北村建設興業</div>
-            <div class="header-list-flex">
+            <div class="header-content-title">株式会社北村建設興業</div>
+            <div class="header-content-list-flex">
                 <ul>
                     <li>
                         <a href="#about">ABOUT</a>
@@ -56,28 +46,30 @@
             <img src="image/About.jpg" alt="main-img">
         </picture>
         <div class="inner">
-            <div id="about-textarea">
-                <h3>伝統とイマを繋ぐ</h3>
-                <p>
-                    古来から伝わる伝統文化 <br>
-                    昔からそこにある材料 <br>
-                    その土地に長い間かけて <br>
-                    最適化してきた <br>
-                    たくさんのヒントを <br>
-                    イマを生きる私たちの <br>
-                    心地よさに取り入れ <br>
-                    新たな技術革新を <br>
-                    起こし続ける会社です
-                </p>
+            <div id="about-text-box">
+                <div id="about-textarea">
+                    <h3>伝統とイマを繋ぐ</h3>
+                    <p>
+                        古来から伝わる伝統文化 <br>
+                        昔からそこにある材料 <br>
+                        その土地に長い間かけて <br>
+                        最適化してきた <br>
+                        たくさんのヒントを <br>
+                        イマを生きる私たちの <br>
+                        心地よさに取り入れ <br>
+                        新たな技術革新を <br>
+                        起こし続ける会社です
+                    </p>
+                </div>
             </div>
         </div>
     </section>
     <section id="service" class="bg-green">
+        <div class="title">
+            <h2>SERVICE</h2>
+            <p>サービス</p>
+        </div>
         <div class="inner">
-            <div class="title">
-                <h2>SERVICE</h2>
-                <p>サービス</p>
-            </div>
             <div id="service-content">
                 <div class="service-content-item">
                     <picture class="service-content-img">
@@ -85,7 +77,7 @@
                         <img src="image/PC_SERVICE01.jpg" alt="service-img">
                     </picture>
                     <p>静岡県U.I様自宅</p>
-                    <div class="service-content-text">
+                    <div class="service-content-text bg-darkgreen">
                         <h3>新築 <br>（土地探し〜建築）</h3>
                         <p> お客様にあった土地探しから <br>
                             建築、施工までサポートいたします。<br>
@@ -94,11 +86,11 @@
                 </div>
                 <div class="service-content-item row-reverse">
                     <picture class="service-content-img">
-                        <source srcset="image/SP_SERVICE_01.jpg" media="(max-width:767px)">
-                        <img src="image/PC_SERVICE01.jpg" alt="service-img">
+                        <source srcset="image/SP_SERVICE_02.jpg" media="(max-width:767px)">
+                        <img src="image/PC_SERVICE_02.jpg" alt="service-img">
                     </picture>
                     <p>北海道富良野市ブックカフェ</p>
-                    <div class="service-content-text">
+                    <div class="service-content-text  bg-darkgreen">
                         <h3>リフォーム <br> リノベーション</h3>
                         <p> 温かみと雰囲気をそのままに <br>
                             住み心地、使い心地を <br>
@@ -108,10 +100,10 @@
                    <div class="service-content-item">
                     <picture class="service-content-img">
                         <source srcset="image/SP_SERVICE_03.jpg" media="(max-width:767px)">
-                        <img src="image/PC_SERVICE03.jpg" alt="service-img">
+                        <img src="image/PC_SERVICE_03.jpg" alt="service-img">
                     </picture>
                     <p>広島県竹原市</p>
-                    <div class="service-content-text">
+                    <div class="service-content-text  bg-darkgreen">
                         <h3>都市計画〜開発 <br> 公共施設</h3>
                         <p> 都市計画から都市開発まで <br>
                             ご提案いたします。<br>
@@ -122,11 +114,11 @@
         </div>
     </section>
     <section id="works">
+        <div class="title">
+            <h2>WORKS</h2>
+            <p>施工事例</p>
+        </div>
         <div class="inner">
-            <div class="title">
-                <h2>WORKS</h2>
-                <p>施工事例</p>
-            </div>
             <div id="works-content">
                 <div class="works-content-item">
                     <picture>
@@ -172,11 +164,11 @@
         </div>
     </section>
     <section id="news" class="bg-green">
+        <div class="title">
+            <h2>NEWS</h2>
+            <p>お知らせ</p>
+        </div>
         <div class="inner">
-            <div class="title">
-                <h2>NEWS</h2>
-                <p>お知らせ</p>
-            </div>
             <div id="news-content">
                 <div class="news-content-item">
                     <div class="news-content-title bg-darkgreen">お知らせ</div>
@@ -224,11 +216,12 @@
         </div>
     </section>
     <section id="company">
+        <div class="title">
+            <h2>COMPANY</h2>
+            <p>会社概要</p>
+        </div>
         <div class="inner">
-            <div class="title">
-                <h2>COMPANY</h2>
-                <p>会社概要</p>
-            </div>
+            
             <div id="company-content">
                 <div class="company-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.275015811544!2d129.83456211165716!3d32.81147738211345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356aad74ca7858b7%3A0x18748db06c4dbc23!2z44G_44GN44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1747442867970!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map-frame"></iframe>
@@ -243,11 +236,11 @@
         </div>
     </section>
     <section id="contact">
+        <div class="title">
+            <h2>CONTACT</h2>
+            <p>お問い合わせ</p>
+        </div>
         <div class="inner">
-            <div class="title">
-                <h2>CONTACT</h2>
-                <p>お問い合わせ</p>
-            </div>
             <p>３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</p>
             <form>
                 <label for="name">お名前 *</label>
