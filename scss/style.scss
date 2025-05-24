@@ -41,15 +41,17 @@ html {
 .title {
     width: 100%;
     text-align: center;
-    letter-spacing:0.3em;
 
     h2 {
         color: $accent-color;
         @include text-style(3.0rem, (33/30));
+        letter-spacing:0.3em;
     }
+
     p {
         @include text-style(2.0rem, (33/20));
         margin-top: 6px;
+        letter-spacing:0.3em;
     }
 }
 
@@ -77,7 +79,7 @@ header {
         @include text-style(4.0rem, (70/40));
         font-weight: 600;
         top: (340%/8);
-        left: 50%;
+        left: 51%;
         transform: translateX(-50%);
         letter-spacing: 0.3em;
     }
@@ -100,7 +102,7 @@ header {
 
     &-list-flex ul{
         display: flex;
-        gap: 30px;
+        gap: 31px;
         @include text-style(1.8rem, (33/18));
     }
 }
@@ -127,12 +129,12 @@ header {
         h3{
             @include text-style(3.0rem, 1.18);
             letter-spacing:4px;
+            margin-left: 42.5px;
         }
 
         p{
-            @include text-style(1.8rem, 2.74);
-            margin-right:40px;
-            letter-spacing: 3px;
+            @include text-style(1.8rem, 2.7);
+            letter-spacing: 7px;
         }
 }
 
@@ -200,5 +202,31 @@ header {
 
     img {
         padding-right: 0;
+    }
+}
+
+// --------------------works--------------------
+#works {
+    padding: 80px 0 97px;
+}
+
+.works-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:(40%/9.2);
+    margin-top: 68px;
+}
+
+.works-content-item {
+    width: (200%/9.2);
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        @include text-style();
+        margin-top: 20px;
     }
 }
