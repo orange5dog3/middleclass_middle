@@ -22,19 +22,20 @@ html {
 .title {
   width: 100%;
   text-align: center;
-  letter-spacing: 0.3em;
 }
 .title h2 {
   color: #4D9600;
   font-weight: 500;
   font-size: 3rem;
   line-height: 1.1;
+  letter-spacing: 0.3em;
 }
 .title p {
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
   margin-top: 6px;
+  letter-spacing: 0.3em;
 }
 
 .bg-green {
@@ -61,7 +62,7 @@ header h1 {
   line-height: 1.75;
   font-weight: 600;
   top: 42.5%;
-  left: 50%;
+  left: 51%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   letter-spacing: 0.3em;
@@ -91,7 +92,7 @@ header h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  gap: 31px;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
@@ -124,13 +125,13 @@ header h1 {
   font-size: 3rem;
   line-height: 1.18;
   letter-spacing: 4px;
+  margin-left: 42.5px;
 }
 #about p {
   font-weight: 500;
   font-size: 1.8rem;
-  line-height: 2.74;
-  margin-right: 40px;
-  letter-spacing: 3px;
+  line-height: 2.7;
+  letter-spacing: 7px;
 }
 
 #service {
@@ -203,4 +204,36 @@ header h1 {
 }
 .row-reverse img {
   padding-right: 0;
+}
+
+#works {
+  padding: 80px 0 97px;
+}
+
+.works-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4.347826087%;
+  margin-top: 68px;
+}
+
+.works-content-item {
+  width: 21.7391304348%;
+}
+.works-content-item img {
+  width: 100%;
+}
+.works-content-item p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */
