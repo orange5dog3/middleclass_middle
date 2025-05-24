@@ -230,3 +230,22 @@ header {
         margin-top: 20px;
     }
 }
+
+// --------------------news--------------------
+#news {
+    padding: 80px 0;
+}
+
+.news-content {
+    display: flex;
+    justify-content: center;
+    gap: (60%/9.2);
+}
+
+.news-content-box {
+    width: (430%/9.2);
+}
+
+.news-content-item {
+    background-color: $main-bg-color;
+}

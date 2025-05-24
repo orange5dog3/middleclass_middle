@@ -236,4 +236,26 @@ header h1 {
   font-size: 1.6rem;
   line-height: 1.5625;
   margin-top: 20px;
+}
+
+#news {
+  padding: 80px 0;
+}
+
+.news-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6.5217391304%;
+}
+
+.news-content-box {
+  width: 46.7391304348%;
+}
+
+.news-content-item {
+  background-color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */
