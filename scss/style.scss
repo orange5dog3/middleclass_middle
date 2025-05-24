@@ -149,6 +149,7 @@ header {
 }
 
 .service-content-item {
+    display: flex;
     position: relative;
     width: 100%;
 
@@ -196,6 +197,8 @@ header {
 }
 
 .row-reverse {
+    display: flex;
+    justify-content:flex-end;
     flex-direction: row-reverse;
 
     img {
