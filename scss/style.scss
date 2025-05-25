@@ -6,6 +6,7 @@
 $main-color:#000000;
 $sb-color:#FFFFFF;
 $accent-color:#4D9600;
+$accent-sb-color:#55A500;
 $main-bg-color:#FFFFFF;
 $accent-bg-color:rgba(77, 150, 0, 0.1);
 
@@ -263,12 +264,63 @@ header {
     display: flex;
     justify-content: center;
     gap: (60%/9.2);
+    margin-top: 68px;
 }
 
 .news-content-box {
     width: (430%/9.2);
 }
 
+.news-content-title {
+    padding:8px 0 9px 20px;
+    @include text-style(2.0rem,(33/20));
+    font-weight:600;
+}
+
 .news-content-item {
     background-color: $main-bg-color;
+    padding:10px 20px 20px 20px;
+}
+
+.news-content-article {
+    display: flex;
+    // gap: (69%/4.3);
+    gap: 69px;
+    border-bottom: 1px solid $accent-sb-color;
+    padding-top: 15px;
+    padding-bottom: 11px;
+
+    &-left {
+        // width: (53%/4.3);
+        @include text-style(1.6rem,(33/16));
+    }
+
+    &-right {
+        flex: 1;
+        @include text-style(1.8rem,(25/18));
+        padding-top: 5px;
+    }
+}
+
+.news-symbol {
+    position: relative;
+    text-align: right;
+    margin-top: 22px;
+
+    p {
+        color: $accent-sb-color;
+        @include text-style(2.0rem,(33/20));
+        padding-right: 35px;
+    }
+
+    img {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+}
+
+// --------------------company--------------------
+#company {
+    padding: 80px 0;
 }
