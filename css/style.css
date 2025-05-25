@@ -280,12 +280,68 @@ header h1 {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 6.5217391304%;
+  margin-top: 68px;
 }
 
 .news-content-box {
   width: 46.7391304348%;
 }
 
+.news-content-title {
+  padding: 8px 0 9px 20px;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
 .news-content-item {
   background-color: #FFFFFF;
+  padding: 10px 20px 20px 20px;
+}
+
+.news-content-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 69px;
+  border-bottom: 1px solid #55A500;
+  padding-top: 15px;
+  padding-bottom: 11px;
+}
+.news-content-article-left {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.0625;
+}
+.news-content-article-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  padding-top: 5px;
+}
+
+.news-symbol {
+  position: relative;
+  text-align: right;
+  margin-top: 22px;
+}
+.news-symbol p {
+  color: #55A500;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.65;
+  padding-right: 35px;
+}
+.news-symbol img {
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+#company {
+  padding: 80px 0;
 }/*# sourceMappingURL=style.css.map */
