@@ -158,11 +158,8 @@ a:hover {
 }
 
 .service-content-item {
-    position: relative;
     display: flex;
-    flex-direction: row;
     width: 100%;
-    gap: calc(40 / 920 * 100%);
 
     h4 {
         @include text-style();
@@ -184,6 +181,7 @@ a:hover {
 }
 
 .service-content-text {
+    padding: 50px 5px 42px 220px;
     margin-top: 195px;
     flex: 1;
     color: $sb-color;
@@ -201,22 +199,21 @@ a:hover {
 }
 
 @mixin green-box-style {
-    background-color: $accent-color;
+    // background-color: $accent-color;
     width: 500px;
     height: 250px;
     z-index: 1;
-    position: absolute;
-    top: 145px;
+    // top: 145px;
 }
 
 .green-box-right {
     @include green-box-style();
-    right: 0;
+    // right: 0;
 }
 
 .green-box-left {
     @include green-box-style();
-    left: 0;
+    // left: 0;
 }
 
 .row-reverse {
@@ -288,16 +285,16 @@ a:hover {
 }
 
 .news-content-article {
-    display: block;
+    display: flex;
     border-bottom: 1px solid $accent-sb-color;
     padding-top: 15px;
     padding-bottom: 11px;
 
-    &-left {
+    time {
         @include text-style(1.6rem,(33/16));
     }
 
-    &-right {
+    h3 {
         flex: 1;
         @include text-style(1.8rem,(25/18));
         padding-top: 5px;
