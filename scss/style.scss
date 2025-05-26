@@ -11,7 +11,7 @@ $main-bg-color:#FFFFFF;
 $accent-bg-color:rgba(77, 150, 0, 0.1);
 
 // font定義
-$font-base: "YuMincho", "Noto Serif JP" ,sans-serif;
+$font-base: "YuMincho", "Noto Sans JP" ,sans-serif;
 
 @mixin text-style($size: 1.6rem, $lineHeight: (25/16)) {
   font-weight: 500;
@@ -34,7 +34,7 @@ html {
 }
 
 .inner {
-    max-width: 1080px-80-80+30+30;
+    max-width: calc(1080px-80-80+30+30);
     padding-inline: 30px;
     margin: 0 auto;
 }
@@ -91,7 +91,7 @@ header {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    max-width: 1080px-80px-80px;
+    max-width: calc(1080px-80px-80px);
     width: 100%;
     top: 28px;
     left: 50%;
@@ -107,6 +107,11 @@ header {
         gap: 31px;
         @include text-style(1.8rem, (33/18));
     }
+}
+
+a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
 }
 
 // --------------------about--------------------
@@ -157,7 +162,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap: (40%/9.2);
+    gap: calc(40 / 920 * 100%);
 
     h4 {
         @include text-style();
@@ -170,7 +175,7 @@ header {
 }
 
 .service-content-imagebox {
-    width: (600%/9.20);
+    width: calc(600 / 920 * 100%);
     z-index: 100;
 
     img {
@@ -238,12 +243,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:(40%/9.2);
+    gap: calc(40 / 920 * 100%);
     margin-top: 68px;
 }
 
 .works-content-item {
-    width: (200%/9.2);
+    width: calc(200 / 9.2 * 100%);
 
     img {
         width: 100%;
@@ -263,12 +268,12 @@ header {
 .news-content {
     display: flex;
     justify-content: center;
-    gap: (60%/9.2);
+    gap: calc(60 / 920 * 100%);
     margin-top: 68px;
 }
 
 .news-content-box {
-    width: (430%/9.2);
+    width: calc(430 / 920 * 100%);
 }
 
 .news-content-title {
@@ -283,15 +288,12 @@ header {
 }
 
 .news-content-article {
-    display: flex;
-    // gap: (69%/4.3);
-    gap: 69px;
+    display: block;
     border-bottom: 1px solid $accent-sb-color;
     padding-top: 15px;
     padding-bottom: 11px;
 
     &-left {
-        // width: (53%/4.3);
         @include text-style(1.6rem,(33/16));
     }
 
@@ -300,6 +302,12 @@ header {
         @include text-style(1.8rem,(25/18));
         padding-top: 5px;
     }
+}
+
+.news-content-article a{
+    width: 100%;
+    display: flex;
+    gap: 69px;
 }
 
 .news-symbol {
