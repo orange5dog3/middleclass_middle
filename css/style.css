@@ -13,6 +13,19 @@ html {
   scroll-behavior: smooth;
 }
 
+h1, h2, h3, h4 {
+  display: block;
+}
+
+a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
 .inner {
   max-width: 980px;
   padding-inline: 30px;
@@ -55,7 +68,7 @@ header {
 header img {
   width: 100%;
 }
-header h1 {
+header h2 {
   position: absolute;
   text-align: center;
   font-weight: 500;
@@ -84,7 +97,7 @@ header h1 {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-.header-content-title {
+.header-content h1 {
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
@@ -97,12 +110,6 @@ header h1 {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
-}
-
-a:hover {
-  opacity: 0.5;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 #about {
@@ -127,7 +134,7 @@ a:hover {
   top: 23%;
   right: 40%;
 }
-#about h3 {
+#about h2 {
   font-weight: 500;
   font-size: 3rem;
   line-height: 1.18;
@@ -168,7 +175,7 @@ a:hover {
   width: 100%;
   gap: 4.347826087%;
 }
-.service-content-item h4 {
+.service-content-item h3 {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5625;
@@ -195,7 +202,7 @@ a:hover {
   color: #FFFFFF;
   z-index: 10;
 }
-.service-content-text h3 {
+.service-content-text h2 {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 1.32;
@@ -232,10 +239,10 @@ a:hover {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.row-reverse h4 {
+.row-reverse h3 {
   text-align: right;
 }
-.row-reverse h3 {
+.row-reverse h2 {
   padding-left: 40px;
 }
 .row-reverse p {

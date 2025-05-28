@@ -33,6 +33,18 @@ html {
     scroll-behavior: smooth;
 }
 
+h1,h2,h3,h4 {
+    display: block;
+}
+
+a {
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
 .inner {
     max-width: calc(1080px - 80px - 80px + 30px + 30px);
     padding-inline: 30px;
@@ -75,7 +87,7 @@ header {
         width: 100%;
     }
 
-    h1 {
+    h2 {
         position: absolute;
         text-align: center;
         @include text-style(4.0rem, (70/40));
@@ -98,7 +110,7 @@ header {
     transform: translateX(-50%);
     
 
-    &-title {
+    h1 {
         @include text-style(2.0rem, calc(33 / 20));
     }
 
@@ -107,11 +119,6 @@ header {
         gap: 31px;
         @include text-style(1.8rem, calc(33 / 18));
     }
-}
-
-a:hover {
-    opacity: 0.5;
-    transition: 0.3s;
 }
 
 // --------------------about--------------------
@@ -133,7 +140,7 @@ a:hover {
         top: 23%;
         right: 40%;
     }
-        h3{
+        h2{
             @include text-style(3.0rem, 1.18);
             letter-spacing:4px;
             margin-left: 42.5px;
@@ -164,7 +171,7 @@ a:hover {
     width: 100%;
     gap: calc(40 / 920 * 100%);
 
-    h4 {
+    h3 {
         @include text-style();
         margin-top: 20px;
     }
@@ -189,7 +196,7 @@ a:hover {
     color: $sb-color;
     z-index: 10;
 
-    h3 {
+    h2 {
         @include text-style(2.5rem,calc(33 / 25));
         font-weight: 600;
     }
@@ -222,10 +229,10 @@ a:hover {
 .row-reverse {
     flex-direction: row-reverse;
 
-    h4 {
+    h3 {
         text-align: right;
     }
-    h3{
+    h2{
         padding-left: 40px;
     }
 
