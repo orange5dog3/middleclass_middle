@@ -34,7 +34,7 @@ html {
 }
 
 .inner {
-    max-width: calc(1080px-80-80+30+30);
+    max-width: calc(1080px - 80 - 80 + 30 + 30);
     padding-inline: 30px;
     margin: 0 auto;
 }
@@ -66,6 +66,19 @@ html {
     background-color: $accent-color;
 }
 
+h1,h2,h3,h4{
+    display: block;
+}
+
+a {
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+
 // --------------------header--------------------
 header {
     color: $sb-color;
@@ -75,7 +88,7 @@ header {
         width: 100%;
     }
 
-    h1 {
+    h3 {
         position: absolute;
         text-align: center;
         @include text-style(4.0rem, (70/40));
@@ -84,6 +97,7 @@ header {
         left: 51%;
         transform: translateX(-50%);
         letter-spacing: 0.3em;
+        z-index: 100;
     }
 }
 
@@ -109,10 +123,6 @@ header {
     }
 }
 
-a:hover {
-    opacity: 0.5;
-    transition: 0.3s;
-}
 
 // --------------------about--------------------
 #about {
@@ -328,4 +338,7 @@ a:hover {
 // --------------------company--------------------
 #company {
     padding: 80px 0;
+}
+body {
+  background: red;
 }
