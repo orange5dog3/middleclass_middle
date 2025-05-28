@@ -3,7 +3,7 @@ body {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5625;
-  font-family: "YuMincho", "Noto Serif JP", sans-serif;
+  font-family: "YuMincho", "Noto Sans JP", sans-serif;
   color: #000000;
   background-color: #FFFFFF;
 }
@@ -97,6 +97,12 @@ header h1 {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
+}
+
+a:hover {
+  opacity: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #about {
@@ -256,7 +262,7 @@ header h1 {
 }
 
 .works-content-item {
-  width: 21.7391304348%;
+  width: 2173.9130434783%;
 }
 .works-content-item img {
   width: 100%;
@@ -301,10 +307,7 @@ header h1 {
 }
 
 .news-content-article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 69px;
+  display: block;
   border-bottom: 1px solid #55A500;
   padding-top: 15px;
   padding-bottom: 11px;
@@ -322,6 +325,14 @@ header h1 {
   font-size: 1.8rem;
   line-height: 1.3888888889;
   padding-top: 5px;
+}
+
+.news-content-article a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 69px;
 }
 
 .news-symbol {
