@@ -259,28 +259,43 @@
             </div>
         </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="bg-green">
         <div class="title">
             <h2>CONTACT</h2>
             <p>お問い合わせ</p>
         </div>
-        <div class="inner">
-            <p>３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</p>
+        <div class="inner-contact">
+            <h3>３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</h3>
             <form>
-                <label for="name">お名前 *</label>
-                <input type="text" id="name" name="name" placeholder="例：北村太郎" required>
+                <div class="form-flex">
+                    <div class="form-content">
+                        <label for="name">お名前 *</label>
+                        <input type="text" id="name" name="name" placeholder="例：北村太郎" required>
+                    </div>
+                    <div class="form-content">
+                        <label>性別</label>
+                        <input type="radio" id="gender-men" name="gender" value="男性" required>
+                        <label for="gender-men">男性</label>
+                        <input type="radio" id="gender-women" name="gender" value="女性">
+                        <label for="gender-women">女性</label>
 
-                <label for="gender">性別</label>
-                <input type="radio" id="gender" name="gender" value="男性" required>男性
-                <input type="radio" id="gender" name="gender" value="女性">女性
+                    </div>
+                    <div class="form-content">
+                        <label for="email">メールアドレス *</label>
+                        <input type="email" id="email" name="email" placeholder="例：aaaaaaaa@gmail.com">
+                    </div>
+                    <div class="form-content">
+                        <label for="category">問い合わせ種別</label>
+                        <select name="category" id="category">
+                            <option value="家づくりについて" selected>家づくりについて</option>
+                        </select>
+                    </div>
+                </div>
+                
 
-                <label for="email">メールアドレス *</label>
-                <input type="email" id="email" name="email" placeholder="例：aaaaaaaa@gmail.com">
+                
 
-                <label for="category">問い合わせ種別</label>
-                <select name="category" id="category">
-                    <option value="家づくりについて" selected>家づくりについて</option>
-                </select>
+                
 
                 <label for="contact-content"></label>
                 <textarea name="contact-content" id="contact-content" required></textarea>
