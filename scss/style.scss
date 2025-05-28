@@ -154,13 +154,13 @@ header {
 
 // --------------------service--------------------
 #service {
-    padding: 80px 0 120px;
+    padding: 80px 0 78px;
     margin: 0 auto;
 
     &-content {
         display: flex;
         flex-direction: column;
-        gap: 120px;
+        gap: 78px;
     }
 }
 
@@ -169,9 +169,8 @@ header {
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap: calc(40 / 920 * 100%);
 
-    h3 {
+    h4 {
         @include text-style();
         margin-top: 20px;
     }
@@ -191,12 +190,15 @@ header {
 }
 
 .service-content-text {
-    margin-top: 195px;
+    margin-top: 145px;
     flex: 1;
     color: $sb-color;
     z-index: 10;
+    padding:50px 5px 42px 220px;
+    background-color: $accent-color;
+    margin-left: -180px;
 
-    h2 {
+    h3 {
         @include text-style(2.5rem,calc(33 / 25));
         font-weight: 600;
     }
@@ -207,37 +209,17 @@ header {
     }
 }
 
-@mixin green-box-style {
-    background-color: $accent-color;
-    width: 500px;
-    height: 250px;
-    z-index: 1;
-    position: absolute;
-    top: 145px;
-}
-
-.green-box-right {
-    @include green-box-style();
-    right: 0;
-}
-
-.green-box-left {
-    @include green-box-style();
-    left: 0;
-}
-
 .row-reverse {
     flex-direction: row-reverse;
 
-    h3 {
-        text-align: right;
-    }
-    h2{
-        padding-left: 40px;
+    .service-content-text {
+        padding:50px 220px 42px 40px;
+        margin-right: -180px;
+        margin-left: auto;
     }
 
-    p {
-        padding-left: 40px;
+    h4 {
+        text-align: right;
     }
 }
 
