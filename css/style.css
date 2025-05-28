@@ -149,7 +149,7 @@ header h2 {
 }
 
 #service {
-  padding: 80px 0 120px;
+  padding: 80px 0 78px;
   margin: 0 auto;
 }
 #service-content {
@@ -160,7 +160,7 @@ header h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 120px;
+  gap: 78px;
 }
 
 .service-content-item {
@@ -173,9 +173,8 @@ header h2 {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  gap: 4.347826087%;
 }
-.service-content-item h3 {
+.service-content-item h4 {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5625;
@@ -195,14 +194,17 @@ header h2 {
 }
 
 .service-content-text {
-  margin-top: 195px;
+  margin-top: 145px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   color: #FFFFFF;
   z-index: 10;
+  padding: 50px 5px 42px 220px;
+  background-color: #4D9600;
+  margin-left: -180px;
 }
-.service-content-text h2 {
+.service-content-text h3 {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 1.32;
@@ -213,40 +215,19 @@ header h2 {
   margin-top: 19px;
 }
 
-.green-box-right {
-  background-color: #4D9600;
-  width: 500px;
-  height: 250px;
-  z-index: 1;
-  position: absolute;
-  top: 145px;
-  right: 0;
-}
-
-.green-box-left {
-  background-color: #4D9600;
-  width: 500px;
-  height: 250px;
-  z-index: 1;
-  position: absolute;
-  top: 145px;
-  left: 0;
-}
-
 .row-reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.row-reverse h3 {
+.row-reverse .service-content-text {
+  padding: 50px 220px 42px 40px;
+  margin-right: -180px;
+  margin-left: auto;
+}
+.row-reverse h4 {
   text-align: right;
-}
-.row-reverse h2 {
-  padding-left: 40px;
-}
-.row-reverse p {
-  padding-left: 40px;
 }
 
 #works {
@@ -299,8 +280,7 @@ header h2 {
 .news-content-box {
   width: 46.7391304348%;
 }
-
-.news-content-title {
+.news-content-box h3 {
   padding: 8px 0 9px 20px;
   font-weight: 500;
   font-size: 2rem;
@@ -319,12 +299,12 @@ header h2 {
   padding-top: 15px;
   padding-bottom: 11px;
 }
-.news-content-article-left {
+.news-content-article time {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.0625;
 }
-.news-content-article-right {
+.news-content-article h4 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -362,4 +342,55 @@ header h2 {
 
 #company {
   padding: 80px 0;
+}
+
+.company-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
+}
+
+.company-map {
+  width: 65.2173913043%;
+  z-index: 10;
+}
+.company-map iframe {
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+
+.company-textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #FFFFFF;
+  padding: 50px 5px 42px 220px;
+  background-color: #4D9600;
+  margin-left: -180px;
+  margin-top: 200px;
+}
+.company-textarea h3 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+.company-textarea p {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+}
+.company-textarea p:nth-of-type(1) {
+  margin-top: 7px;
+}
+.company-textarea p:nth-of-type(2) {
+  margin-top: 10px;
+}
+.company-textarea p:nth-of-type(3) {
+  margin-top: 18px;
+}
+.company-textarea span {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 1;
 }/*# sourceMappingURL=style.css.map */
