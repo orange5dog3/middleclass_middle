@@ -403,11 +403,11 @@ header h2 {
 
 #contact {
   padding: 78px 0;
-}
-#contact h3 {
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
+}
+#contact h3 {
   margin-top: 35px;
 }
 
@@ -415,13 +415,45 @@ header h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form-flex .form-content-left {
+  width: 170px;
+}
+.form-flex .form-content-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.form-flex input {
+  width: 100%;
 }
 
-.form-content {
+.form-name .form-content-right,
+.form-email .form-content-right,
+.form-category .form-content-right {
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+}
+
+.form-name {
+  margin-top: 74px;
+}
+.form-name .form-content-right {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+}
+
+.form-gender {
+  margin-top: 50px;
+}
+.form-gender .form-content-right {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,39 +461,88 @@ header h2 {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.form-content:nth-of-type(1) {
-  margin-top: 74px;
-}
-
-.form-content:nth-of-type(2) {
-  margin-top: 60px;
-}
-
-label {
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.65;
-  width: 170px;
-}
-
-input,
-select {
+.form-gender .form-content-right input {
+  margin-right: 26px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 23px;
+  position: relative;
   background-color: #FFFFFF;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+}
+.form-gender .form-content-right input:checked::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.form-gender .form-content-right label[for=gender-men] {
+  margin-right: 74px;
 }
 
-input[type=text] {
+.form-email {
+  margin-top: 55px;
+}
+.form-email .form-content-right {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+}
+
+.form-category {
+  margin-top: 53px;
+}
+.form-category .form-content-right {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  position: relative;
+}
+.form-category .form-content-right img {
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.form-content {
+  margin-top: 50px;
+}
+.form-content textarea {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #FFFFFF;
   padding: 10px;
+  min-height: 200px;
+  resize: none;
 }
 
-input[type=radio] {
-  -webkit-appearance: radio;
-     -moz-appearance: radio;
-          appearance: radio;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+.form-question {
+  margin-top: 50px;
+}
+.form-question .form-question-flex {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form-question .form-question-flex input {
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin-right: 23px;
+  background-color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

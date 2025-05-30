@@ -267,48 +267,62 @@
         <div class="inner-contact">
             <h3>３営業日以内にメールにてご連絡いたします。*は入力必須項目となります。</h3>
             <form>
-                <div class="form-flex">
-                    <div class="form-content">
+                <div class="form-name form-flex">
+                    <div class="form-content-left">
                         <label for="name">お名前 *</label>
+                    </div>
+                    <div class="form-content-right">
                         <input type="text" id="name" name="name" placeholder="例：北村太郎" required>
                     </div>
-                    <div class="form-content">
+                </div>
+                <div class="form-gender form-flex">
+                    <div class="form-content-left">
                         <label>性別</label>
-                        <input type="radio" id="gender-men" name="gender" value="男性" required>
+                    </div>
+                    <div class="form-content-right">
+                        <input type="radio" id="gender-men" name="gender" value="男性" required checked>
                         <label for="gender-men">男性</label>
                         <input type="radio" id="gender-women" name="gender" value="女性">
                         <label for="gender-women">女性</label>
-
                     </div>
-                    <div class="form-content">
+                </div>
+                <div class="form-email form-flex">
+                    <div class="form-content-left">
                         <label for="email">メールアドレス *</label>
+                    </div>
+                    <div class="form-content-right">
                         <input type="email" id="email" name="email" placeholder="例：aaaaaaaa@gmail.com">
                     </div>
-                    <div class="form-content">
+                </div>
+                <div class="form-category form-flex">
+                    <div class="form-content-left">
                         <label for="category">問い合わせ種別</label>
+                    </div>
+                    <div class="form-content-right">
                         <select name="category" id="category">
                             <option value="家づくりについて" selected>家づくりについて</option>
                         </select>
+                        <img src="image/contact triangle.svg" alt="triangle">
+                    </div>
+                </div>
+                <div class="form-content">
+                    <label for="contact-content">内容 *</label>
+                    <textarea name="contact-content" id="contact-content" required></textarea>
+                </div>
+                <div class="form-question">
+                    <label>何を見て当社HPを知りましたか？ (複数回答可)　*</label>
+                    <div class="form-question-flex">
+                        <input type="checkbox" name="question" value="インターネット">インターネット
+                        <input type="checkbox" name="question" value="チラシ">チラシ
+                        <input type="checkbox" name="question" value="住宅展示場">住宅展示場
+                        <input type="checkbox" name="question" value="看板">看板
+                        <input type="checkbox" name="question" value="各種SNS">各種SNS
+                        <input type="checkbox" name="question" value="紹介">紹介
+                        <input type="checkbox" name="question" value="通りがかり">通りがかり
+                        <input type="checkbox" name="question" value="その他">その他
                     </div>
                 </div>
                 
-
-                
-
-                
-
-                <label for="contact-content"></label>
-                <textarea name="contact-content" id="contact-content" required></textarea>
-
-                <label>何を見て当社HPを知りましたか？ (複数回答可)　*</label>
-                <input type="checkbox" name="question" value="インターネット">インターネット
-                <input type="checkbox" name="question" value="チラシ">チラシ
-                <input type="checkbox" name="question" value="住宅展示場">住宅展示場
-                <input type="checkbox" name="question" value="看板">看板
-                <input type="checkbox" name="question" value="各種SNS">各種SNS
-                <input type="checkbox" name="question" value="紹介">紹介
-                <input type="checkbox" name="question" value="通りがかり">通りがかり
-                <input type="checkbox" name="question" value="その他">その他
 
                 <p>個人情報保護方針</p>
                 <div id="contact-textbox">
