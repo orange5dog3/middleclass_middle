@@ -120,6 +120,7 @@ header {
     top: 28px;
     left: 50%;
     transform: translateX(-50%);
+    height: 50px;
     
 
     h1 {
@@ -128,9 +129,23 @@ header {
 
     &-list-flex ul{
         display: flex;
+        align-items: center;
         gap: 31px;
         @include text-style(1.8rem, calc(33 / 18));
+        height: 50px;
+
+        li {
+            height: 50px;
+
+            a {
+                height: 50px;
+            }
+        }
     }
+}
+
+.header-content-list-flex {
+    height: 50px;
 }
 
 // --------------------about--------------------
@@ -509,15 +524,91 @@ header {
         @include text-style(1.8rem,calc(25 / 18));
         display: flex;
         flex-wrap: wrap;
+        margin-top: 10px;
+        row-gap: 13px;
 
-        input {
+
+        label  {
+            display: flex;
+            width: 25%;
+            align-items: center;
+
+            input {
             // ボタンのレイアウト
             width: 20px;      
             height: 20px;     
             border: none; 
-            margin-right: 23px; 
+            margin-right: 20px; 
             background-color: $main-bg-color;
+            }
         }
-        
     }
+}
+
+.form-textbox {
+    margin-top: 50px;
+
+    .contact-white-textbox{
+        margin-top: 10px;
+        background-color: $main-bg-color;
+        height: 300px;
+        // box-sizing: border-box;
+
+        .contact-textbox {
+            padding: 40px;
+            @include text-style(1.8rem,calc(31 / 18));
+            overflow-y: scroll;
+            height: 260px;
+            // margin: 40px;
+        }
+    }
+}
+
+button {
+    width: fit-content;
+    padding: 10px 60px;
+    border: none;
+    background-color:$accent-color;
+    color: $sb-color;
+    transition: 0.3s;
+    display: block;
+    margin: 80px auto 0;
+}
+
+button:hover {
+    background-color: $sb-color;
+    color: $accent-color;
+}
+
+// --------------------ending--------------------
+#ending {
+    text-align: center;
+    padding: 80px 0;
+
+    h2 {
+        @include text-style(2.0rem,calc(33 / 20));
+    }
+}
+
+.ending-link-list {
+    @include text-style(1.8rem,calc(33 / 18));
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border-top: 1px solid $main-color;
+    margin-top: 28px;
+    padding: 28px 0 28px;
+}
+
+.ending-icon-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+// --------------------ending--------------------
+footer {
+    text-align: center;
+    @include text-style(2.0rem,calc(33 / 20));
+    padding: 30px 0;
 }
