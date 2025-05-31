@@ -102,6 +102,7 @@ header h2 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  height: 50px;
 }
 .header-content h1 {
   font-weight: 500;
@@ -112,10 +113,24 @@ header h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 31px;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
+  height: 50px;
+}
+.header-content-list-flex ul li {
+  height: 50px;
+}
+.header-content-list-flex ul li a {
+  height: 50px;
+}
+
+.header-content-list-flex {
+  height: 50px;
 }
 
 #about {
@@ -538,11 +553,102 @@ header h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 10px;
+  row-gap: 13px;
 }
-.form-question .form-question-flex input {
+.form-question .form-question-flex label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form-question .form-question-flex label input {
   width: 20px;
   height: 20px;
   border: none;
-  margin-right: 23px;
+  margin-right: 20px;
   background-color: #FFFFFF;
+}
+
+.form-textbox {
+  margin-top: 50px;
+}
+.form-textbox .contact-white-textbox {
+  margin-top: 10px;
+  background-color: #FFFFFF;
+  height: 300px;
+}
+.form-textbox .contact-white-textbox .contact-textbox {
+  padding: 40px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.7222222222;
+  overflow-y: scroll;
+  height: 260px;
+}
+
+button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 60px;
+  border: none;
+  background-color: #4D9600;
+  color: #FFFFFF;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: block;
+  margin: 80px auto 0;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+  color: #4D9600;
+}
+
+#ending {
+  text-align: center;
+  padding: 80px 0;
+}
+#ending h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+
+.ending-link-list {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.8333333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  border-top: 1px solid #000000;
+  margin-top: 28px;
+  padding: 28px 0 28px;
+}
+
+.ending-icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+footer {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.65;
+  padding: 30px 0;
 }/*# sourceMappingURL=style.css.map */
