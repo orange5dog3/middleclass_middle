@@ -39,7 +39,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h1,h2,h3,h4,label,input {
+h1,h2,h3,h4,label,input,a,ul,li {
     display: block;
 }
 
@@ -117,35 +117,30 @@ header {
     justify-content: space-between;
     max-width: calc(1080px - 80px - 80px);
     width: 100%;
-    top: 28px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     height: 50px;
-    
+
+    a {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding-inline: 5px;
+    }
 
     h1 {
         @include text-style(2.0rem, calc(33 / 20));
+        height: 50px;
+        display: flex;
+        align-items: center;
     }
 
     &-list-flex ul{
         display: flex;
-        align-items: center;
-        gap: 31px;
+        gap: 20px;
         @include text-style(1.8rem, calc(33 / 18));
-        height: 50px;
-
-        li {
-            height: 50px;
-
-            a {
-                height: 50px;
-            }
-        }
     }
-}
-
-.header-content-list-flex {
-    height: 50px;
 }
 
 // --------------------about--------------------
