@@ -203,6 +203,27 @@ ul .slide-dots{
   color:$main-color;
 }
 
+// header animation
+.header-content-list-flex a {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: $sb-color;
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
 
 // --------------------about--------------------
 #about {
