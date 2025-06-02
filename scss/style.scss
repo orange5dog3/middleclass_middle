@@ -175,32 +175,34 @@ ul .slide-dots{
   }
 }
 
-// arrows
-button.slide-arrow-prev,
-button.slide-arrow-next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    color: $main-color; 
-    width: 40px;
-    height: 40px;
-    background-color:$sb-color ; 
-    opacity: 0.7;
-    border-radius: 50%;
-    font-size: 20px;
-    z-index: 20;
-    border: none;
-    top: 50%;
-    transform: translateY(-50%);
+//arrows
+.slick-arrow {
+  font-size: 40px;
+  color: $sb-color;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  transition: 0.3s;
 }
 
-button.slide-arrow-prev {
-    left: 30px;
+.slick-prev {
+  left: 30px;
+  padding: 10px 7px 10px 13px;
 }
-button.slide-arrow-next {
-    right: 30px;
+
+.slick-next {
+  right: 30px;
+  padding: 10px 8px 10px 12px;
 }
+
+.slick-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color:$main-color;
+}
+
 
 // --------------------about--------------------
 #about {
