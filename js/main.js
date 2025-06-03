@@ -1,3 +1,4 @@
+// slider
 $('.slick').slick({
     autoplay: true, 
     fade: true, 
@@ -10,3 +11,15 @@ $('.slick').slick({
     dotsClass: "slide-dots"
 });
 
+// modal
+$(".modal-open").click (
+    function(){
+        $("modal-area").show()
+    }
+);
+
+$(".modal-close").click(
+    function(){
+        $("modal-area").close()
+    }
+);
