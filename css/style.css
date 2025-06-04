@@ -320,8 +320,7 @@ ul .slide-dots li.slick-active button {
     gap: 24px;
   }
 }
-
-h2 {
+.about-textarea h2 {
   font-weight: 500;
   font-size: 3rem;
   line-height: 1.18;
@@ -329,7 +328,7 @@ h2 {
   margin-left: 42.5px;
 }
 @media screen and (max-width: 767px) {
-  h2 {
+  .about-textarea h2 {
     font-weight: 500;
     font-size: 2.5rem;
     line-height: 1.18;
@@ -343,15 +342,14 @@ h2 {
     margin: 0;
   }
 }
-
-p {
+.about-textarea p {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.7;
   letter-spacing: 7px;
 }
 @media screen and (max-width: 767px) {
-  p {
+  .about-textarea p {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.6;
