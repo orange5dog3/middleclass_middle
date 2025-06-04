@@ -67,6 +67,21 @@ a:hover {
   background-color: #4D9600;
 }
 
+.upper-arrow {
+  position: relative;
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  z-index: 999;
+}
+.upper-arrow img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 header {
   color: #FFFFFF;
   position: relative;
@@ -729,13 +744,14 @@ ul .slide-dots li.slick-active button {
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 60px;
-  border: none;
+  border: 1px solid #4D9600;
   background-color: #4D9600;
   color: #FFFFFF;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: block;
   margin: 80px auto 0;
+  cursor: pointer;
 }
 
 #contact button:hover {
