@@ -367,7 +367,10 @@ ul .slide-dots li.slick-active button {
   margin-top: 20px;
 }
 
-.modal-area {
+.modal-area1,
+.modal-area2,
+.modal-area3,
+.modal-area4 {
   display: none;
   position: fixed;
   top: 0;
