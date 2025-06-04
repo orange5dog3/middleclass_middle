@@ -1,3 +1,4 @@
+// slider------------------------
 $('.slick').slick({
     autoplay: true, 
     fade: true, 
@@ -9,4 +10,52 @@ $('.slick').slick({
     dots: true,
     dotsClass: "slide-dots"
 });
+// modal------------------------
+// modal1
+$(".modal-open1").click (
+    function(){
+        $(".modal-area1").show()
+    }
+);
 
+$(".modal-close1").click(
+    function(){
+        $(".modal-area1").hide()
+    }
+);
+// modal2
+$(".modal-open2").click (
+    function(){
+        $(".modal-area2").show()
+    }
+);
+
+$(".modal-close2").click(
+    function(){
+        $(".modal-area2").hide()
+    }
+);
+// modal3
+$(".modal-open3").click (
+    function(){
+        $(".modal-area3").show()
+    }
+);
+
+$(".modal-close3").click(
+    function(){
+        $(".modal-area3").hide()
+    }
+);
+// modal4
+$(".modal-open4").click (
+    function(){
+        $(".modal-area4").show()
+    }
+);
+
+$(".modal-close4").click(
+    function(){
+        $(".modal-area4").hide()
+    }
+);
