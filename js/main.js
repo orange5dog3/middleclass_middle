@@ -14,12 +14,13 @@ $('.slick').slick({
 // modal
 $(".modal-open").click (
     function(){
-        $("modal-area").show()
+        $(".modal-area").show()
     }
 );
 
 $(".modal-close").click(
     function(){
-        $("modal-area").close()
+        $(".modal-area").hide()
     }
 );
+

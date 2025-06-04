@@ -369,15 +369,34 @@ ul .slide-dots{
     opacity: 0.4;
 }
 
-.modal-content {
+.modal-content-whitebox {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 60%;
-    height: auto;
-    text-align: left;
-    background: $sb-color;
+    width: 450px;
+    height: 275px;
+    background-color: $sb-color;
+
+
+    .modal-content {
+        margin: 15px 15px 0;
+        width: 420px;
+        height: 220px;
+
+
+        picture {
+            display: block;
+            width: 100%;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+    }
+
+    
 }
 
 .modal-cancel {
