@@ -310,7 +310,6 @@ ul .slide-dots{
         justify-content: center;
         gap: 24px;
     }
-}
     h2{
         @include text-style(3.0rem, 1.18);
         letter-spacing:4px;
@@ -333,6 +332,7 @@ ul .slide-dots{
             display: flex;
             align-items: center;
         }
+    }
 }
 
 // --------------------service--------------------
