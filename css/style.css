@@ -58,6 +58,10 @@ a:hover {
   letter-spacing: 0.3em;
 }
 
+.inline {
+  display: inline-block;
+}
+
 .bg-green {
   background-color: rgba(77, 150, 0, 0.1);
 }
@@ -389,11 +393,26 @@ ul .slide-dots li.slick-active button {
           flex-direction: row;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .service-content-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .service-content-item h4 {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5625;
   margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .service-content-item h4 {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.25;
+  }
 }
 
 .service-content-item:first-of-type {
@@ -424,6 +443,7 @@ ul .slide-dots li.slick-active button {
   font-size: 2.5rem;
   line-height: 1.32;
   font-weight: 600;
+  width: 250px;
 }
 .service-content-text p {
   font-weight: 600;

@@ -87,6 +87,10 @@ a:hover {
     }
 }
 
+.inline {
+    display: inline-block;
+}
+
 .bg-green {
     background-color: $accent-bg-color;
 }
@@ -353,9 +357,17 @@ ul .slide-dots{
     flex-direction: row;
     width: 100%;
 
+    @include sp {
+        flex-direction: column;
+    }
+
     h4 {
         @include text-style();
         margin-top: 20px;
+
+        @include sp {
+            @include text-style(2.0rem,calc(25 / 20));
+        }
     }
 }
 
@@ -382,6 +394,7 @@ ul .slide-dots{
     h3 {
         @include text-style(2.5rem,calc(33 / 25));
         font-weight: 600;
+        width: 250px;
     }
 
     p {
