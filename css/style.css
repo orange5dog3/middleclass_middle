@@ -371,6 +371,11 @@ ul .slide-dots li.slick-active button {
   padding: 80px 0 78px;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  #service {
+    padding: 50px 0 45px;
+  }
+}
 #service-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,6 +385,11 @@ ul .slide-dots li.slick-active button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 78px;
+}
+@media screen and (max-width: 767px) {
+  #service-content {
+    gap: 45px;
+  }
 }
 
 .service-content-item {
@@ -401,6 +411,11 @@ ul .slide-dots li.slick-active button {
             flex-direction: column;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .service-content-item {
+    gap: 5px;
+  }
+}
 .service-content-item h4 {
   font-weight: 500;
   font-size: 1.6rem;
@@ -409,19 +424,27 @@ ul .slide-dots li.slick-active button {
 }
 @media screen and (max-width: 767px) {
   .service-content-item h4 {
-    font-weight: 500;
-    font-size: 2rem;
-    line-height: 1.25;
+    margin-top: 5px;
   }
 }
 
 .service-content-item:first-of-type {
   margin-top: 68px;
 }
+@media screen and (max-width: 767px) {
+  .service-content-item:first-of-type {
+    margin-top: 40px;
+  }
+}
 
 .service-content-imagebox {
   width: 65.2173913043%;
   z-index: 100;
+}
+@media screen and (max-width: 767px) {
+  .service-content-imagebox {
+    width: 100%;
+  }
 }
 .service-content-imagebox img {
   width: 100%;
@@ -438,6 +461,12 @@ ul .slide-dots li.slick-active button {
   background-color: #4D9600;
   margin-left: -180px;
 }
+@media screen and (max-width: 767px) {
+  .service-content-text {
+    margin: 0;
+    padding: 20px 20px 12px;
+  }
+}
 .service-content-text h3 {
   font-weight: 500;
   font-size: 2.5rem;
@@ -445,9 +474,22 @@ ul .slide-dots li.slick-active button {
   font-weight: 600;
   width: 250px;
 }
+@media screen and (max-width: 767px) {
+  .service-content-text h3 {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.25;
+    width: 225px;
+  }
+}
 .service-content-text p {
   font-weight: 600;
   margin-top: 19px;
+}
+@media screen and (max-width: 767px) {
+  .service-content-text p {
+    margin-top: 14px;
+  }
 }
 
 .row-reverse {
@@ -456,13 +498,34 @@ ul .slide-dots li.slick-active button {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
+@media screen and (max-width: 767px) {
+  .row-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+  }
+}
 .row-reverse .service-content-text {
   padding: 50px 220px 42px 40px;
   margin-right: -180px;
   margin-left: auto;
 }
+@media screen and (max-width: 767px) {
+  .row-reverse .service-content-text {
+    margin: 0;
+    padding: 20px 20px 12px;
+  }
+}
 .row-reverse h4 {
   text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .row-reverse h4 {
+    text-align: left;
+    margin-top: 5px;
+  }
 }
 
 #works {
