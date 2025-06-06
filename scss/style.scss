@@ -560,6 +560,9 @@ ul .slide-dots{
 // --------------------news--------------------
 #news {
     padding: 80px 0;
+    @include sp {
+        padding: 52px 0 50px;
+    }
 }
 
 .news-content {
@@ -567,10 +570,18 @@ ul .slide-dots{
     justify-content: center;
     gap: calc(60 / 920 * 100%);
     margin-top: 68px;
+    @include sp {
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 51px;
+    }
 }
 
 .news-content-box {
     width: calc(430 / 920 * 100%);
+    @include sp {
+        width: 100%;
+    }
 
     h3 {
         padding:8px 0 9px 20px;
@@ -582,6 +593,9 @@ ul .slide-dots{
 .news-content-item {
     background-color: $main-bg-color;
     padding:10px 20px 20px 20px;
+    @include sp {
+        padding:10px 20px 23px 20px;
+    }
 }
 
 .news-content-article {
@@ -589,6 +603,10 @@ ul .slide-dots{
     border-bottom: 1px solid $accent-sb-color;
     padding-top: 15px;
     padding-bottom: 11px;
+    @include sp {
+        padding-top: 13px;
+        padding-bottom: 13.5px;
+    }
 
     time {
         @include text-style(1.6rem,calc(33 / 16));
@@ -598,6 +616,13 @@ ul .slide-dots{
         flex: 1;
         @include text-style(1.8rem,calc(25 / 18));
         padding-top: 5px;
+        @include sp {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
 
@@ -605,12 +630,18 @@ ul .slide-dots{
     width: 100%;
     display: flex;
     gap: 69px;
+    @include sp {
+        gap: 20px;
+    }
 }
 
 .news-symbol {
     position: relative;
     text-align: right;
     margin-top: 22px;
+    @include sp {
+        margin-top: 18px;
+    }
 
     p {
         color: $accent-sb-color;
