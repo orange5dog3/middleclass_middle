@@ -766,6 +766,11 @@ ul .slide-dots li.slick-active button {
 #company {
   padding: 80px 0;
 }
+@media screen and (max-width: 767px) {
+  #company {
+    padding: 50px 0 50px;
+  }
+}
 
 .company-content {
   display: -webkit-box;
@@ -773,14 +778,34 @@ ul .slide-dots li.slick-active button {
   display: flex;
   margin-top: 70px;
 }
+@media screen and (max-width: 767px) {
+  .company-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+  }
+}
 
 .company-map {
   width: 65.2173913043%;
   z-index: 10;
 }
+@media screen and (max-width: 767px) {
+  .company-map {
+    width: 100%;
+  }
+}
 .company-map iframe {
   width: 100%;
   aspect-ratio: 3/2;
+}
+@media screen and (max-width: 767px) {
+  .company-map iframe {
+    aspect-ratio: 315/300;
+  }
 }
 
 .company-textarea {
@@ -792,6 +817,13 @@ ul .slide-dots li.slick-active button {
   background-color: #4D9600;
   margin-left: -180px;
   margin-top: 200px;
+}
+@media screen and (max-width: 767px) {
+  .company-textarea {
+    margin: 0;
+    padding: 20px 20px 12px;
+    width: 100%;
+  }
 }
 .company-textarea h3 {
   font-weight: 500;
