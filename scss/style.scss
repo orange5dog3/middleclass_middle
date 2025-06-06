@@ -659,20 +659,34 @@ ul .slide-dots{
 // --------------------company--------------------
 #company {
     padding: 80px 0;
+    @include sp {
+        padding: 50px 0 50px;
+    }
 }
 
 .company-content {
     display: flex;
     margin-top: 70px;
+    @include sp {
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 20px;
+    }
 }
 
 .company-map {
     width: calc(600 / 920 * 100%);
     z-index: 10;
+    @include sp {
+        width: 100%;
+    }
 
     iframe {
         width: 100%;
         aspect-ratio: 3 / 2;
+        @include sp {
+            aspect-ratio: 315 / 300;
+        }
     }
 }
 
@@ -681,6 +695,11 @@ ul .slide-dots{
     color: $sb-color;
     @include green-box;
     margin-top: 200px;
+    @include sp {
+        margin: 0;
+        padding: 20px 20px 12px;
+        width: 100%;
+    }
 
     h3 {
         @include text-style(2.0rem,calc(33 / 20))
