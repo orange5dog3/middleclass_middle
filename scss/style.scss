@@ -461,6 +461,9 @@ ul .slide-dots{
 // --------------------works--------------------
 #works {
     padding: 80px 0 97px;
+    @include sp {
+        padding: 50px 0 40px;
+    }
 }
 
 .works-content {
@@ -469,10 +472,18 @@ ul .slide-dots{
     justify-content: center;
     gap: calc(40 / 920 * 100%);
     margin-top: 68px;
+    @include sp {
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 20px;
+    }
 }
 
 .works-content-item {
     width: calc(200 / 9.2 * 100%);
+    @include sp {
+        width: 100%;
+    }
 
     img {
         width: 100%;
@@ -481,6 +492,9 @@ ul .slide-dots{
     p {
         @include text-style();
         margin-top: 20px;
+        @include sp {
+            margin-top: 10px;
+        }
     }
 }
 
