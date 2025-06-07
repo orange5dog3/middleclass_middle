@@ -702,7 +702,7 @@ ul .slide-dots{
     }
 
     h3 {
-        @include text-style(2.0rem,calc(33 / 20))
+        @include text-style(2.0rem,calc(33 / 20));
     }
 
     p {
