@@ -664,6 +664,7 @@ ul .slide-dots{
     }
 }
 
+
 .company-content {
     display: flex;
     margin-top: 70px;
@@ -719,18 +720,29 @@ ul .slide-dots{
 
     p:nth-of-type(3) {
         margin-top:18px;
+        @include sp {
+        margin-top: 15px;
+        }
     }
 
     span {
         @include text-style(2.5rem,calc(25 / 25))
     }
 }
+// 縦並びになってしまう原因の解消
+.company-tel,
+.company-email{
+    display: flex;
+    align-items: center;
+}
 
 // --------------------contact--------------------
 #contact {
     padding: 78px 0;
     @include text-style(2.0rem,calc( 33 / 20));
-
+    @include sp {
+        padding: 50px 0 50px;
+    }
 
     h3 {
         margin-top: 35px;
@@ -740,7 +752,6 @@ ul .slide-dots{
 .form-flex {
     display: flex;
     align-items: center;
-
 
     .form-content-left {
         width: 170px;
@@ -767,21 +778,41 @@ ul .slide-dots{
 
 .form-name{
     margin-top: 74px;
+    @include sp {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
 
     .form-content-right{
         @include text-style(1.6rem,calc(25 / 16));
-    }
+            width: 100%;
+        }
 }
 
 .form-gender{
     margin-top: 50px;
+    @include sp {
+        margin-top: 35px;
+    }
+
+    .form-content-left {
+        @include sp {
+            width: 90px;
+        }
+    }
+
     .form-content-right{
         @include text-style(1.8rem,calc(25 / 18));
         display: flex;
         align-items: center;
         
+        
         input {
             margin-right: 26px;
+            @include sp {
+                margin-right: 19px;
+            }
             
             // ボタンのレイアウト
             width: 20px;      
@@ -809,24 +840,43 @@ ul .slide-dots{
 
         label[for="gender-men"]{
             margin-right: 74px;
+            @include sp {
+                margin-right: 30px;
+            }
         }
     }
 }
 
 .form-email {
     margin-top: 55px;
+    @include sp {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
 
     .form-content-right{
         @include text-style(1.6rem,calc(25 / 16));
+        @include sp {
+            width: 100%;
+        }
     }
 }
 
 .form-category {
     margin-top: 53px;
+    @include sp {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
 
     .form-content-right{
         @include text-style(1.8rem,calc(25 / 18));
         position: relative;
+        @include sp {
+            width: 100%;
+        }
 
         img {
             position: absolute;
@@ -839,6 +889,7 @@ ul .slide-dots{
 
 .form-content {
     margin-top: 50px;
+    
 
     textarea{
         margin-top: 10px;
@@ -847,6 +898,7 @@ ul .slide-dots{
         padding: 10px;
         min-height: 200px;
         resize: none;
+        
     }
 }
 
@@ -859,6 +911,9 @@ ul .slide-dots{
         flex-wrap: wrap;
         margin-top: 10px;
         row-gap: 13px;
+        @include sp {
+            row-gap: 10px;
+        }
 
 
         label  {
