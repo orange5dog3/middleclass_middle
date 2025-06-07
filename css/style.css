@@ -844,10 +844,25 @@ ul .slide-dots li.slick-active button {
 .company-textarea p:nth-of-type(3) {
   margin-top: 18px;
 }
+@media screen and (max-width: 767px) {
+  .company-textarea p:nth-of-type(3) {
+    margin-top: 15px;
+  }
+}
 .company-textarea span {
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 1;
+}
+
+.company-tel,
+.company-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #contact {
@@ -855,6 +870,11 @@ ul .slide-dots li.slick-active button {
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
+}
+@media screen and (max-width: 767px) {
+  #contact {
+    padding: 50px 0 50px;
+  }
 }
 #contact h3 {
   margin-top: 35px;
@@ -890,14 +910,37 @@ ul .slide-dots li.slick-active button {
 .form-name {
   margin-top: 74px;
 }
+@media screen and (max-width: 767px) {
+  .form-name {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 40px;
+  }
+}
 .form-name .form-content-right {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5625;
+  width: 100%;
 }
 
 .form-gender {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .form-gender {
+    margin-top: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-gender .form-content-left {
+    width: 90px;
+  }
 }
 .form-gender .form-content-right {
   font-weight: 500;
@@ -920,6 +963,11 @@ ul .slide-dots li.slick-active button {
   position: relative;
   background-color: #FFFFFF;
 }
+@media screen and (max-width: 767px) {
+  .form-gender .form-content-right input {
+    margin-right: 19px;
+  }
+}
 .form-gender .form-content-right input:checked::before {
   content: "";
   display: block;
@@ -936,24 +984,63 @@ ul .slide-dots li.slick-active button {
 .form-gender .form-content-right label[for=gender-men] {
   margin-right: 74px;
 }
+@media screen and (max-width: 767px) {
+  .form-gender .form-content-right label[for=gender-men] {
+    margin-right: 30px;
+  }
+}
 
 .form-email {
   margin-top: 55px;
+}
+@media screen and (max-width: 767px) {
+  .form-email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 40px;
+  }
 }
 .form-email .form-content-right {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.5625;
 }
+@media screen and (max-width: 767px) {
+  .form-email .form-content-right {
+    width: 100%;
+  }
+}
 
 .form-category {
   margin-top: 53px;
+}
+@media screen and (max-width: 767px) {
+  .form-category {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 40px;
+  }
 }
 .form-category .form-content-right {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.3888888889;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .form-category .form-content-right {
+    width: 100%;
+  }
 }
 .form-category .form-content-right img {
   position: absolute;
@@ -989,6 +1076,11 @@ ul .slide-dots li.slick-active button {
       flex-wrap: wrap;
   margin-top: 10px;
   row-gap: 13px;
+}
+@media screen and (max-width: 767px) {
+  .form-question .form-question-flex {
+    row-gap: 10px;
+  }
 }
 .form-question .form-question-flex label {
   display: -webkit-box;
