@@ -1002,7 +1002,7 @@ ul .slide-dots li.slick-active button {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 .form-email .form-content-right {
@@ -1028,7 +1028,7 @@ ul .slide-dots li.slick-active button {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-top: 40px;
+    margin-top: 33px;
   }
 }
 .form-category .form-content-right {
@@ -1040,6 +1040,9 @@ ul .slide-dots li.slick-active button {
 @media screen and (max-width: 767px) {
   .form-category .form-content-right {
     width: 100%;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5625;
   }
 }
 .form-category .form-content-right img {
@@ -1049,9 +1052,19 @@ ul .slide-dots li.slick-active button {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+@media screen and (max-width: 767px) {
+  .form-category .form-content-right img {
+    right: 22px;
+  }
+}
 
 .form-content {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .form-content {
+    margin-top: 35px;
+  }
 }
 .form-content textarea {
   margin-top: 10px;
@@ -1061,9 +1074,22 @@ ul .slide-dots li.slick-active button {
   min-height: 200px;
   resize: none;
 }
+@media screen and (max-width: 767px) {
+  .form-content textarea {
+    margin-top: 0;
+  }
+}
 
 .form-question {
   margin-top: 50px;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.35;
+}
+@media screen and (max-width: 767px) {
+  .form-question {
+    margin-top: 30px;
+  }
 }
 .form-question .form-question-flex {
   font-weight: 500;
@@ -1079,7 +1105,11 @@ ul .slide-dots li.slick-active button {
 }
 @media screen and (max-width: 767px) {
   .form-question .form-question-flex {
-    row-gap: 10px;
+    row-gap: 5px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5625;
+    margin-top: 0;
   }
 }
 .form-question .form-question-flex label {
@@ -1091,6 +1121,11 @@ ul .slide-dots li.slick-active button {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .form-question .form-question-flex label {
+    width: 50%;
+  }
+}
 .form-question .form-question-flex label input {
   width: 20px;
   height: 20px;
@@ -1098,14 +1133,30 @@ ul .slide-dots li.slick-active button {
   margin-right: 20px;
   background-color: #FFFFFF;
 }
+@media screen and (max-width: 767px) {
+  .form-question .form-question-flex label input {
+    margin-right: 10px;
+  }
+}
 
 .form-textbox {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .form-textbox {
+    margin-top: 30px;
+  }
 }
 .form-textbox .contact-white-textbox {
   margin-top: 10px;
   background-color: #FFFFFF;
   height: 300px;
+}
+@media screen and (max-width: 767px) {
+  .form-textbox .contact-white-textbox {
+    margin-top: 0;
+    height: 323px;
+  }
 }
 .form-textbox .contact-white-textbox .contact-textbox {
   padding: 40px;
@@ -1114,6 +1165,15 @@ ul .slide-dots li.slick-active button {
   line-height: 1.7222222222;
   overflow-y: scroll;
   height: 260px;
+}
+@media screen and (max-width: 767px) {
+  .form-textbox .contact-white-textbox .contact-textbox {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.0625;
+    padding: 30px 50px 30px 30px;
+    height: 290px;
+  }
 }
 
 #contact button {
@@ -1130,6 +1190,12 @@ ul .slide-dots li.slick-active button {
   margin: 80px auto 0;
   cursor: pointer;
 }
+@media screen and (max-width: 767px) {
+  #contact button {
+    margin-top: 50px;
+    padding: 7.5px 65px;
+  }
+}
 
 #contact button:hover {
   background-color: #FFFFFF;
@@ -1139,6 +1205,11 @@ ul .slide-dots li.slick-active button {
 #ending {
   text-align: center;
   padding: 80px 0;
+}
+@media screen and (max-width: 767px) {
+  #ending {
+    padding: 48px 0 50px;
+  }
 }
 #ending h2 {
   font-weight: 500;
@@ -1159,12 +1230,16 @@ ul .slide-dots li.slick-active button {
   gap: 50px;
   border-top: 1px solid #000000;
   margin-top: 28px;
-  padding: 28px 0 28px;
+  padding: 28px 0;
 }
 @media screen and (max-width: 767px) {
   .ending-link-list {
+    margin-top: 20px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 30px;
+    row-gap: 5px;
   }
 }
 

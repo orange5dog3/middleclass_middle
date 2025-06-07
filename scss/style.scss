@@ -852,7 +852,7 @@ ul .slide-dots{
     @include sp {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .form-content-right{
@@ -868,7 +868,7 @@ ul .slide-dots{
     @include sp {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 40px;
+        margin-top: 33px;
     }
 
     .form-content-right{
@@ -876,6 +876,8 @@ ul .slide-dots{
         position: relative;
         @include sp {
             width: 100%;
+            @include text-style(1.6rem,calc(25 / 16));
+
         }
 
         img {
@@ -883,13 +885,18 @@ ul .slide-dots{
             top: 50%;
             right: 17px;
             transform: translateY(-50%);
+            @include sp {
+                right: 22px;
+            }
         }
     }
 }
 
 .form-content {
     margin-top: 50px;
-    
+    @include sp {
+        margin-top: 35px;
+    }
 
     textarea{
         margin-top: 10px;
@@ -898,12 +905,18 @@ ul .slide-dots{
         padding: 10px;
         min-height: 200px;
         resize: none;
-        
+        @include sp {
+            margin-top: 0;
+        }
     }
 }
 
 .form-question {
     margin-top: 50px;
+    @include text-style(2.0rem,calc(27 / 20));
+    @include sp {
+        margin-top: 30px;
+    }
 
     .form-question-flex {
         @include text-style(1.8rem,calc(25 / 18));
@@ -912,7 +925,9 @@ ul .slide-dots{
         margin-top: 10px;
         row-gap: 13px;
         @include sp {
-            row-gap: 10px;
+            row-gap: 5px;
+            @include text-style(1.6rem,calc(25 / 16));
+            margin-top: 0;
         }
 
 
@@ -920,6 +935,9 @@ ul .slide-dots{
             display: flex;
             width: 25%;
             align-items: center;
+            @include sp {
+                width: 50%;
+            }
 
             input {
             // ボタンのレイアウト
@@ -928,6 +946,9 @@ ul .slide-dots{
             border: none; 
             margin-right: 20px; 
             background-color: $main-bg-color;
+            @include sp {
+                margin-right: 10px;
+            }
             }
         }
     }
@@ -935,19 +956,29 @@ ul .slide-dots{
 
 .form-textbox {
     margin-top: 50px;
+    @include sp {
+        margin-top: 30px;    
+    }
 
     .contact-white-textbox{
         margin-top: 10px;
         background-color: $main-bg-color;
         height: 300px;
-        // box-sizing: border-box;
+        @include sp {
+            margin-top: 0;
+            height: 323px;
+        }
 
         .contact-textbox {
             padding: 40px;
             @include text-style(1.8rem,calc(31 / 18));
             overflow-y: scroll;
             height: 260px;
-            // margin: 40px;
+            @include sp {
+                @include text-style(1.6rem,calc(33 / 16));
+                padding: 30px 50px 30px 30px;
+                height: 290px;
+            }
         }
     }
 }
@@ -962,6 +993,10 @@ ul .slide-dots{
     display: block;
     margin: 80px auto 0;
     cursor: pointer;
+    @include sp {
+        margin-top: 50px;
+        padding: 7.5px 65px;
+    }
 }
 
 #contact button:hover {
@@ -973,6 +1008,9 @@ ul .slide-dots{
 #ending {
     text-align: center;
     padding: 80px 0;
+    @include sp {
+        padding: 48px 0 50px;
+    }
 
     h2 {
         @include text-style(2.0rem,calc(33 / 20));
@@ -986,11 +1024,14 @@ ul .slide-dots{
     gap: 50px;
     border-top: 1px solid $main-color;
     margin-top: 28px;
-    padding: 28px 0 28px;
-
+    padding: 28px 0;
 
     @include sp {
+        margin-top: 20px;
         flex-wrap: wrap;
+        padding: 20px 0;
+        gap: 30px;
+        row-gap: 5px;
     }
 }
 
