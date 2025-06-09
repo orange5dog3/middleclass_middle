@@ -21,3 +21,12 @@ for (let i = 1; i <= 4; i++) {
         $(`.modal-area${i}`).hide();
     });
 }
+
+// hamburger------------------------
+$(".hamburger-trigger").click(
+    function() {
+    $(".hamburger-menu").toggle(300)
+    $(".hamburger").toggleClass("active")
+    $("#hamburger-bg").toggleClass("active")
+    }
+);
