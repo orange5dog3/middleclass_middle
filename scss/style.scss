@@ -136,6 +136,7 @@ a:hover {
 header {
     color: $sb-color;
     position: relative;
+    z-index: 1;
 
     img {
         width: 100%;
@@ -286,6 +287,108 @@ ul .slide-dots{
         width: 100%;
     }
 }
+
+// hamburger
+    // 3本線
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $main-bg-color;
+    width: 7.2rem;
+    height: 5rem;
+    z-index: 10;
+
+    &-line,
+    &-line::before,
+    &-line::after{
+        position: absolute;
+        height: 0.4rem;
+        width: 3.2rem;
+        background-color: $accent-color;
+        border-radius: 25%;
+        left: 2rem;
+        z-index: 11;
+        transition: 0.3s;
+    }
+
+    &-line{
+        top: 2.1rem;
+    }
+
+
+    &-line::before,
+    &-line::after {
+        content: "";
+        left: 0;
+    }
+
+    &-line::before{
+        top: -1.2rem;
+    }
+
+    &-line::after{
+        top: 1.2rem;
+    }
+}
+    // 3本線閉じる
+.hamburger.active .hamburger-line {
+    background-color: transparent;
+}
+
+.hamburger.active .hamburger-line::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+.hamburger.active .hamburger-line::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+    // 中身
+.hamburger-menu {
+    position: fixed;
+    width: 30rem;
+    height: auto;
+    top: 5rem;
+    right: 0;
+    overflow: hidden;
+    display: none;
+    background-color: $accent-color;
+    color: $sb-color;
+    z-index: 101;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        @include text-style(1.8rem,calc(33 / 18));
+        padding: 1.2rem 0 1.2rem 2rem;
+    }
+}
+
+    // 背景
+.hamburger-bg {
+    transition: 0.3s;
+}
+
+.hamburger-bg.active {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: $main-color;
+    opacity: 0.6;
+    z-index: 100;
+}
+
+// なぜかheader全てをbgが覆ってくれない
+
 
 // --------------------about--------------------
 #about {
