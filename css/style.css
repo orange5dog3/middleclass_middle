@@ -79,12 +79,22 @@ a:hover {
 .upper-arrow {
   position: relative;
   position: fixed;
-  right: 60px;
-  bottom: 60px;
+  width: 6.8rem;
+  height: 6.8rem;
+  right: 6rem;
+  bottom: 6rem;
   z-index: 999;
+}
+@media screen and (max-width: 767px) {
+  .upper-arrow {
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+  }
 }
 .upper-arrow img {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -103,8 +113,9 @@ a:hover {
 }
 header {
   color: #FFFFFF;
+  position: fixed;
   position: relative;
-  z-index: 1;
+  z-index: 999;
 }
 header img {
   width: 100%;
@@ -136,7 +147,7 @@ header h2 {
 }
 
 .header-content {
-  position: absolute;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,6 +161,14 @@ header h2 {
   padding-top: 2rem;
   padding-left: 6.0185185185vw;
   padding-right: 6.0185185185vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4D9600), to(rgba(77, 150, 0, 0.4)));
+  background: linear-gradient(to bottom, #4D9600, rgba(77, 150, 0, 0.4));
+}
+@media screen and (max-width: 767px) {
+  .header-content {
+    padding: 0 0 0 0.5rem;
+    height: 5rem;
+  }
 }
 .header-content a {
   display: -webkit-box;
@@ -184,11 +203,6 @@ header h2 {
 @media screen and (max-width: 1000px) {
   .header-content-nav ul {
     display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  .header-content {
-    padding: 0 0 0 0.5rem;
   }
 }
 
@@ -285,7 +299,7 @@ ul .slide-dots li.slick-active button {
   background-color: #FFFFFF;
   width: 7.2rem;
   height: 5rem;
-  z-index: 100 !important;
+  z-index: 10;
 }
 .hamburger-line, .hamburger-line::before, .hamburger-line::after {
   position: absolute;
@@ -336,7 +350,7 @@ ul .slide-dots li.slick-active button {
   display: none;
   background-color: #4D9600;
   color: #FFFFFF;
-  z-index: 101;
+  z-index: 100;
 }
 .hamburger-menu ul {
   display: -webkit-box;
@@ -346,28 +360,25 @@ ul .slide-dots li.slick-active button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 100;
 }
 .hamburger-menu li {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
-  z-index: 100;
 }
 .hamburger-menu a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 1.2rem 0 1.2rem 2rem;
-  z-index: 100;
 }
 .hamburger-menu a:hover {
   background-color: #000000;
+  opacity: 1;
 }
 
 .hamburger-bg {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 100;
 }
 
 .hamburger-bg.active {
@@ -378,7 +389,6 @@ ul .slide-dots li.slick-active button {
   height: 100vh;
   background: #000000;
   opacity: 0.6;
-  z-index: 100;
 }
 
 #about {
@@ -722,14 +732,27 @@ ul .slide-dots li.slick-active button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
-  height: 275px;
+  width: 45rem;
+  height: 27.5rem;
   background-color: #FFFFFF;
 }
+@media screen and (max-width: 767px) {
+  .modal-content-whitebox {
+    width: 31.5rem;
+    height: 21rem;
+  }
+}
 .modal-content-whitebox .modal-content {
-  margin: 15px 15px 0;
-  width: 420px;
-  height: 220px;
+  margin: 1.5rem 1.5rem 0;
+  width: 42rem;
+  height: 22rem;
+}
+@media screen and (max-width: 767px) {
+  .modal-content-whitebox .modal-content {
+    margin: 2rem 2rem 0;
+    width: 27.4rem;
+    height: 14.4rem;
+  }
 }
 .modal-content-whitebox .modal-content picture {
   display: block;
