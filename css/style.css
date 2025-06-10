@@ -733,25 +733,22 @@ ul .slide-dots li.slick-active button {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 45rem;
-  height: 27.5rem;
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 767px) {
   .modal-content-whitebox {
     width: 31.5rem;
-    height: 21rem;
   }
 }
 .modal-content-whitebox .modal-content {
-  margin: 1.5rem 1.5rem 0;
+  margin: 1.5rem 1.5rem 0.6rem;
   width: 42rem;
-  height: 22rem;
 }
 @media screen and (max-width: 767px) {
   .modal-content-whitebox .modal-content {
-    margin: 2rem 2rem 0;
+    margin: 2rem 2rem 1.4rem;
     width: 27.4rem;
-    height: 14.4rem;
+    height: auto;
   }
 }
 .modal-content-whitebox .modal-content picture {
