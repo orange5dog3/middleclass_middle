@@ -291,13 +291,13 @@ ul .slide-dots{
 // hamburger
     // 3本線
 .hamburger {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: $main-bg-color;
     width: 7.2rem;
     height: 5rem;
-    z-index: 100;
+    z-index: 100!important;
 
     &-line,
     &-line::before,

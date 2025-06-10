@@ -279,13 +279,13 @@ ul .slide-dots li.slick-active button {
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #FFFFFF;
   width: 7.2rem;
   height: 5rem;
-  z-index: 100;
+  z-index: 100 !important;
 }
 .hamburger-line, .hamburger-line::before, .hamburger-line::after {
   position: absolute;
