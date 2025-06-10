@@ -291,13 +291,13 @@ ul .slide-dots{
 // hamburger
     // 3本線
 .hamburger {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: $main-bg-color;
     width: 7.2rem;
     height: 5rem;
-    z-index: 10;
+    z-index: 100!important;
 
     &-line,
     &-line::before,
@@ -332,22 +332,23 @@ ul .slide-dots{
     }
 }
     // 3本線閉じる
-.hamburger.active .hamburger-line {
+.hamburger.active {
+    .hamburger-line {
     background-color: transparent;
+    }
+
+    .hamburger-line::before {
+    transform: rotate(45deg);
+    top: 0;
+    }
+
+    .hamburger-line::after {
+    transform: rotate(-45deg);
+    top: 0;
+    }
+
 }
 
-.hamburger.active .hamburger-line::before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 0;
-}
-.hamburger.active .hamburger-line::after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 0;
-}
 
     // 中身
 .hamburger-menu {
@@ -365,21 +366,38 @@ ul .slide-dots{
     ul {
         display: flex;
         flex-direction: column;
+        z-index: 100;
     }
 
     li {
         @include text-style(1.8rem,calc(33 / 18));
+        z-index: 100;
+
+    }
+
+    a {
+        transition: 0.3s;
         padding: 1.2rem 0 1.2rem 2rem;
+        z-index: 100;
+
+
+        &:hover {
+            background-color: $main-color;
+        }
     }
 }
 
     // 背景
 .hamburger-bg {
     transition: 0.3s;
+        z-index: 100;
+
 }
 
 .hamburger-bg.active {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background: $main-color;
@@ -387,7 +405,6 @@ ul .slide-dots{
     z-index: 100;
 }
 
-// なぜかheader全てをbgが覆ってくれない
 
 
 // --------------------about--------------------
@@ -473,6 +490,7 @@ ul .slide-dots{
     display: flex;
     flex-direction: row;
     width: 100%;
+    z-index: 1;
 
     @include sp {
         flex-direction: column;
@@ -500,7 +518,7 @@ ul .slide-dots{
 
 .service-content-imagebox {
     width: calc(600 / 920 * 100%);
-    z-index: 100;
+    z-index: 11;
 
     @include sp {
         width: 100%;

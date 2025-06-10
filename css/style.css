@@ -279,13 +279,13 @@ ul .slide-dots li.slick-active button {
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #FFFFFF;
   width: 7.2rem;
   height: 5rem;
-  z-index: 10;
+  z-index: 100 !important;
 }
 .hamburger-line, .hamburger-line::before, .hamburger-line::after {
   position: absolute;
@@ -315,16 +315,14 @@ ul .slide-dots li.slick-active button {
 .hamburger.active .hamburger-line {
   background-color: transparent;
 }
-
 .hamburger.active .hamburger-line::before {
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
   top: 0;
 }
-
 .hamburger.active .hamburger-line::after {
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+          transform: rotate(-45deg);
   top: 0;
 }
 
@@ -348,21 +346,34 @@ ul .slide-dots li.slick-active button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 100;
 }
 .hamburger-menu li {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
+  z-index: 100;
+}
+.hamburger-menu a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   padding: 1.2rem 0 1.2rem 2rem;
+  z-index: 100;
+}
+.hamburger-menu a:hover {
+  background-color: #000000;
 }
 
 .hamburger-bg {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 100;
 }
 
 .hamburger-bg.active {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: #000000;
@@ -501,6 +512,7 @@ ul .slide-dots li.slick-active button {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
+  z-index: 1;
 }
 @media screen and (max-width: 767px) {
   .service-content-item {
@@ -538,7 +550,7 @@ ul .slide-dots li.slick-active button {
 
 .service-content-imagebox {
   width: 65.2173913043%;
-  z-index: 100;
+  z-index: 11;
 }
 @media screen and (max-width: 767px) {
   .service-content-imagebox {
