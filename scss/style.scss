@@ -108,12 +108,20 @@ a:hover {
 .upper-arrow {
     position: relative;
     position: fixed;
-    right: 60px;
-    bottom: 60px;
+    width: 6.8rem;
+    height: 6.8rem;
+    right: 6rem;
+    bottom: 6rem;
     z-index: 999;
+    @include sp{
+        right: 2rem;
+        width: 5rem;
+        height: 5rem;
+    }
 
     img {
         position: absolute;
+        width: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -135,8 +143,9 @@ a:hover {
 // --------------------header--------------------
 header {
     color: $sb-color;
+    position: fixed;
     position: relative;
-    z-index: 1;
+    z-index: 999;
 
     img {
         width: 100%;
@@ -163,7 +172,7 @@ header {
 }
 
 .header-content {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -173,6 +182,14 @@ header {
     padding-top: 2.0rem;
     padding-left:calc(65 / 1080 * 100vw) ;
     padding-right:calc(65 / 1080 * 100vw) ;
+    background: linear-gradient(to bottom, $accent-color, rgba(77, 150, 0, 0.4));
+
+
+    
+    @include sp {
+            padding: 0 0 0 0.5rem;
+            height: 5rem;
+    }
 
 
     a {
@@ -195,10 +212,6 @@ header {
         @media screen and (max-width:1000px) {
             display: none;
         }
-    }
-
-    @include sp {
-        padding: 0 0 0 0.5rem;
     }
 }
 
@@ -297,7 +310,7 @@ ul .slide-dots{
     background-color: $main-bg-color;
     width: 7.2rem;
     height: 5rem;
-    z-index: 100!important;
+    z-index: 10;
 
     &-line,
     &-line::before,
@@ -361,28 +374,24 @@ ul .slide-dots{
     display: none;
     background-color: $accent-color;
     color: $sb-color;
-    z-index: 101;
+    z-index: 100;
 
     ul {
         display: flex;
         flex-direction: column;
-        z-index: 100;
     }
 
     li {
         @include text-style(1.8rem,calc(33 / 18));
-        z-index: 100;
-
     }
 
     a {
         transition: 0.3s;
         padding: 1.2rem 0 1.2rem 2rem;
-        z-index: 100;
-
 
         &:hover {
-            background-color: $main-color;
+            background-color: $main-color ;
+            opacity: 1;
         }
     }
 }
@@ -390,8 +399,6 @@ ul .slide-dots{
     // 背景
 .hamburger-bg {
     transition: 0.3s;
-        z-index: 100;
-
 }
 
 .hamburger-bg.active {
@@ -402,7 +409,6 @@ ul .slide-dots{
     height: 100vh;
     background: $main-color;
     opacity: 0.6;
-    z-index: 100;
 }
 
 
@@ -652,15 +658,24 @@ ul .slide-dots{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 450px;
-    height: 275px;
+    width: 45rem;
+    height: 27.5rem;
     background-color: $sb-color;
+    @include sp{
+        width: 31.5rem;
+        height: 21rem;
+    }
 
 
     .modal-content {
-        margin: 15px 15px 0;
-        width: 420px;
-        height: 220px;
+        margin: 1.5rem 1.5rem 0;
+        width: 42rem;
+        height: 22rem;
+        @include sp{
+            margin: 2rem 2rem 0;
+            width: 27.4rem;
+            height: 14.4rem;
+        }
 
 
         picture {
