@@ -137,7 +137,7 @@
                                 <div class="service-content-text">
                                     <h3>新築<span class="inline">（土地探し〜建築）</span></h3>
                                     <p> お客様にあった土地探しから <br class="service-middle_none">
-                                        建築、施工までサポートいたします。<br class="service-middle_none">
+                                        建築、施工までサポート<span class="nowrap">いたします</span>。<br class="service-middle_none">
                                         風水的観点からもご提案。</p>
                                 </div>
                                 <div class="green-box-right"></div>
@@ -154,7 +154,7 @@
                                     <h3>リフォーム<span class="inline">リノベーション</span></h3>
                                     <p> 温かみと雰囲気をそのままに<br class="service-middle_none">
                                         住み心地、使い心地を<br class="service-middle_none">
-                                        追求しご提供いたします。</p>
+                                        追求しご提供<span class="nowrap">いたします</span>。</p>
                                 </div>
                                 <div class="green-box-left"></div>
                             </div>
@@ -169,7 +169,7 @@
                                 <div class="service-content-text">
                                     <h3>都市計画〜開発<br>公共施設</h3>
                                     <p> 都市計画から都市開発まで <br class="service-middle_none">
-                                        ご提案いたします。<br class="service-middle_none">
+                                        ご提案<span class="nowrap">いたします</span>。<br class="service-middle_none">
                                         公共施設もさらに居心地良く。</p>
                                 </div>
                                 <div class="green-box-right"></div>
@@ -401,7 +401,7 @@
                                     <label for="email">メールアドレス *</label>
                                 </div>
                                 <div class="form-content-right">
-                                    <input type="email" id="email" name="email" placeholder="例：aaaaaaaa@gmail.com">
+                                    <input type="email" id="email" name="email" placeholder="例：aaaaaaaa@gmail.com" required>
                                 </div>
                             </div>
                             <div class="form-category form-flex">
@@ -446,9 +446,8 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <button type="submit">内容に同意して送信</button>
                         </form>
-                        <button type="submit">内容に同意して送信</button>
                     </div>
                 </section>
                 <section id="ending">
@@ -463,10 +462,10 @@
                             <a href="#contact">CONTACT</a>
                         </div>
                         <div class="ending-icon-list">
-                            <img src="image/ending-icon-twitter.svg" alt="twitter">
-                            <img src="image/ending-icon-facebook.svg" alt="facebook">
-                            <img src="image/ending-icon-youtube.svg" alt="youtube">
-                            <img src="image/ending-icon-instagram.svg" alt="instagram">
+                            <a href="#"><img src="image/ending-icon-twitter.svg" alt="twitter"></a>
+                            <a href="#"><img src="image/ending-icon-facebook.svg" alt="facebook"></a>
+                            <a href="#"><img src="image/ending-icon-youtube.svg" alt="youtube"></a>
+                            <a href="#"><img src="image/ending-icon-instagram.svg" alt="instagram"></a>
                         </div>
                     </div>
                 </section>
@@ -477,11 +476,13 @@
                     &copy;Copyright2022&emsp;<span class="inline">kitamurakensetukogyo</span>
                 </p>
             </footer>
-            <a href="#">
-                <picture class="upper-arrow">
-                    <img src="image/upper arrow.svg" alt="upper-arrow">
-                </picture>
-            </a>
+            <div id="upper-arrow">
+                <a href="#">
+                    <picture>
+                        <img src="image/upper arrow.svg" alt="upper-arrow">
+                    </picture>
+                </a>
+            </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
             <script src="js/slick.min.js"></script>
             <script src="js/main.js"></script>
