@@ -97,6 +97,10 @@ a:hover {
     display: inline-block;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .bg-green {
     background-color: $accent-bg-color;
 }
@@ -106,8 +110,7 @@ a:hover {
     background-color: $accent-color;
 }
 
-.upper-arrow {
-    position: relative;
+#upper-arrow {
     position: fixed;
     width: 6.8rem;
     height: 6.8rem;
@@ -127,6 +130,11 @@ a:hover {
         left: 50%;
         transform: translate(-50%,-50%);
     }
+    
+    a:hover{
+        transform: none;
+        opacity: 0.7;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -144,7 +152,6 @@ a:hover {
 // --------------------header--------------------
 header {
     color: $sb-color;
-    position: fixed;
     position: relative;
     z-index: 999;
 
@@ -992,12 +999,7 @@ ul .slide-dots{
         }
         
         
-        input {
-            margin-right: 2.6rem;
-            @include sp {
-                margin-right: 2rem;
-            }
-            
+        input[type="radio"] {
             // ボタンのレイアウト
             width: 2rem;      
             height: 2rem;     
@@ -1006,7 +1008,7 @@ ul .slide-dots{
             margin-right: 1.8rem; 
             position: relative; 
             background-color: $main-bg-color;
-
+            cursor: pointer;
 
             &:checked::before {
                 content: '';
@@ -1113,7 +1115,7 @@ ul .slide-dots{
             @include text-style(1.6rem,calc(25 / 16));
             margin-top: 0;
         }
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 350px) {
             @include text-style(1.2rem,calc(20 / 12));
         }
 
@@ -1126,16 +1128,28 @@ ul .slide-dots{
                 width: 50%;
             }
 
-            input {
-            // ボタンのレイアウト
-            width: 2rem;      
-            height: 2rem;     
-            border: none; 
-            margin-right: 2rem; 
-            background-color: $main-bg-color;
-            @include sp {
-                margin-right: 1rem;
-            }
+            input[type="checkbox"] {
+                width: 2rem;      
+                height: 2rem;     
+                border: none;
+                margin-right: 2rem; 
+                background-color: $main-bg-color;
+                cursor: pointer;
+                position: relative;
+                @include sp {
+                    margin-right: 1rem;
+                }
+
+                &:checked::after {
+                    content: "✓";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $main-color;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
             }
         }
     }
@@ -1184,7 +1198,7 @@ ul .slide-dots{
         margin-top: 4.9rem;
         padding: 0.75rem 6.5rem;
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 350px) {
         @include text-style(1.7rem,calc(30 / 17));
         padding: 0.9rem 4rem;
     }
