@@ -20,7 +20,7 @@ $font-base: "YuMincho", "Noto Sans JP" ,sans-serif;
 }
 
 @mixin green-box {
-    padding:50px 5px 42px 220px;
+    padding:50px 9px 42px 220px;
     background-color: $accent-color;
     margin-left: -180px;
 }
@@ -55,11 +55,12 @@ h1,h2,h3,h4,label,input,a,ul,li {
 }
 
 a {
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 a:hover {
     opacity: 0.5;
+    transform: translateY(-3px);
 }
 
 .inner {
@@ -449,25 +450,38 @@ ul .slide-dots{
     }
     h2{
         @include text-style(3.0rem, 1.18);
-        letter-spacing:4px;
-        margin-left: 42.5px;
+        letter-spacing:0.4rem;
+        margin-left: 4.25rem;
+        @media screen and (max-width: 945px) and (min-width: 766px) {
+            @include text-style(2.7rem, 1.18);
+            margin-left: 3rem;
+        }
         @include sp {
             @include text-style(2.5rem, 1.18);
-            letter-spacing:5px;
+            letter-spacing:0.5rem;
             display: flex;
             align-items: center;
             margin: 0;
+        }
+        @media screen and (max-width: 320px) {
+            @include text-style(2rem, 1.18);
         }
     }
 
     p{
         @include text-style(1.8rem, 2.7);
-        letter-spacing: 7px;
+        letter-spacing: 0.7rem;
+        @media screen and (max-width: 945px) and (min-width: 766px) {
+            @include text-style(1.7rem, 2.4);
+        }
         @include sp {
             @include text-style(1.6rem, 1.6);
-            letter-spacing: 4px;
+            letter-spacing: 0.4rem;
             display: flex;
             align-items: center;
+        }
+        @media screen and (max-width: 320px) {
+            @include text-style(1.3rem, 1.5);
         }
     }
 }
@@ -536,14 +550,14 @@ ul .slide-dots{
 }
 
 .service-content-text {
-    margin-top: 145px;
+    margin-top: 14.5rem;
     flex: 1;
     color: $sb-color;
     z-index: 10;
     @include green-box;
     @include sp {
         margin: 0;
-        padding: 20px 20px 12px;
+        padding: 2rem 2rem 1.2rem;
     }
 
     h3 {
@@ -554,6 +568,12 @@ ul .slide-dots{
             @include text-style(2.0rem,calc(25 / 20));
             width: 22.5rem;
         }
+        @media screen and (max-width: 955px) and (min-width: 766px) {
+            @include text-style(2.3rem,calc(33 / 23));
+        }
+        @media screen and (max-width: 350px){
+            @include text-style(1.7rem,calc(20 / 17));
+        }
     }
 
     p {
@@ -561,6 +581,17 @@ ul .slide-dots{
         margin-top: 1.9rem;
         @include sp {
             margin-top: 1.4rem;
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 766px) {
+            .service-middle_none {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 350px){
+            .service-middle_none {
+                display: none;
+            }
         }
     }
 }
@@ -629,6 +660,9 @@ ul .slide-dots{
         @include sp {
             margin-top: 1rem;
         }
+        @media screen and (max-width: 950px) and (min-width: 766px) {
+            @include text-style(1.25rem, calc(20 / 12.5));
+        }
     }
 }
 
@@ -658,20 +692,19 @@ ul .slide-dots{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 45rem;
+    width: calc(45 / 108 * 100vw);
     background-color: $sb-color;
     @include sp{
-        width: 31.5rem;
+        width: calc(31.5 / 37.5 * 100vw);
     }
 
 
     .modal-content {
-        margin: 1.5rem 1.5rem 0.6rem;
-        width: 42rem;
+        margin: calc(1.5 / 108 * 100vw) auto calc(0.6 / 108 * 100vw);
+        width: calc(42 / 108 * 100vw);
         @include sp{
-            margin: 2rem 2rem 1.4rem;
-            width: 27.4rem;
-            height: auto;
+            margin: calc(2 / 37.5 * 100vw) auto calc(1.4 / 37.5 * 100vw);
+            width: calc(27.4 / 37.5 * 100vw);
         }
 
 
@@ -754,13 +787,11 @@ ul .slide-dots{
         flex: 1;
         @include text-style(1.8rem,calc(25 / 18));
         padding-top: 0.5rem;
-        @include sp {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2; 
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; 
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
@@ -837,16 +868,22 @@ ul .slide-dots{
     margin-top: 20rem;
     @include sp {
         margin: 0;
-        padding: 2rem 2rem 1.4rem;
+        padding: 2rem 2rem 1rem;
         width: 100%;
     }
 
     h3 {
         @include text-style(2.0rem,calc(33 / 20));
+        @media screen and (max-width: 830px) and (min-width: 766px) {
+            @include text-style(1.8rem,calc(30 / 18));
+        }
     }
 
     p {
         @include text-style(1.6rem, calc(25 / 16));
+        @media screen and (max-width: 830px) and (min-width: 766px) {
+            @include text-style(1.4rem,calc(22 / 14));
+        }
     }
 
     p:nth-of-type(1) {
@@ -855,6 +892,9 @@ ul .slide-dots{
 
     p:nth-of-type(2) {
         margin-top: 1rem;
+        @include sp {
+        margin-top: 1.5rem;
+        }
     }
 
     p:nth-of-type(3) {
@@ -955,7 +995,7 @@ ul .slide-dots{
         input {
             margin-right: 2.6rem;
             @include sp {
-                margin-right: rem;
+                margin-right: 2rem;
             }
             
             // ボタンのレイアウト
@@ -1012,7 +1052,7 @@ ul .slide-dots{
     @include sp {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 3.3rem;
+        margin-top: 3rem;
     }
 
     .form-content-right{
@@ -1072,6 +1112,9 @@ ul .slide-dots{
             row-gap: 0.5rem;
             @include text-style(1.6rem,calc(25 / 16));
             margin-top: 0;
+        }
+        @media screen and (max-width: 400px) {
+            @include text-style(1.2rem,calc(20 / 12));
         }
 
 
@@ -1135,11 +1178,15 @@ ul .slide-dots{
     color: $sb-color;
     transition: 0.3s;
     display: block;
-    margin: 8rem auto 0;
+    margin: 7.9rem auto 0;
     cursor: pointer;
     @include sp {
         margin-top: 4.9rem;
         padding: 0.75rem 6.5rem;
+    }
+    @media screen and (max-width: 400px) {
+        @include text-style(1.7rem,calc(30 / 17));
+        padding: 0.9rem 4rem;
     }
 }
 
@@ -1153,7 +1200,7 @@ ul .slide-dots{
     text-align: center;
     padding: 8rem 0;
     @include sp {
-        padding: 4.8rem 0 5rem;
+        padding: 5rem 0 5rem;
     }
 
     h2 {
@@ -1172,14 +1219,14 @@ ul .slide-dots{
     @include sp {
         margin-top: 2rem;
         flex-wrap: wrap;
-        padding: 1.3rem 0 2.5rem;
+        padding: 1.5rem 0 2.5rem;
         column-gap: 1.3rem;
     }
 
     a {
         padding:1rem 2.6rem;
         @include sp {
-            padding: 0.4rem 0.8rem;
+            padding: 0.3rem 0.8rem;
         }
     }
 }
@@ -1201,6 +1248,6 @@ footer p{
     padding: 3rem 0;
     @include sp {
         @include text-style(2.0rem,calc(25 / 20));
-        padding: 2rem 0;
+        padding: 2.2rem 0;
     }
 }
