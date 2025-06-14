@@ -1,0 +1,7 @@
+# 共有サーバー用の設定
+<Files "*">
+AuthType Basic
+AuthName "Protected Area"
+AuthUserFile .htpasswd
+Require valid-user
+</Files> 

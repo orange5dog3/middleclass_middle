@@ -1,0 +1,20 @@
+# Apache 2.4以降対応
+<IfModule mod_authz_core.c>
+    AuthType Basic
+    AuthName "Input ID and Password."
+    AuthUserFile /home/orange5dog3/orange-david.com/public_html/.htpasswd
+    Require valid-user
+</IfModule>
+
+# Apache 2.2以前対応
+<IfModule !mod_authz_core.c>
+    AuthType Basic
+    AuthName "Input ID and Password."
+    AuthUserFile /home/orange5dog3/orange-david.com/public_html/.htpasswd
+    require valid-user
+</IfModule>
+
+# 設定ファイルを外部からアクセス不可にする
+<Files ".ht*">
+    Require all denied
+</Files> 
