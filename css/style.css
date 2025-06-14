@@ -139,7 +139,7 @@ header h2 {
   line-height: 1.75;
   font-weight: 600;
   top: 42.5%;
-  left: 51%;
+  left: 50.5%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   letter-spacing: 0.3em;
@@ -188,7 +188,7 @@ header h2 {
       -ms-flex-align: center;
           align-items: center;
   height: 5rem;
-  padding-inline: 1.5rem;
+  padding-inline: 1.55rem;
 }
 .header-content h1 {
   font-weight: 500;
@@ -717,7 +717,7 @@ ul .slide-dots li.slick-active button {
 }
 @media screen and (max-width: 767px) {
   #works {
-    padding: 5rem 0 4rem;
+    padding: 5rem 0 4.2rem;
   }
 }
 
@@ -840,7 +840,7 @@ ul .slide-dots li.slick-active button {
 }
 @media screen and (max-width: 767px) {
   #news {
-    padding: 5.2rem 0 5rem;
+    padding: 5rem 0 5.3rem;
   }
 }
 
@@ -896,7 +896,7 @@ ul .slide-dots li.slick-active button {
   display: block;
   border-bottom: 0.1rem solid #55A500;
   padding-top: 1.5rem;
-  padding-bottom: 1.1rem;
+  padding-bottom: 1.2rem;
 }
 @media screen and (max-width: 767px) {
   .news-content-article {
@@ -940,7 +940,7 @@ ul .slide-dots li.slick-active button {
 .news-symbol {
   position: relative;
   text-align: right;
-  margin-top: 2.2rem;
+  margin-top: 1.8rem;
 }
 @media screen and (max-width: 767px) {
   .news-symbol {
@@ -961,7 +961,7 @@ ul .slide-dots li.slick-active button {
 }
 
 #company {
-  padding: 8rem 0;
+  padding: 8.2rem 0 7.8rem;
 }
 @media screen and (max-width: 767px) {
   #company {
@@ -981,7 +981,7 @@ ul .slide-dots li.slick-active button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 4rem;
+    margin-top: 3.8rem;
     gap: 2rem;
   }
 }
@@ -1013,7 +1013,7 @@ ul .slide-dots li.slick-active button {
   padding: 50px 9px 42px 220px;
   background-color: #4D9600;
   margin-left: -180px;
-  margin-top: 20rem;
+  margin-top: 19.7rem;
 }
 @media screen and (max-width: 767px) {
   .company-textarea {
@@ -1050,20 +1050,10 @@ ul .slide-dots li.slick-active button {
   margin-top: 0.7rem;
 }
 .company-textarea p:nth-of-type(2) {
-  margin-top: 1rem;
-}
-@media screen and (max-width: 767px) {
-  .company-textarea p:nth-of-type(2) {
-    margin-top: 1.5rem;
-  }
+  margin-top: 1.5rem;
 }
 .company-textarea p:nth-of-type(3) {
-  margin-top: 1.8rem;
-}
-@media screen and (max-width: 767px) {
-  .company-textarea p:nth-of-type(3) {
-    margin-top: 1.5rem;
-  }
+  margin-top: 1.5rem;
 }
 .company-textarea span {
   font-weight: 500;
@@ -1082,14 +1072,14 @@ ul .slide-dots li.slick-active button {
 }
 
 #contact {
-  padding: 7.8rem 0;
+  padding: 8rem 0;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
 }
 @media screen and (max-width: 767px) {
   #contact {
-    padding: 5rem 0;
+    padding: 4.8rem 0 5rem;
   }
 }
 #contact h3 {
@@ -1454,7 +1444,7 @@ ul .slide-dots li.slick-active button {
 }
 @media screen and (max-width: 767px) {
   #ending {
-    padding: 5rem 0 5rem;
+    padding: 5rem 0 5.2rem;
   }
 }
 #ending h2 {
@@ -1467,15 +1457,18 @@ ul .slide-dots li.slick-active button {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   border-top: 0.1rem solid #000000;
-  margin-top: 2.8rem;
+  margin-top: 2.6rem;
   padding: 1.8rem 0;
+  -webkit-column-gap: 2.7rem;
+     -moz-column-gap: 2.7rem;
+          column-gap: 2.7rem;
 }
 @media screen and (max-width: 767px) {
   .ending-link-list {
@@ -1483,13 +1476,13 @@ ul .slide-dots li.slick-active button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 1.5rem 0 2.5rem;
-    -webkit-column-gap: 1.3rem;
-       -moz-column-gap: 1.3rem;
-            column-gap: 1.3rem;
+    -webkit-column-gap: 1.31rem;
+       -moz-column-gap: 1.31rem;
+            column-gap: 1.31rem;
   }
 }
 .ending-link-list a {
-  padding: 1rem 2.6rem;
+  padding: 1rem 1.2rem;
 }
 @media screen and (max-width: 767px) {
   .ending-link-list a {
