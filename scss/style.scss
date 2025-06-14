@@ -166,7 +166,7 @@ header {
         @include text-style(4.0rem, (70/40));
         font-weight: 600;
         top: calc(340 / 800 * 100%);
-        left: 51%;
+        left: 50.5%;
         transform: translateX(-50%);
         letter-spacing: 0.3em;
 
@@ -195,8 +195,8 @@ header {
 
     
     @include sp {
-            padding: 0 0 0 0.5rem;
-            height: 5rem;
+        padding: 0 0 0 0.5rem;
+        height: 5rem;
     }
 
 
@@ -204,7 +204,7 @@ header {
         display: flex;
         align-items: center;
         height: 5rem;
-        padding-inline: 1.5rem;
+        padding-inline: 1.55rem;
     }
 
     h1 {
@@ -634,7 +634,7 @@ ul .slide-dots{
 #works {
     padding: 8rem 0 9.7rem;
     @include sp {
-        padding: 5rem 0 4rem;
+        padding: 5rem 0 4.2rem;
     }
 }
 
@@ -738,7 +738,7 @@ ul .slide-dots{
 #news {
     padding: 8rem 0;
     @include sp {
-        padding: 5.2rem 0 5rem;
+        padding: 5rem 0 5.3rem;
     }
 }
 
@@ -780,7 +780,7 @@ ul .slide-dots{
     display: block;
     border-bottom: 0.1rem solid $accent-sb-color;
     padding-top: 1.5rem;
-    padding-bottom: 1.1rem;
+    padding-bottom: 1.2rem;
     @include sp {
         padding-top: 1.3rem;
         padding-bottom: 1.35rem;
@@ -814,7 +814,7 @@ ul .slide-dots{
 .news-symbol {
     position: relative;
     text-align: right;
-    margin-top: 2.2rem;
+    margin-top: 1.8rem;
     @include sp {
         margin-top: 1.8rem;
     }
@@ -835,7 +835,7 @@ ul .slide-dots{
 
 // --------------------company--------------------
 #company {
-    padding: 8rem 0;
+    padding: 8.2rem 0 7.8rem;
     @include sp {
         padding: 5rem 0;
     }
@@ -847,7 +847,7 @@ ul .slide-dots{
     margin-top: 7rem;
     @include sp {
         flex-direction: column;
-        margin-top: 4rem;
+        margin-top: 3.8rem;
         gap: 2rem;
     }
 }
@@ -872,7 +872,7 @@ ul .slide-dots{
     flex: 1;
     color: $sb-color;
     @include green-box;
-    margin-top: 20rem;
+    margin-top: 19.7rem;
     @include sp {
         margin: 0;
         padding: 2rem 2rem 1rem;
@@ -898,17 +898,11 @@ ul .slide-dots{
     }
 
     p:nth-of-type(2) {
-        margin-top: 1rem;
-        @include sp {
         margin-top: 1.5rem;
-        }
     }
 
     p:nth-of-type(3) {
-        margin-top:1.8rem;
-        @include sp {
         margin-top: 1.5rem;
-        }
     }
 
     span {
@@ -924,10 +918,10 @@ ul .slide-dots{
 
 // --------------------contact--------------------
 #contact {
-    padding: 7.8rem 0;
+    padding: 8rem 0;
     @include text-style(2.0rem,calc( 33 / 20));
     @include sp {
-        padding: 5rem 0;
+        padding: 4.8rem 0 5rem;
     }
 
     h3 {
@@ -1214,7 +1208,7 @@ ul .slide-dots{
     text-align: center;
     padding: 8rem 0;
     @include sp {
-        padding: 5rem 0 5rem;
+        padding: 5rem 0 5.2rem;
     }
 
     h2 {
@@ -1224,21 +1218,22 @@ ul .slide-dots{
 
 .ending-link-list {
     @include text-style(1.8rem,calc(33 / 18));
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     border-top: 0.1rem solid $main-color;
-    margin-top: 2.8rem;
+    margin-top: 2.6rem;
     padding: 1.8rem 0;
+    column-gap: 2.7rem;
 
     @include sp {
         margin-top: 2rem;
         flex-wrap: wrap;
         padding: 1.5rem 0 2.5rem;
-        column-gap: 1.3rem;
+        column-gap: 1.31rem;
     }
 
     a {
-        padding:1rem 2.6rem;
+        padding:1rem 1.2rem;
         @include sp {
             padding: 0.3rem 0.8rem;
         }
