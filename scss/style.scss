@@ -60,10 +60,6 @@ a {
     transition: 0.3s ease;
 }
 
-a:hover {
-    opacity: 0.5;
-}
-
 .inner {
     max-width: calc(1080px - 80px - 80px + 30px + 30px);
     padding-inline: 30px;
@@ -161,44 +157,12 @@ section {
 // --------------------header--------------------
 header {
     color: $sb-color;
-    position: relative;
-    z-index: 999;
-
-    img {
-        width: 100%;
-    }
-
-    h2 {
-        width: 100%;
-        position: absolute;
-        text-align: center;
-        @include text-style(4.0rem, (70/40));
-        font-weight: 600;
-        top: calc(340 / 800 * 100%);
-        left: 50.5%;
-        transform: translateX(-50%);
-        letter-spacing: 0.3em;
-
-        @include sp {
-            @include text-style(3.0rem, (60/30));
-            top: 51%;
-            left: 51%;
-            transform: translate(-50%, -50%);
-        }
-    }
-}
-
-.header-content {
     position: fixed;
-    display: flex;
-    justify-content: space-between;
+    z-index: 999;
     width: 100%;
-    height: 8rem;
     top: 0;
     left: 0;
-    padding-top: 2.0rem;
-    padding-left:calc(65 / 1080 * 100vw) ;
-    padding-right:calc(65 / 1080 * 100vw) ;
+    height: 8rem;
     background: transparent;
     transition: background 4s ease;
 
@@ -206,125 +170,115 @@ header {
         background: $accent-color;
     }
 
+    @include sp {
+        height: 5rem;
+    }
+}
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 108rem;
+    margin: 0 auto;
+    height: inherit; 
+    padding-left:calc(65 / 1080 * 100vw) ;
+    padding-right:calc(65 / 1080 * 100vw) ;
+
+    @media screen and (min-width:768px) and (max-width:1000px) {
+        padding-left:calc(40 / 1080 * 100vw) ;
+        padding-right:calc(40 / 1080 * 100vw) ;
+    }
     
     @include sp {
         padding: 0 0 0 0.5rem;
-        height: 5rem;
     }
 
-
-    a {
-        display: flex;
-        align-items: center;
-        height: 5rem;
-        padding-inline: 1.55rem;
-    }
-
-    h1 {
+    &-h1 {
         @include text-style(2.0rem, calc(33 / 20));
-        height: 8rem;
         display: flex;
         align-items: center;
+        height: inherit; 
+
+        @media screen and (min-width:768px) and (max-width:1000px) {
+            @include text-style(1.4rem, calc(25 / 14));
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            height: inherit; 
+            padding-inline: 1.55rem;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &-nav {
+        height: inherit;
+        @include sp {
+            display: none;
+        }
+    }
+
+    &-nav nav {
+        height: inherit;
     }
 
     &-nav ul{
         display: flex;
+        align-items: center;
+        height: inherit; 
         @include text-style(1.8rem, calc(33 / 18));
         @media screen and (max-width:1000px) {
-            display: none;
+            @include text-style(1.4rem, calc(25 / 14));
         }
     }
-}
 
-// slick
-ul.slick li{
-    position: relative;
-}
-
-ul .slide-dots{
-    display: flex;
-    justify-content: center;
-    position: absolute; 
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-
-    li {
-        button {
-        font-size: 0;
-        width: 1.2rem;
-        height: 1.2rem;
-        border-radius: 50%;
-        background-color: $main-bg-color;
-        opacity: 0.5;
-        border: none;
-        margin: 1rem;
-        }
-
-    &.slick-active button {
-        opacity: 1;
-        }
-  }
-}
-
-//arrows
-.slick-arrow {
-  font-size: 40px;
-  color: $sb-color;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 100;
-  transition: 0.3s;
-
-  @include sp {
-    display: none !important;
-  }
-}
-
-.slick-prev {
-  left: 30px;
-  padding: 10px 7px 10px 13px;
-}
-
-.slick-next {
-  right: 30px;
-  padding: 10px 8px 10px 12px;
-}
-
-.slick-arrow:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  color:$main-color;
+    &-nav li {
+        display: flex;
+        align-items: center;
+        height: inherit;   
+    }
 }
 
 // header animation
 .header-content-nav a {
-  cursor: pointer;
-  position: relative;
-  text-decoration: none;
-  display: inline-block;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: inherit; 
+    padding-inline: 1.55rem;
 
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: $sb-color;
+    span {
+        position: relative;
+        display: inline-block;
         opacity: 1; 
-        transition: width 0.3s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            padding-inline: 0;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: $sb-color;
+            transition: width 0.3s ease;
+        }
     }
 
-    &:hover {
-        &::after {
-            width: 100%; 
-            opacity: 1; 
-        }
+    &:hover span {
+        color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+    }
+
+    &:hover span::after {
+        width: 100%;
     }
 }
 
@@ -418,7 +372,6 @@ ul .slide-dots{
 
         &:hover {
             background-color: $main-color ;
-            opacity: 1;
         }
     }
 }
@@ -437,9 +390,111 @@ ul .slide-dots{
     background: $main-color;
     opacity: 0.6;
 }
+// --------------------firstview--------------------
 
+#firstview {
+    color: $sb-color;
+    position: relative;
 
+    h2 {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        @include text-style(4.0rem, (70/40));
+        font-weight: 600;
+        top: calc(340 / 800 * 100%);
+        left: 50.5%;
+        transform: translateX(-50%);
+        letter-spacing: 0.3em;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 
+        @include sp {
+            @include text-style(3.0rem, (60/30));
+            top: 51%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.fv-content {
+    width: 100%;
+    
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+// slick
+ul.slick {
+    width: 100%;
+    
+    li {
+        position: relative;
+        width: 100%;
+    }
+}
+
+ul .slide-dots{
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    li {
+        button {
+        font-size: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: $main-bg-color;
+        opacity: 0.5;
+        border: none;
+        margin: 1rem;
+        }
+
+    &.slick-active button {
+        opacity: 1;
+        }
+  }
+}
+
+//arrows
+.slick-arrow {
+  font-size: 40px;
+  color: $sb-color;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  transition: 0.3s;
+
+  @include sp {
+    display: none !important;
+  }
+}
+
+.slick-prev {
+  left: 30px;
+  padding: 10px 7px 10px 13px;
+}
+
+.slick-next {
+  right: 30px;
+  padding: 10px 8px 10px 12px;
+}
+
+.slick-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color:$main-color;
+}
 // --------------------about--------------------
 #about {
     position: relative;
@@ -839,6 +894,10 @@ ul .slide-dots{
     @include sp {
         gap: 2rem;
     }
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .news-symbol {
@@ -944,6 +1003,10 @@ ul .slide-dots{
 .company-email{
     display: flex;
     align-items: center;
+
+    a:hover {
+        opacity: 0.5;
+    }
 }
 
 // --------------------contact--------------------
@@ -1267,6 +1330,10 @@ ul .slide-dots{
         @include sp {
             padding: 0.3rem 0.8rem;
         }
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 
@@ -1274,12 +1341,22 @@ ul .slide-dots{
     display: flex;
     justify-content: center;
     gap: 3rem;
+
+    a:hover {
+        opacity: 0.5;
+    }
 }
 
 // --------------------footer--------------------
 footer {
     padding-inline: 2rem;
+
+    a:hover {
+        opacity: 0.5;
+    }
 }
+
+
 
 footer p{
     text-align: center;

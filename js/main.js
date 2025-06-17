@@ -4,10 +4,10 @@ $('.slick').slick({
     fade: true, 
     cssEase: 'linear',
     speed: 2000,
-    arrows: true,
+    arrows: false,
     prevArrow: '<span class="material-symbols-outlined slick-arrow slick-prev">arrow_back_ios</span>',
     nextArrow: '<span class="material-symbols-outlined slick-arrow slick-next">arrow_forward_ios</span>',
-    dots: true,
+    dots: false,
     dotsClass: "slide-dots"
 });
 // modal------------------------
@@ -28,6 +28,13 @@ $(".hamburger-trigger").click(
     $(".hamburger-menu").toggle(300)
     $(".hamburger").toggleClass("active")
     $("#hamburger-bg").toggleClass("active")
+    
+    // ハンバーガーメニューの開閉に応じてupper-arrowの表示を切り替え
+    if ($(".hamburger").hasClass("active")) {
+        $("#upper-arrow").hide();
+    } else {
+        $("#upper-arrow").show();
+    }
     }
 );
 
@@ -37,8 +44,13 @@ $(window).scroll(function() {
     const headerHeight = $('header').outerHeight(); 
     
     if (scrollTop > headerHeight) {
-        $('.header-content').addClass('scrolled');
+        $('header').addClass('scrolled');
     } else {
-        $('.header-content').removeClass('scrolled');
+        $('header').removeClass('scrolled');
     }
+});
+
+// window resize slick refresh------------------------
+$(window).resize(function() {
+    $('.slick').slick('setPosition');
 });
