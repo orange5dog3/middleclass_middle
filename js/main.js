@@ -30,3 +30,15 @@ $(".hamburger-trigger").click(
     $("#hamburger-bg").toggleClass("active")
     }
 );
+
+// header scroll background------------------------
+$(window).scroll(function() {
+    const scrollTop = $(this).scrollTop();
+    const headerHeight = $('header').outerHeight(); 
+    
+    if (scrollTop > headerHeight) {
+        $('.header-content').addClass('scrolled');
+    } else {
+        $('.header-content').removeClass('scrolled');
+    }
+});

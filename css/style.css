@@ -488,6 +488,15 @@ a:hover {
   opacity: 0.7;
 }
 
+section {
+  scroll-margin-top: 8rem;
+}
+@media screen and (max-width: 767px) {
+  section {
+    scroll-margin-top: 5rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .pc_none {
     display: none;
@@ -547,8 +556,12 @@ header h2 {
   padding-top: 2rem;
   padding-left: 6.0185185185vw;
   padding-right: 6.0185185185vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4D9600), to(rgba(77, 150, 0, 0.4)));
-  background: linear-gradient(to bottom, #4D9600, rgba(77, 150, 0, 0.4));
+  background: transparent;
+  -webkit-transition: background 4s ease;
+  transition: background 4s ease;
+}
+.header-content.scrolled {
+  background: #4D9600;
 }
 @media screen and (max-width: 767px) {
   .header-content {
@@ -662,6 +675,7 @@ ul .slide-dots li.slick-active button {
   cursor: pointer;
   position: relative;
   text-decoration: none;
+  display: inline-block;
 }
 .header-content-nav a::after {
   content: "";
@@ -671,11 +685,13 @@ ul .slide-dots li.slick-active button {
   width: 0;
   height: 2px;
   background-color: #FFFFFF;
+  opacity: 1;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
 }
 .header-content-nav a:hover::after {
   width: 100%;
+  opacity: 1;
 }
 
 .hamburger {
@@ -1150,6 +1166,21 @@ ul .slide-dots li.slick-active button {
     font-size: 1.25rem;
     line-height: 1.6;
   }
+}
+
+.modal-open1,
+.modal-open2,
+.modal-open3,
+.modal-open4 {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.modal-open1:hover,
+.modal-open2:hover,
+.modal-open3:hover,
+.modal-open4:hover {
+  opacity: 0.7;
 }
 
 .modal-area1,

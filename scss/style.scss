@@ -138,6 +138,14 @@ a:hover {
     }
 }
 
+section {
+    scroll-margin-top: 8rem; 
+    
+    @include sp {
+        scroll-margin-top: 5rem;
+    }
+}
+
 @media screen and (min-width:768px) {
     .pc_none{
       display: none;
@@ -191,7 +199,12 @@ header {
     padding-top: 2.0rem;
     padding-left:calc(65 / 1080 * 100vw) ;
     padding-right:calc(65 / 1080 * 100vw) ;
-    background: linear-gradient(to bottom, $accent-color, rgba(77, 150, 0, 0.4));
+    background: transparent;
+    transition: background 4s ease;
+
+    &.scrolled {
+        background: $accent-color;
+    }
 
 
     
@@ -293,6 +306,7 @@ ul .slide-dots{
   cursor: pointer;
   position: relative;
   text-decoration: none;
+  display: inline-block;
 
     &::after {
         content: '';
@@ -302,11 +316,15 @@ ul .slide-dots{
         width: 0;
         height: 2px;
         background-color: $sb-color;
+        opacity: 1; 
         transition: width 0.3s ease;
     }
 
-    &:hover::after {
-        width: 100%;
+    &:hover {
+        &::after {
+            width: 100%; 
+            opacity: 1; 
+        }
     }
 }
 
@@ -674,7 +692,18 @@ ul .slide-dots{
     }
 }
 
-// modal
+.modal-open1,
+.modal-open2,
+.modal-open3,
+.modal-open4 {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
 .modal-area1,
 .modal-area2,
 .modal-area3,
