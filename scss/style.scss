@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@use 'destyle.scss';
+
 // --------------------定義--------------------
 
 // color定義 
@@ -11,7 +13,7 @@ $main-bg-color:#FFFFFF;
 $accent-bg-color:rgba(77, 150, 0, 0.1);
 
 // font定義
-$font-base: "YuMincho", "Noto Sans JP" ,sans-serif;
+$font-base: "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
 
 @mixin text-style($size: 1.6rem, $lineHeight: (25/16)) {
   font-weight: 500;
@@ -60,7 +62,6 @@ a {
 
 a:hover {
     opacity: 0.5;
-    transform: translateY(-3px);
 }
 
 .inner {
@@ -457,7 +458,7 @@ ul .slide-dots{
     }
     h2{
         @include text-style(3.0rem, 1.18);
-        letter-spacing:0.4rem;
+        letter-spacing:0.13em;
         margin-left: 4.25rem;
         @media screen and (max-width: 945px) and (min-width: 766px) {
             @include text-style(2.7rem, 1.18);
@@ -465,7 +466,7 @@ ul .slide-dots{
         }
         @include sp {
             @include text-style(2.5rem, 1.18);
-            letter-spacing:0.5rem;
+            letter-spacing:0.2em;
             display: flex;
             align-items: center;
             margin: 0;
@@ -477,13 +478,13 @@ ul .slide-dots{
 
     p{
         @include text-style(1.8rem, 2.7);
-        letter-spacing: 0.7rem;
+        letter-spacing: 0.39em;
         @media screen and (max-width: 945px) and (min-width: 766px) {
             @include text-style(1.7rem, 2.4);
         }
         @include sp {
             @include text-style(1.6rem, 1.6);
-            letter-spacing: 0.4rem;
+            letter-spacing: 0.25em;
             display: flex;
             align-items: center;
         }
