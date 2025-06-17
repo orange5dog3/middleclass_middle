@@ -1010,6 +1010,9 @@ ul .slide-dots li.slick-active button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 100%;
   z-index: 1;
 }
@@ -1048,6 +1051,7 @@ ul .slide-dots li.slick-active button {
 }
 
 .service-content-imagebox {
+  padding-bottom: 5rem;
   width: 65.2173913043%;
   z-index: 11;
 }
@@ -1061,19 +1065,24 @@ ul .slide-dots li.slick-active button {
 }
 
 .service-content-text {
+  padding: 50px 9px 42px 23.9130434783%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   color: #FFFFFF;
   z-index: 10;
-  margin-left: -calc(30.4347826087%);
-  padding: 5rem 26.0869565217% 4.2rem 26.0869565217%;
+  margin-left: -19.5652173913%;
   background-color: #4D9600;
 }
 @media screen and (max-width: 767px) {
   .service-content-text {
     margin: 0;
     padding: 2rem 2rem 1.2rem;
+  }
+}
+@media screen and (max-width: 955px) and (min-width: 766px) {
+  .service-content-text {
+    padding: 50px 9px 42px 21.7391304348%;
   }
 }
 .service-content-text h3 {
@@ -1141,9 +1150,14 @@ ul .slide-dots li.slick-active button {
   }
 }
 .row-reverse .service-content-text {
-  padding: 5rem 22rem 4.2rem 4rem;
-  margin-right: -calc(30.4347826087%);
+  padding: 50px 23.9130434783% 42px 39px;
+  margin-right: -19.5652173913%;
   margin-left: auto;
+}
+@media screen and (max-width: 955px) and (min-width: 766px) {
+  .row-reverse .service-content-text {
+    padding: 50px 21.7391304348% 42px 19px;
+  }
 }
 @media screen and (max-width: 767px) {
   .row-reverse .service-content-text {
@@ -1477,7 +1491,6 @@ ul .slide-dots li.slick-active button {
       -ms-flex: 1;
           flex: 1;
   color: #FFFFFF;
-  padding: 5rem 26.0869565217% 4.2rem 26.0869565217%;
   background-color: #4D9600;
   margin-top: 19.7rem;
 }

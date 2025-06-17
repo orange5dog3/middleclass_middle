@@ -21,7 +21,9 @@ $font-base: "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
   line-height: $lineHeight;
 }
 
-
+@mixin green-box {
+    background-color: $accent-color;
+}
 
 @mixin sp {
   @media screen and (max-width: 767px) {
@@ -559,8 +561,6 @@ ul .slide-dots{
 #service {
     padding: 8rem 0 7.8rem;
     margin: 0 auto;
-    display: flex;
-    height: auto;
 
     @include sp {
         padding: 5rem 0 4.5rem; 
@@ -576,11 +576,7 @@ ul .slide-dots{
     }
 }
 
-@mixin green-box {
-    padding:50px 9px 42px 220px;
-    background-color: $accent-color;
-    // margin-left: -180px;
-}
+
 
 .service-content-item {
     position: relative;
@@ -614,7 +610,7 @@ ul .slide-dots{
 }
 
 .service-content-imagebox {
-    position: absolute;
+    padding-bottom: 5rem;
     width: calc(600 / 920 * 100%);
     z-index: 11;
 
@@ -628,15 +624,18 @@ ul .slide-dots{
 }
 
 .service-content-text {
-    // margin-top: 14.5rem;
+    padding:50px 9px 42px calc(220 / 920 * 100%);
     flex: 1;
     color: $sb-color;
     z-index: 10;
-    margin-left: -calc(180 / 920 * 100%);
+    margin-left: calc(-180 / 920 * 100%); 
     @include green-box;
     @include sp {
         margin: 0;
         padding: 2rem 2rem 1.2rem;
+    }
+    @media screen and (max-width: 955px) and (min-width: 766px) {
+        padding:50px 9px 42px calc(200 / 920 * 100%);
     }
 
     h3 {
@@ -683,9 +682,12 @@ ul .slide-dots{
     }
 
     .service-content-text {
-        padding:5rem 22rem 4.2rem 4rem;
-        margin-right: -18rem;
+        padding:50px calc(220 / 920 * 100%) 42px 39px;
+        margin-right: calc(-180 / 920 * 100%); 
         margin-left: auto;
+        @media screen and (max-width: 955px) and (min-width: 766px) {
+            padding:50px calc(200 / 920 * 100%) 42px 19px;
+        }
 
         @include sp {
             margin: 0;
