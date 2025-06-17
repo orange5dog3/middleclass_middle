@@ -21,11 +21,7 @@ $font-base: "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
   line-height: $lineHeight;
 }
 
-@mixin green-box {
-    padding:50px 9px 42px 220px;
-    background-color: $accent-color;
-    margin-left: -180px;
-}
+
 
 @mixin sp {
   @media screen and (max-width: 767px) {
@@ -504,21 +500,13 @@ ul .slide-dots{
     }
 }
 
-.about-text-box {
-        display: flex;
-        justify-content: flex-end;
-        @include sp {
-            margin: 0 auto;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
-
 .about-textarea {
     writing-mode: vertical-rl;
     position: absolute;
-    top: 23%;
-    right: 40%;
+    top: 50%;
+    right: 50%;
+    transform: translate(21%, -27%);
+    height: 100%;
     @include sp {
         top: 0;
         left: 50%;
@@ -531,7 +519,7 @@ ul .slide-dots{
     }
     h2{
         @include text-style(3.0rem, 1.18);
-        letter-spacing:0.13em;
+        letter-spacing:0.15em;
         margin-left: 4.25rem;
         @media screen and (max-width: 945px) and (min-width: 766px) {
             @include text-style(2.7rem, 1.18);
@@ -571,6 +559,8 @@ ul .slide-dots{
 #service {
     padding: 8rem 0 7.8rem;
     margin: 0 auto;
+    display: flex;
+    height: auto;
 
     @include sp {
         padding: 5rem 0 4.5rem; 
@@ -586,10 +576,17 @@ ul .slide-dots{
     }
 }
 
+@mixin green-box {
+    padding:50px 9px 42px 220px;
+    background-color: $accent-color;
+    // margin-left: -180px;
+}
+
 .service-content-item {
     position: relative;
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
     width: 100%;
     z-index: 1;
 
@@ -606,7 +603,6 @@ ul .slide-dots{
         @include sp {
             margin-top: 0.5rem;
         }
-        
     }
 }
 
@@ -618,6 +614,7 @@ ul .slide-dots{
 }
 
 .service-content-imagebox {
+    position: absolute;
     width: calc(600 / 920 * 100%);
     z-index: 11;
 
@@ -631,10 +628,11 @@ ul .slide-dots{
 }
 
 .service-content-text {
-    margin-top: 14.5rem;
+    // margin-top: 14.5rem;
     flex: 1;
     color: $sb-color;
     z-index: 10;
+    margin-left: -calc(180 / 920 * 100%);
     @include green-box;
     @include sp {
         margin: 0;
