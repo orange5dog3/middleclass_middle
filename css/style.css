@@ -386,6 +386,13 @@ body {
   color: #000000;
   background-color: #FFFFFF;
 }
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
 
 html {
   font-size: 62.5%;
@@ -1280,7 +1287,7 @@ ul .slide-dots li.slick-active button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 41.6666666667vw;
+  width: 450px;
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 767px) {
@@ -1289,8 +1296,8 @@ ul .slide-dots li.slick-active button {
   }
 }
 .modal-content-whitebox .modal-content {
-  margin: 1.3888888889vw auto 0.5555555556vw;
-  width: 38.8888888889vw;
+  margin: 15px auto 6px;
+  width: 420px;
 }
 @media screen and (max-width: 767px) {
   .modal-content-whitebox .modal-content {
@@ -1308,7 +1315,7 @@ ul .slide-dots li.slick-active button {
 
 .modal-cancel {
   position: absolute;
-  top: -30px;
+  top: 0;
   right: 0;
   cursor: pointer;
 }

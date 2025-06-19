@@ -38,6 +38,15 @@ body {
     font-family: $font-base;
     color: $main-color;
     background-color: $main-bg-color;
+    
+    // モーダル開いている時のスクロール無効化
+    &.modal-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
 }
 
 html { 
@@ -784,7 +793,7 @@ ul .slide-dots{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: calc(45 / 108 * 100vw);
+    width: 450px;
     background-color: $sb-color;
     @include sp{
         width: calc(31.5 / 37.5 * 100vw);
@@ -792,8 +801,8 @@ ul .slide-dots{
 
 
     .modal-content {
-        margin: calc(1.5 / 108 * 100vw) auto calc(0.6 / 108 * 100vw);
-        width: calc(42 / 108 * 100vw);
+        margin: 15px auto 6px;
+        width: 420px;
         @include sp{
             margin: calc(2 / 37.5 * 100vw) auto calc(1.4 / 37.5 * 100vw);
             width: calc(27.4 / 37.5 * 100vw);
@@ -813,7 +822,7 @@ ul .slide-dots{
 
 .modal-cancel {
     position: absolute;
-    top: -30px;
+    top: 0;
     right: 0;
     cursor: pointer;
 }
