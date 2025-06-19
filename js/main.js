@@ -12,13 +12,40 @@ $('.slick').slick({
 });
 // modal------------------------
 
+// スクロール無効化関数
+function disableScroll() {
+    // 現在のスクロール位置を保存
+    const scrollTop = $(window).scrollTop();
+    // bodyを現在のスクロール位置で固定（topに移動させない）
+    $('body').addClass('modal-open').css('top', -scrollTop + 'px');
+}
+
+// スクロール有効化関数
+function enableScroll() {
+    // 保存されたスクロール位置を取得
+    const scrollTop = parseInt($('body').css('top')) * -1;
+    // bodyの固定を解除
+    $('body').removeClass('modal-open').css('top', '');
+    // 元のスクロール位置に戻す
+    $(window).scrollTop(scrollTop);
+}
+
 for (let i = 1; i <= 4; i++) {
     $(`.modal-open${i}`).click(() => {
         $(`.modal-area${i}`).show();
+        disableScroll(); 
     });
 
     $(`.modal-close${i}`).click(() => {
         $(`.modal-area${i}`).hide();
+        enableScroll(); 
+    });
+    
+    $(`.modal-area${i}`).click((e) => {
+        if (e.target === e.currentTarget) {
+            $(`.modal-area${i}`).hide();
+            enableScroll();
+        }
     });
 }
 
