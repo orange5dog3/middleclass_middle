@@ -12,49 +12,24 @@ $('.slick').slick({
 });
 // modal------------------------
 
-// スクロール無効化関数
-function disableScroll() {
-    // 現在のスクロール位置を保存
-    const scrollTop = $(window).scrollTop();
-    // bodyを現在のスクロール位置で固定（topに移動させない）
-    $('body').addClass('modal-open').css('top', -scrollTop + 'px');
-}
+//「開く」がクリックされた場合
+$('.modal-trigger').on('click', function () {
+    // data-target属性の値を取得
+    var target = $(this).data('target');
+    // 対応するidのモーダルを表示
+    $('#' + target).show();
+    $('#upper-arrow').hide(); // トップへ戻る矢印を非表示
+    $('body').css('overflow-y', 'hidden');  // 本文の縦スクロールを無効
+});
 
-// スクロール有効化関数
-function enableScroll() {
-    // 保存されたスクロール位置を取得
-    const scrollTop = parseInt($('body').css('top')) * -1;
-    // bodyの固定を解除
-    $('body').removeClass('modal-open').css('top', '');
-    // 元のスクロール位置に戻す
-    $(window).scrollTop(scrollTop);
-}
+//「閉じる」がクリックされた場合
+$('.modal-closer').on('click', function () {
+    $('.modal-window').hide();
+    $('#upper-arrow').show(); // トップへ戻る矢印を表示
+    $('body').css('overflow-y', 'auto');     // 本文の縦スクロールを有効
+});
 
-for (let i = 1; i <= 4; i++) {
-    $(`.modal-open${i}`).click(() => {
-        $(`.modal-area${i}`).show();
-        disableScroll(); 
-        $("#upper-arrow").hide();
-    });
 
-    $(`.modal-close${i}`).click(() => {
-        $(`.modal-area${i}`).hide();
-        enableScroll(); 
-        if (!$(".hamburger").hasClass("active")) {
-            $("#upper-arrow").show();
-        }
-    });
-    
-    $(`.modal-area${i}`).click((e) => {
-        if (e.target === e.currentTarget) {
-            $(`.modal-area${i}`).hide();
-            enableScroll();
-            if (!$(".hamburger").hasClass("active")) {
-                $("#upper-arrow").show();
-            }
-        }
-    });
-}
 
 // hamburger------------------------
 $(".hamburger-trigger").click(
@@ -87,4 +62,16 @@ $(window).scroll(function() {
 // window resize slick refresh------------------------
 $(window).resize(function() {
     $('.slick').slick('setPosition');
+});
+
+// upper-arrow scroll control------------------------
+$(window).scroll(function () {
+    const fvHeight = $('#firstview').outerHeight();
+    const scrollTop = $(window).scrollTop();
+
+    if (scrollTop > fvHeight) {
+        $('#upper-arrow').fadeIn();
+    } else {
+        $('#upper-arrow').fadeOut();
+    }
 });

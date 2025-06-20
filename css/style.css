@@ -386,13 +386,6 @@ body {
   color: #000000;
   background-color: #FFFFFF;
 }
-body.modal-open {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
 
 html {
   font-size: 62.5%;
@@ -463,6 +456,7 @@ a {
 }
 
 #upper-arrow {
+  display: none;
   position: fixed;
   width: 6.8rem;
   height: 6.8rem;
@@ -1246,25 +1240,15 @@ ul .slide-dots li.slick-active button {
   }
 }
 
-.modal-open1,
-.modal-open2,
-.modal-open3,
-.modal-open4 {
+.modal-trigger {
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.modal-open1:hover,
-.modal-open2:hover,
-.modal-open3:hover,
-.modal-open4:hover {
-  opacity: 0.7;
 }
 
-.modal-area1,
-.modal-area2,
-.modal-area3,
-.modal-area4 {
+.modal-trigger:hover {
+  opacity: 0.5;
+}
+
+.modal-window {
   display: none;
   position: fixed;
   top: 0;
@@ -1870,7 +1854,8 @@ ul .slide-dots li.slick-active button {
   background-color: #FFFFFF;
   padding: 1rem;
   min-height: 20rem;
-  resize: none;
+  resize: vertical;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .form-content textarea {
@@ -1917,44 +1902,52 @@ ul .slide-dots li.slick-active button {
     line-height: 1.6666666667;
   }
 }
-.form-question .form-question-flex label {
+.form-question .form-question-flex .custom-checkbox {
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 @media screen and (max-width: 767px) {
-  .form-question .form-question-flex label {
-    width: 50%;
+  .form-question .form-question-flex .custom-checkbox {
+    width: 25%;
   }
 }
-.form-question .form-question-flex label input[type=checkbox] {
+.form-question .form-question-flex .custom-checkbox label {
+  cursor: pointer;
+}
+.form-question .form-question-flex .custom-checkbox input[type=checkbox] {
+  display: none;
+}
+.form-question .form-question-flex .custom-checkbox span {
+  position: relative;
+  padding-left: 4rem;
+}
+.form-question .form-question-flex .custom-checkbox span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 2rem;
   height: 2rem;
   border: none;
-  margin-right: 2rem;
   background-color: #FFFFFF;
-  cursor: pointer;
-  position: relative;
 }
-@media screen and (max-width: 767px) {
-  .form-question .form-question-flex label input[type=checkbox] {
-    margin-right: 1rem;
-  }
-}
-.form-question .form-question-flex label input[type=checkbox]:checked::after {
-  content: "✓";
+.form-question .form-question-flex .custom-checkbox input[type=checkbox]:checked + span::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   position: absolute;
+  left: 0.3rem;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #000000;
-  font-size: 1.4rem;
-  font-weight: 700;
 }
 
 .form-textbox {
@@ -1966,6 +1959,7 @@ ul .slide-dots li.slick-active button {
   }
 }
 .form-textbox .contact-white-textbox {
+  position: relative;
   margin-top: 1rem;
   background-color: #FFFFFF;
   height: 30rem;
@@ -1976,13 +1970,22 @@ ul .slide-dots li.slick-active button {
     height: 32.3rem;
   }
 }
+.form-textbox .contact-white-textbox .contact-textbox-area {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 96.6666666667%;
+  height: 100%;
+  overflow-y: scroll;
+  height: 26rem;
+}
 .form-textbox .contact-white-textbox .contact-textbox {
   padding: 4rem;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.7222222222;
-  overflow-y: scroll;
-  height: 26rem;
 }
 @media screen and (max-width: 767px) {
   .form-textbox .contact-white-textbox .contact-textbox {
@@ -1992,6 +1995,23 @@ ul .slide-dots li.slick-active button {
     padding: 3rem 5rem 3rem 3rem;
     height: 29rem;
   }
+}
+
+.contact-textbox-area::-webkit-scrollbar {
+  width: 10px; /* スクロールバーの幅 */
+}
+
+.contact-textbox-area::-webkit-scrollbar-track {
+  background: #E3E3E3; /* トラック（背景）の色 */
+  border-radius: 4px;
+}
+
+.contact-textbox-area::-webkit-scrollbar-thumb {
+  background: #9B9B9B; /* ハンドル（つまみ）の色 */
+}
+
+.contact-textbox-area::-webkit-scrollbar-thumb:hover {
+  background: #55A500; /* ホバー時のハンドルの色 */
 }
 
 #contact button {
