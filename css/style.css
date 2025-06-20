@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -1870,7 +1869,8 @@ ul .slide-dots li.slick-active button {
   background-color: #FFFFFF;
   padding: 1rem;
   min-height: 20rem;
-  resize: none;
+  resize: vertical;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .form-content textarea {
@@ -1917,44 +1917,47 @@ ul .slide-dots li.slick-active button {
     line-height: 1.6666666667;
   }
 }
-.form-question .form-question-flex label {
+.form-question .form-question-flex .custom-checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1.8rem;
+  cursor: pointer;
+  margin-right: 7.4rem;
+  width: 25%;
 }
-@media screen and (max-width: 767px) {
-  .form-question .form-question-flex label {
-    width: 50%;
-  }
+.form-question .form-question-flex .custom-checkbox input[type=checkbox] {
+  display: none;
 }
-.form-question .form-question-flex label input[type=checkbox] {
+.form-question .form-question-flex .custom-checkbox span {
+  position: relative;
+  padding-left: 4rem;
+}
+.form-question .form-question-flex .custom-checkbox span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 2rem;
   height: 2rem;
   border: none;
-  margin-right: 2rem;
   background-color: #FFFFFF;
-  cursor: pointer;
-  position: relative;
 }
-@media screen and (max-width: 767px) {
-  .form-question .form-question-flex label input[type=checkbox] {
-    margin-right: 1rem;
-  }
-}
-.form-question .form-question-flex label input[type=checkbox]:checked::after {
-  content: "✓";
+.form-question .form-question-flex .custom-checkbox input[type=checkbox]:checked + span::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   position: absolute;
+  left: 0.3rem;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #000000;
-  font-size: 1.4rem;
-  font-weight: 700;
 }
 
 .form-textbox {

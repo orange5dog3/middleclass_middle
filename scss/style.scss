@@ -1249,7 +1249,8 @@ ul .slide-dots{
         background-color: $main-bg-color;
         padding: 1rem;
         min-height: 20rem;
-        resize: none;
+        resize: vertical;
+        cursor: pointer;
         @include sp {
             margin-top: 0;
         }
@@ -1278,37 +1279,44 @@ ul .slide-dots{
             @include text-style(1.2rem,calc(20 / 12));
         }
 
-
-        label  {
+        .custom-checkbox {
             display: flex;
-            width: 25%;
             align-items: center;
-            @include sp {
-                width: 50%;
-            }
+            gap: 1.8rem;
+            cursor: pointer;
+            margin-right: 7.4rem;
+            width: 25%;
 
             input[type="checkbox"] {
-                width: 2rem;      
-                height: 2rem;     
-                border: none;
-                margin-right: 2rem; 
-                background-color: $main-bg-color;
-                cursor: pointer;
+                display: none;
+            }
+            
+            span {
                 position: relative;
-                @include sp {
-                    margin-right: 1rem;
-                }
+                padding-left: 4rem;
+            }
 
-                &:checked::after {
-                    content: "✓";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    color: $main-color;
-                    font-size: 1.4rem;
-                    font-weight: 700;
-                }
+            span::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2rem;
+                height: 2rem;
+                border: none;
+                background-color: $main-bg-color;
+            }
+
+            input[type="checkbox"]:checked + span::after {
+                content: '\f00c';
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 900;
+                position: absolute;
+                left: 0.3rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $main-color;
             }
         }
     }
