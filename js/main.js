@@ -34,17 +34,24 @@ for (let i = 1; i <= 4; i++) {
     $(`.modal-open${i}`).click(() => {
         $(`.modal-area${i}`).show();
         disableScroll(); 
+        $("#upper-arrow").hide();
     });
 
     $(`.modal-close${i}`).click(() => {
         $(`.modal-area${i}`).hide();
         enableScroll(); 
+        if (!$(".hamburger").hasClass("active")) {
+            $("#upper-arrow").show();
+        }
     });
     
     $(`.modal-area${i}`).click((e) => {
         if (e.target === e.currentTarget) {
             $(`.modal-area${i}`).hide();
             enableScroll();
+            if (!$(".hamburger").hasClass("active")) {
+                $("#upper-arrow").show();
+            }
         }
     });
 }
