@@ -1199,9 +1199,9 @@ ul .slide-dots li.slick-active button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   gap: 4.347826087%;
   margin-top: 6.8rem;
 }
@@ -1217,7 +1217,7 @@ ul .slide-dots li.slick-active button {
 }
 
 .works-content-item {
-  width: 2173.9130434783%;
+  width: 21.7391304348%;
 }
 @media screen and (max-width: 767px) {
   .works-content-item {
@@ -1271,7 +1271,7 @@ ul .slide-dots li.slick-active button {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .modal-bg {
@@ -1289,6 +1289,7 @@ ul .slide-dots li.slick-active button {
           transform: translate(-50%, -50%);
   width: 450px;
   background-color: #FFFFFF;
+  z-index: 1000;
 }
 @media screen and (max-width: 767px) {
   .modal-content-whitebox {
@@ -1333,9 +1334,9 @@ ul .slide-dots li.slick-active button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   gap: 6.5217391304%;
   margin-top: 6.8rem;
 }
@@ -1380,14 +1381,6 @@ ul .slide-dots li.slick-active button {
 .news-content-article {
   display: block;
   border-bottom: 0.1rem solid #55A500;
-  padding-top: 1.5rem;
-  padding-bottom: 1.2rem;
-}
-@media screen and (max-width: 767px) {
-  .news-content-article {
-    padding-top: 1.3rem;
-    padding-bottom: 1.35rem;
-  }
 }
 .news-content-article time {
   font-weight: 500;
@@ -1414,11 +1407,15 @@ ul .slide-dots li.slick-active button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 69px;
+  gap: 17.6923076923%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.2rem;
 }
 @media screen and (max-width: 767px) {
   .news-content-article a {
     gap: 2rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.35rem;
   }
 }
 .news-content-article a:hover {
@@ -1447,6 +1444,54 @@ ul .slide-dots li.slick-active button {
   right: 0;
   top: 1.5rem;
 }
+.news-symbol:hover {
+  -webkit-animation: shake-horizontal 0.3s ease-in-out;
+          animation: shake-horizontal 0.3s ease-in-out;
+}
+@-webkit-keyframes shake-horizontal {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes shake-horizontal {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 
 #company {
   padding: 8.2rem 0 7.8rem;
@@ -1461,6 +1506,9 @@ ul .slide-dots li.slick-active button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-top: 7rem;
 }
 @media screen and (max-width: 767px) {
@@ -1476,6 +1524,7 @@ ul .slide-dots li.slick-active button {
 
 .company-map {
   width: 65.2173913043%;
+  padding-bottom: 60px;
   z-index: 10;
 }
 @media screen and (max-width: 767px) {
@@ -1500,6 +1549,8 @@ ul .slide-dots li.slick-active button {
   color: #FFFFFF;
   background-color: #4D9600;
   margin-top: 19.7rem;
+  margin-left: -19.5652173913%;
+  padding: 50px 9px 42px 23.9130434783%;
 }
 @media screen and (max-width: 767px) {
   .company-textarea {
@@ -1559,6 +1610,15 @@ ul .slide-dots li.slick-active button {
 .company-tel a:hover,
 .company-email a:hover {
   opacity: 0.5;
+}
+
+.company-tel a {
+  pointer-events: none;
+}
+@media screen and (max-width: 767px) {
+  .company-tel a {
+    pointer-events: auto;
+  }
 }
 
 #contact {
