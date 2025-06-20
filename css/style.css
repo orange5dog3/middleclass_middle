@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -385,13 +386,6 @@ body {
   color: #000000;
   background-color: #FFFFFF;
 }
-body.modal-open {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
 
 html {
   font-size: 62.5%;
@@ -462,6 +456,7 @@ a {
 }
 
 #upper-arrow {
+  display: none;
   position: fixed;
   width: 6.8rem;
   height: 6.8rem;
@@ -1245,25 +1240,15 @@ ul .slide-dots li.slick-active button {
   }
 }
 
-.modal-open1,
-.modal-open2,
-.modal-open3,
-.modal-open4 {
+.modal-trigger {
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.modal-open1:hover,
-.modal-open2:hover,
-.modal-open3:hover,
-.modal-open4:hover {
-  opacity: 0.7;
 }
 
-.modal-area1,
-.modal-area2,
-.modal-area3,
-.modal-area4 {
+.modal-trigger:hover {
+  opacity: 0.5;
+}
+
+.modal-window {
   display: none;
   position: fixed;
   top: 0;
@@ -1918,16 +1903,21 @@ ul .slide-dots li.slick-active button {
   }
 }
 .form-question .form-question-flex .custom-checkbox {
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.8rem;
+}
+@media screen and (max-width: 767px) {
+  .form-question .form-question-flex .custom-checkbox {
+    width: 25%;
+  }
+}
+.form-question .form-question-flex .custom-checkbox label {
   cursor: pointer;
-  margin-right: 7.4rem;
-  width: 25%;
 }
 .form-question .form-question-flex .custom-checkbox input[type=checkbox] {
   display: none;
@@ -1969,6 +1959,7 @@ ul .slide-dots li.slick-active button {
   }
 }
 .form-textbox .contact-white-textbox {
+  position: relative;
   margin-top: 1rem;
   background-color: #FFFFFF;
   height: 30rem;
@@ -1979,13 +1970,22 @@ ul .slide-dots li.slick-active button {
     height: 32.3rem;
   }
 }
+.form-textbox .contact-white-textbox .contact-textbox-area {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 96.6666666667%;
+  height: 100%;
+  overflow-y: scroll;
+  height: 26rem;
+}
 .form-textbox .contact-white-textbox .contact-textbox {
   padding: 4rem;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.7222222222;
-  overflow-y: scroll;
-  height: 26rem;
 }
 @media screen and (max-width: 767px) {
   .form-textbox .contact-white-textbox .contact-textbox {
@@ -1995,6 +1995,23 @@ ul .slide-dots li.slick-active button {
     padding: 3rem 5rem 3rem 3rem;
     height: 29rem;
   }
+}
+
+.contact-textbox-area::-webkit-scrollbar {
+  width: 10px; /* スクロールバーの幅 */
+}
+
+.contact-textbox-area::-webkit-scrollbar-track {
+  background: #E3E3E3; /* トラック（背景）の色 */
+  border-radius: 4px;
+}
+
+.contact-textbox-area::-webkit-scrollbar-thumb {
+  background: #9B9B9B; /* ハンドル（つまみ）の色 */
+}
+
+.contact-textbox-area::-webkit-scrollbar-thumb:hover {
+  background: #55A500; /* ホバー時のハンドルの色 */
 }
 
 #contact button {

@@ -38,15 +38,6 @@ body {
     font-family: $font-base;
     color: $main-color;
     background-color: $main-bg-color;
-    
-    // モーダル開いている時のスクロール無効化
-    &.modal-open {
-        overflow: hidden;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-    }
 }
 
 html { 
@@ -115,6 +106,7 @@ a {
 }
 
 #upper-arrow {
+    display: none;
     position: fixed;
     width: 6.8rem;
     height: 6.8rem;
@@ -756,22 +748,15 @@ ul .slide-dots{
     }
 }
 
-.modal-open1,
-.modal-open2,
-.modal-open3,
-.modal-open4 {
+.modal-trigger {
     cursor: pointer;
-    transition: all 0.3s ease;
-    
-    &:hover {
-        opacity: 0.7;
-    }
 }
 
-.modal-area1,
-.modal-area2,
-.modal-area3,
-.modal-area4 {
+.modal-trigger:hover {
+    opacity: 0.5;
+}
+
+.modal-window {
     display: none;
     position: fixed;
     top: 0;
@@ -1279,13 +1264,18 @@ ul .slide-dots{
             @include text-style(1.2rem,calc(20 / 12));
         }
 
+
         .custom-checkbox {
+            width: 25%;
             display: flex;
             align-items: center;
-            gap: 1.8rem;
+            @include sp {
+                width: 25%;
+            }
+
+            label {
             cursor: pointer;
-            margin-right: 7.4rem;
-            width: 25%;
+            }
 
             input[type="checkbox"] {
                 display: none;
@@ -1329,6 +1319,7 @@ ul .slide-dots{
     }
 
     .contact-white-textbox{
+        position: relative;
         margin-top: 1rem;
         background-color: $main-bg-color;
         height: 30rem;
@@ -1337,11 +1328,21 @@ ul .slide-dots{
             height: 32.3rem;
         }
 
+        .contact-textbox-area {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(290 / 300 * 100%);
+            height: 100%;
+            overflow-y: scroll;
+            height: 26rem;
+        }
+
         .contact-textbox {
             padding: 4rem;
             @include text-style(1.8rem,calc(31 / 18));
-            overflow-y: scroll;
-            height: 26rem;
+            
             @include sp {
                 @include text-style(1.6rem,calc(33 / 16));
                 padding: 3rem 5rem 3rem 3rem;
@@ -1349,6 +1350,24 @@ ul .slide-dots{
             }
         }
     }
+}
+
+// スクロールバーのカスタマイズ
+.contact-textbox-area::-webkit-scrollbar {
+    width: 10px; /* スクロールバーの幅 */
+}
+
+.contact-textbox-area::-webkit-scrollbar-track {
+    background: #E3E3E3; /* トラック（背景）の色 */
+    border-radius: 4px;
+}
+
+.contact-textbox-area::-webkit-scrollbar-thumb {
+    background: #9B9B9B; /* ハンドル（つまみ）の色 */
+}
+
+.contact-textbox-area::-webkit-scrollbar-thumb:hover {
+    background: $accent-sb-color; /* ホバー時のハンドルの色 */
 }
 
 #contact button {
