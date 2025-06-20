@@ -870,11 +870,13 @@ ul .slide-dots li.slick-active button {
   color: #000000;
 }
 
-#about {
-  position: relative;
-}
 #about img {
   width: 100%;
+}
+
+.about-fadeup {
+  position: relative;
+  z-index: 10;
 }
 
 .about-textarea {

@@ -496,11 +496,14 @@ ul .slide-dots{
 }
 // --------------------about--------------------
 #about {
-    position: relative;
-
     img {
         width: 100%;
     }
+}
+
+.about-fadeup {
+    position: relative;
+    z-index: 10;
 }
 
 .about-textarea {
