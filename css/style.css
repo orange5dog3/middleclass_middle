@@ -994,7 +994,7 @@ ul .slide-dots li.slick-active button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 7.8rem;
+  row-gap: 8rem;
 }
 @media screen and (max-width: 767px) {
   #service .service-content {
@@ -1568,7 +1568,7 @@ ul .slide-dots li.slick-active button {
   }
 }
 .company-textarea p:nth-of-type(1) {
-  margin-top: 0.7rem;
+  margin-top: 0.9rem;
 }
 .company-textarea p:nth-of-type(2) {
   margin-top: 1.5rem;
@@ -1751,6 +1751,9 @@ ul .slide-dots li.slick-active button {
 .form-email {
   margin-top: 5rem;
 }
+.form-email label {
+  letter-spacing: -0.05em;
+}
 @media screen and (max-width: 767px) {
   .form-email {
     -webkit-box-orient: vertical;
@@ -1835,20 +1838,17 @@ ul .slide-dots li.slick-active button {
 }
 
 .form-content {
-  margin-top: 5rem;
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 1.3888888889;
+  margin-top: 5.2rem;
 }
 @media screen and (max-width: 767px) {
   .form-content {
     margin-top: 3rem;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.5625;
   }
 }
 .form-content textarea {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
   margin-top: 1rem;
   width: 100%;
   background-color: #FFFFFF;
@@ -1860,6 +1860,9 @@ ul .slide-dots li.slick-active button {
 @media screen and (max-width: 767px) {
   .form-content textarea {
     margin-top: 0;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.5625;
   }
 }
 
@@ -1976,13 +1979,13 @@ ul .slide-dots li.slick-active button {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 96.6666666667%;
+  width: 98.3333333333%;
   height: 100%;
   overflow-y: scroll;
-  height: 26rem;
+  height: 28rem;
 }
 .form-textbox .contact-white-textbox .contact-textbox {
-  padding: 4rem;
+  padding: 3rem 3.5rem;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.7222222222;
