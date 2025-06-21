@@ -185,8 +185,8 @@ header {
     padding-right:calc(65 / 1080 * 100vw) ;
 
     @media screen and (min-width:768px) and (max-width:1000px) {
-        padding-left:calc(40 / 1080 * 100vw) ;
-        padding-right:calc(40 / 1080 * 100vw) ;
+        padding-left:calc(10 / 1080 * 100vw) ;
+        padding-right:calc(10 / 1080 * 100vw) ;
     }
     
     @include sp {
@@ -511,17 +511,16 @@ ul .slide-dots{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right:calc(300 / 1080 * 100vw);
+    @include sp {
+        padding-right: 0;
+    }
 }
 
 
 .about-textarea {
     writing-mode: vertical-rl;
     @include sp {
-        top: 0;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        transform: translateX(-50%);
         display: flex;
         justify-content: center;
         gap: 24px;
@@ -595,9 +594,8 @@ ul .slide-dots{
 
     @include sp {
         flex-direction: column;
-        @include sp {
-            row-gap: 0.5rem;
-        }
+        row-gap: 0.5rem;
+        align-items:flex-start;
     }
 
     h4 {
@@ -623,6 +621,7 @@ ul .slide-dots{
 
     @include sp {
         width: 100%;
+        padding-bottom: 0;
     }
 
     img {
@@ -640,6 +639,7 @@ ul .slide-dots{
     @include sp {
         margin: 0;
         padding: 2rem 2rem 1.2rem;
+        width: 100%;
     }
     @media screen and (max-width: 955px) and (min-width: 766px) {
         padding:50px 9px 42px calc(200 / 920 * 100%);
@@ -800,9 +800,7 @@ ul .slide-dots{
             width: calc(27.4 / 37.5 * 100vw);
         }
 
-
-        picture {
-            display: block;
+        img {
             width: 100%;
         }
 
@@ -959,6 +957,7 @@ ul .slide-dots{
     z-index: 10;
     @include sp {
         width: 100%;
+        padding-bottom: 0;
     }
 
     iframe {
@@ -1000,10 +999,16 @@ ul .slide-dots{
 
     p:nth-of-type(1) {
         margin-top: 0.9rem;
+        @include sp {
+            margin-top: 0.8rem;
+        }
     }
 
     p:nth-of-type(2) {
         margin-top: 1.5rem;
+        @include sp {
+            margin-top: 1.1rem;
+        }
     }
 
     p:nth-of-type(3) {
@@ -1039,7 +1044,7 @@ ul .slide-dots{
     padding: 8rem 0;
     @include text-style(2.0rem,calc( 33 / 20));
     @include sp {
-        padding: 4.8rem 0 5rem;
+        padding: 5.2rem 0 5rem;
     }
 
     h3 {
@@ -1107,6 +1112,9 @@ ul .slide-dots{
         @include sp {
             width: 9rem;
         }
+        @media screen and (max-width: 374px) {
+            width: 7rem;
+        }
     }
 
     .form-content-right{
@@ -1118,12 +1126,19 @@ ul .slide-dots{
             padding-left: 0;
         }
         
+        
         .custom-radio {
             display: flex;
             align-items: center;
             gap: 1.8rem;
             cursor: pointer;
             margin-right: 7.4rem;
+            @include sp {
+                margin-right: 3rem;
+            }
+            @media screen and (max-width: 374px) {
+                margin-right: 2rem;
+            }
 
             input[type="radio"] {
                 display: none;
@@ -1132,6 +1147,9 @@ ul .slide-dots{
             span {
                 position: relative;
                 padding-left: 4rem;
+                @media screen and (max-width: 374px) {
+                    padding-left: 3rem;
+                }
             }
 
             span::before {
@@ -1166,6 +1184,9 @@ ul .slide-dots{
     margin-top: 5rem;
     label {
         letter-spacing: -0.05em;
+        @include sp {
+        letter-spacing: 0;
+        }
     }
     @include sp {
         flex-direction: column;
@@ -1186,7 +1207,7 @@ ul .slide-dots{
     @include sp {
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 3rem;
+        margin-top: 3.2rem;
     }
 
     .form-content-right{
@@ -1279,7 +1300,7 @@ ul .slide-dots{
             display: flex;
             align-items: center;
             @include sp {
-                width: 25%;
+                width: 50%;
             }
 
             label {
@@ -1293,6 +1314,9 @@ ul .slide-dots{
             span {
                 position: relative;
                 padding-left: 4rem;
+                @include sp {
+                    padding-left: 3rem;
+                }
             }
 
             span::before {
@@ -1342,10 +1366,14 @@ ul .slide-dots{
             top: 10px;
             left: 50%;
             transform: translateX(-50%);
-            width: calc(295 / 300 * 100%);
+            width: calc(685 / 700 * 100%);
             height: 100%;
             overflow-y: scroll;
             height: 28rem;
+            @include sp {
+                width: calc(305 / 323 * 100%);
+                height: 29rem;
+            }
         }
 
         .contact-textbox {
@@ -1354,7 +1382,7 @@ ul .slide-dots{
             
             @include sp {
                 @include text-style(1.6rem,calc(33 / 16));
-                padding: 3rem 5rem 3rem 3rem;
+                padding: 2rem 3rem 3rem 2rem;
                 height: 29rem;
             }
         }
@@ -1368,7 +1396,6 @@ ul .slide-dots{
 
 .contact-textbox-area::-webkit-scrollbar-track {
     background: #E3E3E3; /* トラック（背景）の色 */
-    border-radius: 4px;
 }
 
 .contact-textbox-area::-webkit-scrollbar-thumb {
@@ -1472,6 +1499,6 @@ footer p{
     padding: 3rem 0;
     @include sp {
         @include text-style(2.0rem,calc(25 / 20));
-        padding: 2.2rem 0;
+        padding: 2rem 0;
     }
 }
