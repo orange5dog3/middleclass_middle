@@ -872,12 +872,9 @@ ul .slide-dots li.slick-active button {
 
 #about {
   position: relative;
-  width: 100%;
 }
 #about img {
   width: 100%;
-  display: block;
-  position: relative;
 }
 
 .about-textarea {
