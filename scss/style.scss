@@ -800,8 +800,7 @@ ul .slide-dots{
             width: calc(27.4 / 37.5 * 100vw);
         }
 
-        picture {
-            display: block;
+        img {
             width: 100%;
         }
 
@@ -1113,6 +1112,9 @@ ul .slide-dots{
         @include sp {
             width: 9rem;
         }
+        @media screen and (max-width: 374px) {
+            width: 7rem;
+        }
     }
 
     .form-content-right{
@@ -1124,6 +1126,7 @@ ul .slide-dots{
             padding-left: 0;
         }
         
+        
         .custom-radio {
             display: flex;
             align-items: center;
@@ -1133,6 +1136,9 @@ ul .slide-dots{
             @include sp {
                 margin-right: 3rem;
             }
+            @media screen and (max-width: 374px) {
+                margin-right: 2rem;
+            }
 
             input[type="radio"] {
                 display: none;
@@ -1141,6 +1147,9 @@ ul .slide-dots{
             span {
                 position: relative;
                 padding-left: 4rem;
+                @media screen and (max-width: 374px) {
+                    padding-left: 3rem;
+                }
             }
 
             span::before {

@@ -1303,8 +1303,7 @@ ul .slide-dots li.slick-active button {
     width: 73.0666666667vw;
   }
 }
-.modal-content-whitebox .modal-content picture {
-  display: block;
+.modal-content-whitebox .modal-content img {
   width: 100%;
 }
 .modal-content-whitebox .modal-content p {
@@ -1711,6 +1710,11 @@ ul .slide-dots li.slick-active button {
     width: 9rem;
   }
 }
+@media screen and (max-width: 374px) {
+  .form-gender .form-content-left {
+    width: 7rem;
+  }
+}
 .form-gender .form-content-right {
   font-weight: 500;
   font-size: 1.8rem;
@@ -1744,12 +1748,22 @@ ul .slide-dots li.slick-active button {
     margin-right: 3rem;
   }
 }
+@media screen and (max-width: 374px) {
+  .form-gender .form-content-right .custom-radio {
+    margin-right: 2rem;
+  }
+}
 .form-gender .form-content-right .custom-radio input[type=radio] {
   display: none;
 }
 .form-gender .form-content-right .custom-radio span {
   position: relative;
   padding-left: 4rem;
+}
+@media screen and (max-width: 374px) {
+  .form-gender .form-content-right .custom-radio span {
+    padding-left: 3rem;
+  }
 }
 .form-gender .form-content-right .custom-radio span::before {
   content: "";
