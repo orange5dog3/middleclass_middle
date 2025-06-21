@@ -497,20 +497,25 @@ ul .slide-dots{
 // --------------------about--------------------
 #about {
     position: relative;
-
     img {
         width: 100%;
+        display: block;
     }
+}
+.about-fadeup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .about-textarea {
     writing-mode: vertical-rl;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(21%, -27%);
-    height: 100%;
     @include sp {
         top: 0;
         left: 50%;
