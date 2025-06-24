@@ -190,7 +190,7 @@ header {
     }
     
     @include sp {
-        padding: 0 0 0 0.5rem;
+        padding: 0 0 0 2rem;
     }
 
     &-h1 {
@@ -1058,7 +1058,7 @@ ul .slide-dots{
 
 // --------------------contact--------------------
 #contact {
-    padding: 8.3rem 0;
+    padding: 8.3rem 0 7.8rem;
     @include text-style(2.0rem,calc( 33 / 20));
     @include sp {
         padding: 5.2rem 0 5rem;
@@ -1281,7 +1281,6 @@ ul .slide-dots{
         padding: 1rem;
         min-height: 20rem;
         resize: vertical;
-        cursor: pointer;
         @include sp {
             margin-top: 0;
             @include text-style(1.6rem,calc(25 / 16));
@@ -1385,7 +1384,7 @@ ul .slide-dots{
             overflow-y: scroll;
             height: 28rem;
             @include sp {
-                width: calc(305 / 323 * 100%);
+                width: calc(315 / 323 * 100%);
                 height: 29rem;
             }
         }
@@ -1396,7 +1395,7 @@ ul .slide-dots{
             
             @include sp {
                 @include text-style(1.6rem,calc(33 / 16));
-                padding: 2rem 3rem 3rem 2rem;
+                padding: 2rem 3rem 3rem 3rem;
                 height: 29rem;
             }
         }
@@ -1448,13 +1447,14 @@ ul .slide-dots{
 // --------------------ending--------------------
 #ending {
     text-align: center;
-    padding: 8rem 0;
+    padding: 7rem 0;
     @include sp {
-        padding: 5rem 0 5.1rem;
+        padding: 4rem 0 4rem;
     }
 }
 
 .ending-title {
+    display: inline-block;
     @include text-style(2.0rem,calc(33 / 20));
     a {
         padding: 1rem;
@@ -1466,14 +1466,14 @@ ul .slide-dots{
     display: inline-flex;
     justify-content: center;
     border-top: 0.1rem solid $main-color;
-    margin-top: 2.6rem;
-    padding: 1.8rem 0;
+    margin-top: 1.7rem;
+    padding: 1.8rem 0 0.5rem;
     column-gap: 2.7rem;
 
     @include sp {
-        margin-top: 2rem;
+        margin-top: 1rem;
         flex-wrap: wrap;
-        padding: 1.5rem 0 2.5rem;
+        padding: 1.5rem 0 1.5rem;
         column-gap: 1.31rem;
     }
 
@@ -1492,7 +1492,11 @@ ul .slide-dots{
 .ending-icon-list {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1rem;
+
+    a {
+        padding: 1rem;
+    }
 
     a:hover {
         opacity: 0.5;

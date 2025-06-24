@@ -549,7 +549,7 @@ header.scrolled {
 }
 @media screen and (max-width: 767px) {
   .header-content {
-    padding: 0 0 0 0.5rem;
+    padding: 0 0 0 2rem;
   }
 }
 .header-content-h1 {
@@ -1646,7 +1646,7 @@ ul .slide-dots li.slick-active button {
 }
 
 #contact {
-  padding: 8.3rem 0;
+  padding: 8.3rem 0 7.8rem;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
@@ -1920,7 +1920,6 @@ ul .slide-dots li.slick-active button {
   padding: 1rem;
   min-height: 20rem;
   resize: vertical;
-  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .form-content textarea {
@@ -2051,7 +2050,7 @@ ul .slide-dots li.slick-active button {
 }
 @media screen and (max-width: 767px) {
   .form-textbox .contact-white-textbox .contact-textbox-area {
-    width: 94.427244582%;
+    width: 97.5232198142%;
     height: 29rem;
   }
 }
@@ -2066,7 +2065,7 @@ ul .slide-dots li.slick-active button {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 2.0625;
-    padding: 2rem 3rem 3rem 2rem;
+    padding: 2rem 3rem 3rem 3rem;
     height: 29rem;
   }
 }
@@ -2123,15 +2122,16 @@ ul .slide-dots li.slick-active button {
 
 #ending {
   text-align: center;
-  padding: 8rem 0;
+  padding: 7rem 0;
 }
 @media screen and (max-width: 767px) {
   #ending {
-    padding: 5rem 0 5.1rem;
+    padding: 4rem 0 4rem;
   }
 }
 
 .ending-title {
+  display: inline-block;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
@@ -2151,18 +2151,18 @@ ul .slide-dots li.slick-active button {
       -ms-flex-pack: center;
           justify-content: center;
   border-top: 0.1rem solid #000000;
-  margin-top: 2.6rem;
-  padding: 1.8rem 0;
+  margin-top: 1.7rem;
+  padding: 1.8rem 0 0.5rem;
   -webkit-column-gap: 2.7rem;
      -moz-column-gap: 2.7rem;
           column-gap: 2.7rem;
 }
 @media screen and (max-width: 767px) {
   .ending-link-list {
-    margin-top: 2rem;
+    margin-top: 1rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 1.5rem 0 2.5rem;
+    padding: 1.5rem 0 1.5rem;
     -webkit-column-gap: 1.31rem;
        -moz-column-gap: 1.31rem;
             column-gap: 1.31rem;
@@ -2187,7 +2187,10 @@ ul .slide-dots li.slick-active button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 3rem;
+  gap: 1rem;
+}
+.ending-icon-list a {
+  padding: 1rem;
 }
 .ending-icon-list a:hover {
   opacity: 0.5;
