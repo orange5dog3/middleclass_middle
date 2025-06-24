@@ -50,9 +50,9 @@ $(".hamburger-trigger").click(
 // header scroll background------------------------
 $(window).scroll(function() {
     const scrollTop = $(this).scrollTop();
-    const headerHeight = $('header').outerHeight(); 
+    const fvHeight = $('#firstview').outerHeight(); 
     
-    if (scrollTop > headerHeight) {
+    if (scrollTop > fvHeight) {
         $('header').addClass('scrolled');
     } else {
         $('header').removeClass('scrolled');
