@@ -208,6 +208,7 @@ header {
             display: flex;
             align-items: center;
             height: inherit; 
+            padding: 0;
 
             &:hover {
                 opacity: 0.5;
@@ -523,10 +524,8 @@ ul .slide-dots{
     justify-content: center;
     align-items: center;
     padding-right:calc(300 / 1080 * 100vw);
-    padding-top: 1rem;
     @include sp {
         padding-right: 0;
-        padding-top: 0;
     }
 }
 
@@ -847,7 +846,7 @@ ul .slide-dots{
     display: flex;
     justify-content: left;
     gap: calc(60 / 920 * 100%);
-    margin-top: 6.8rem;
+    margin-top: 6.5rem;
     @include sp {
         flex-direction: column;
         margin-top: 4rem;
@@ -1427,7 +1426,7 @@ ul .slide-dots{
     color: $sb-color;
     transition: 0.3s;
     display: block;
-    margin: 7.9rem auto 0;
+    margin: 8rem auto 0;
     cursor: pointer;
     @include sp {
         margin-top: 4.9rem;
@@ -1447,7 +1446,7 @@ ul .slide-dots{
 // --------------------ending--------------------
 #ending {
     text-align: center;
-    padding: 7rem 0;
+    padding: 7rem 0 7rem;
     @include sp {
         padding: 4rem 0 4rem;
     }
@@ -1467,7 +1466,7 @@ ul .slide-dots{
     justify-content: center;
     border-top: 0.1rem solid $main-color;
     margin-top: 1.7rem;
-    padding: 1.8rem 0 0.5rem;
+    padding: 1.8rem 0 1rem;
     column-gap: 2.7rem;
 
     @include sp {

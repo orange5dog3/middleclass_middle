@@ -580,6 +580,7 @@ header.scrolled {
       -ms-flex-align: center;
           align-items: center;
   height: inherit;
+  padding: 0;
 }
 .header-content-h1 a:hover {
   opacity: 0.5;
@@ -904,12 +905,10 @@ ul .slide-dots li.slick-active button {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 27.7777777778vw;
-  padding-top: 1rem;
 }
 @media screen and (max-width: 767px) {
   .about-fadeup {
     padding-right: 0;
-    padding-top: 0;
   }
 }
 
@@ -1351,7 +1350,7 @@ ul .slide-dots li.slick-active button {
       -ms-flex-pack: left;
           justify-content: left;
   gap: 6.5217391304%;
-  margin-top: 6.8rem;
+  margin-top: 6.5rem;
 }
 @media screen and (max-width: 767px) {
   .news-content {
@@ -2097,7 +2096,7 @@ ul .slide-dots li.slick-active button {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: block;
-  margin: 7.9rem auto 0;
+  margin: 8rem auto 0;
   cursor: pointer;
 }
 @media screen and (max-width: 767px) {
@@ -2122,7 +2121,7 @@ ul .slide-dots li.slick-active button {
 
 #ending {
   text-align: center;
-  padding: 7rem 0;
+  padding: 7rem 0 7rem;
 }
 @media screen and (max-width: 767px) {
   #ending {
@@ -2152,7 +2151,7 @@ ul .slide-dots li.slick-active button {
           justify-content: center;
   border-top: 0.1rem solid #000000;
   margin-top: 1.7rem;
-  padding: 1.8rem 0 0.5rem;
+  padding: 1.8rem 0 1rem;
   -webkit-column-gap: 2.7rem;
      -moz-column-gap: 2.7rem;
           column-gap: 2.7rem;
