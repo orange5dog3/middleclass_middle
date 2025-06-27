@@ -229,6 +229,7 @@ header {
         display: flex;
         align-items: center;
         height: inherit; 
+        @include text-style(1.8rem, calc(33 / 18));
         @media screen and (min-width:768px) and (max-width:1000px) {
             @include text-style(1.6rem, calc(33 / 16));
         }
