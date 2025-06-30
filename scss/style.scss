@@ -13,7 +13,7 @@ $main-bg-color:#FFFFFF;
 $accent-bg-color:rgba(77, 150, 0, 0.1);
 
 // font定義
-$font-base: "YuMincho", "Noto Serif JP", "Yu Mincho", "MS Mincho", serif;
+$font-base: "YuMincho", "Yu Mincho","Noto Serif JP",  serif;
 
 @mixin text-style($size: 1.6rem, $lineHeight: calc(25 / 16)) {
   font-weight: 500;
