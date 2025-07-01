@@ -1441,18 +1441,22 @@ ul .slide-dots{
 }
 
 #contact button {
-    width: fit-content;
-    padding: 0.9rem 6rem;
+    width: 100%;
+    max-width: 30rem;
+
+    padding: 0.9rem 2rem;
     border: 0.1rem solid $accent-color;
     background-color:$accent-color;
     color: $sb-color;
     transition: 0.3s;
     display: block;
     margin: 8rem auto 0;
+    text-align: center;
     cursor: pointer;
     @include sp {
+        max-width: 31.5rem;
         margin-top: 4.9rem;
-        padding: 0.75rem 6.7rem;
+        padding: 0.75rem 1rem;
     }
     @media screen and (max-width: 350px) {
         @include text-style(1.7rem,calc(30 / 17));
