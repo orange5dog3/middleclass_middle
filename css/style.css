@@ -1398,13 +1398,7 @@ ul .slide-dots li.slick-active button {
 
 .news-content-item {
   background-color: #FFFFFF;
-  padding: 1rem 2rem 2rem 2rem;
-}
-@media screen and (max-width: 767px) {
-  .news-content-item {
-    padding-right: 2.1rem;
-    padding-bottom: 2.2rem;
-  }
+  padding: 1rem 2rem 1.2rem 2rem;
 }
 
 .news-content-article {
@@ -1458,7 +1452,7 @@ ul .slide-dots li.slick-active button {
 }
 @media screen and (max-width: 767px) {
   .news-symbol {
-    margin-top: 1.8rem;
+    margin-top: 0.9rem;
   }
 }
 .news-symbol a {
@@ -1544,7 +1538,7 @@ ul .slide-dots li.slick-active button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-top: 6rem;
+  margin-top: 6.5rem;
 }
 @media screen and (max-width: 767px) {
   .company-content {
@@ -1553,13 +1547,13 @@ ul .slide-dots li.slick-active button {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 3.8rem;
-    gap: 2rem;
+    gap: 1.8rem;
   }
 }
 
 .company-map {
   width: 65.2173913043%;
-  padding-bottom: 70px;
+  padding-bottom: 65px;
   z-index: 10;
 }
 @media screen and (max-width: 767px) {

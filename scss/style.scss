@@ -882,11 +882,7 @@ ul .slide-dots{
 
 .news-content-item {
     background-color: $main-bg-color;
-    padding:1rem 2rem 2rem 2rem;
-    @include sp {
-        padding-right: 2.1rem;
-        padding-bottom: 2.2rem;
-    }
+    padding:1rem 2rem 1.2rem 2rem;
 }
 
 .news-content-article {
@@ -931,7 +927,7 @@ ul .slide-dots{
     text-align: right;
     margin-top: 0.8rem;
     @include sp {
-        margin-top: 1.8rem;
+        margin-top: 0.9rem;
     }
 
     a {
@@ -979,17 +975,17 @@ ul .slide-dots{
 .company-content {
     display: flex;
     align-items: flex-end;
-    margin-top: 6rem;
+    margin-top: 6.5rem;
     @include sp {
         flex-direction: column;
         margin-top: 3.8rem;
-        gap: 2rem;
+        gap: 1.8rem;
     }
 }
 
 .company-map {
     width: calc(600 / 920 * 100%);
-    padding-bottom: 70px;
+    padding-bottom: 65px;
     z-index: 10;
     @include sp {
         width: 100%;
