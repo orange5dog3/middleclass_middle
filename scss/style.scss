@@ -929,22 +929,29 @@ ul .slide-dots{
 .news-symbol {
     position: relative;
     text-align: right;
-    margin-top: 1.8rem;
+    margin-top: 0.8rem;
     @include sp {
         margin-top: 1.8rem;
+    }
+
+    a {
+        display: inline-block;
+        position: relative;
+        padding: 1rem;
+        cursor: pointer;
     }
 
     p {
         color: $accent-sb-color;
         @include text-style(2.0rem, calc(33 / 20));
-        padding-right: 3.5rem;
+        padding-right: 2.5rem;
        
     }
 
     img {
         position: absolute;
         right: 0;
-        top: 1.5rem;
+        top: 50%;
     }
 
     &:hover {

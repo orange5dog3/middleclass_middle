@@ -1454,24 +1454,30 @@ ul .slide-dots li.slick-active button {
 .news-symbol {
   position: relative;
   text-align: right;
-  margin-top: 1.8rem;
+  margin-top: 0.8rem;
 }
 @media screen and (max-width: 767px) {
   .news-symbol {
     margin-top: 1.8rem;
   }
 }
+.news-symbol a {
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+}
 .news-symbol p {
   color: #55A500;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
-  padding-right: 3.5rem;
+  padding-right: 2.5rem;
 }
 .news-symbol img {
   position: absolute;
   right: 0;
-  top: 1.5rem;
+  top: 50%;
 }
 .news-symbol:hover {
   -webkit-animation: shake-horizontal 0.3s ease-in-out;
