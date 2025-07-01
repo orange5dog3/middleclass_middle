@@ -13,7 +13,7 @@ $main-bg-color:#FFFFFF;
 $accent-bg-color:rgba(77, 150, 0, 0.1);
 
 // font定義
-$font-base: "YuMincho", "Noto Serif JP", "Yu Mincho", "MS Mincho", serif;
+$font-base: "YuMincho", "Yu Mincho","Noto Serif JP",  serif;
 
 @mixin text-style($size: 1.6rem, $lineHeight: calc(25 / 16)) {
   font-weight: 500;
@@ -118,17 +118,31 @@ a {
         height: 5rem;
     }
 
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: $accent-color;
+        border-radius: 50%;
+        cursor: pointer;
+        
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
     img {
         position: absolute;
-        width: 100%;
+        width: 2.3rem;
+        height: 1.6rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-    }
-    
-    a:hover{
-        transform: none;
-        opacity: 0.7;
+        @include sp{
+            width: 1.7rem;
+            height: 1.1rem;
+        }
     }
 }
 
