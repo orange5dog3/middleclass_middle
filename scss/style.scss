@@ -882,11 +882,7 @@ ul .slide-dots{
 
 .news-content-item {
     background-color: $main-bg-color;
-    padding:1rem 2rem 2rem 2rem;
-    @include sp {
-        padding-right: 2.1rem;
-        padding-bottom: 2.2rem;
-    }
+    padding:1rem 2rem 1.2rem 2rem;
 }
 
 .news-content-article {
@@ -929,22 +925,29 @@ ul .slide-dots{
 .news-symbol {
     position: relative;
     text-align: right;
-    margin-top: 1.8rem;
+    margin-top: 0.8rem;
     @include sp {
-        margin-top: 1.8rem;
+        margin-top: 0.9rem;
+    }
+
+    a {
+        display: inline-block;
+        position: relative;
+        padding: 1rem;
+        cursor: pointer;
     }
 
     p {
         color: $accent-sb-color;
         @include text-style(2.0rem, calc(33 / 20));
-        padding-right: 3.5rem;
+        padding-right: 2.5rem;
        
     }
 
     img {
         position: absolute;
         right: 0;
-        top: 1.5rem;
+        top: 50%;
     }
 
     &:hover {
@@ -972,17 +975,17 @@ ul .slide-dots{
 .company-content {
     display: flex;
     align-items: flex-end;
-    margin-top: 6rem;
+    margin-top: 6.5rem;
     @include sp {
         flex-direction: column;
         margin-top: 3.8rem;
-        gap: 2rem;
+        gap: 1.8rem;
     }
 }
 
 .company-map {
     width: calc(600 / 920 * 100%);
-    padding-bottom: 70px;
+    padding-bottom: 65px;
     z-index: 10;
     @include sp {
         width: 100%;
@@ -1434,18 +1437,22 @@ ul .slide-dots{
 }
 
 #contact button {
-    width: fit-content;
-    padding: 0.9rem 6rem;
+    width: 100%;
+    max-width: 30rem;
+
+    padding: 0.9rem 2rem;
     border: 0.1rem solid $accent-color;
     background-color:$accent-color;
     color: $sb-color;
     transition: 0.3s;
     display: block;
     margin: 8rem auto 0;
+    text-align: center;
     cursor: pointer;
     @include sp {
+        max-width: 31.5rem;
         margin-top: 4.9rem;
-        padding: 0.75rem 6.7rem;
+        padding: 0.75rem 1rem;
     }
     @media screen and (max-width: 350px) {
         @include text-style(1.7rem,calc(30 / 17));

@@ -1398,13 +1398,7 @@ ul .slide-dots li.slick-active button {
 
 .news-content-item {
   background-color: #FFFFFF;
-  padding: 1rem 2rem 2rem 2rem;
-}
-@media screen and (max-width: 767px) {
-  .news-content-item {
-    padding-right: 2.1rem;
-    padding-bottom: 2.2rem;
-  }
+  padding: 1rem 2rem 1.2rem 2rem;
 }
 
 .news-content-article {
@@ -1454,24 +1448,30 @@ ul .slide-dots li.slick-active button {
 .news-symbol {
   position: relative;
   text-align: right;
-  margin-top: 1.8rem;
+  margin-top: 0.8rem;
 }
 @media screen and (max-width: 767px) {
   .news-symbol {
-    margin-top: 1.8rem;
+    margin-top: 0.9rem;
   }
+}
+.news-symbol a {
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
 }
 .news-symbol p {
   color: #55A500;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
-  padding-right: 3.5rem;
+  padding-right: 2.5rem;
 }
 .news-symbol img {
   position: absolute;
   right: 0;
-  top: 1.5rem;
+  top: 50%;
 }
 .news-symbol:hover {
   -webkit-animation: shake-horizontal 0.3s ease-in-out;
@@ -1538,7 +1538,7 @@ ul .slide-dots li.slick-active button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-top: 6rem;
+  margin-top: 6.5rem;
 }
 @media screen and (max-width: 767px) {
   .company-content {
@@ -1547,13 +1547,13 @@ ul .slide-dots li.slick-active button {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 3.8rem;
-    gap: 2rem;
+    gap: 1.8rem;
   }
 }
 
 .company-map {
   width: 65.2173913043%;
-  padding-bottom: 70px;
+  padding-bottom: 65px;
   z-index: 10;
 }
 @media screen and (max-width: 767px) {
@@ -2107,10 +2107,9 @@ ul .slide-dots li.slick-active button {
 }
 
 #contact button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.9rem 6rem;
+  width: 100%;
+  max-width: 30rem;
+  padding: 0.9rem 2rem;
   border: 0.1rem solid #4D9600;
   background-color: #4D9600;
   color: #FFFFFF;
@@ -2118,12 +2117,14 @@ ul .slide-dots li.slick-active button {
   transition: 0.3s;
   display: block;
   margin: 8rem auto 0;
+  text-align: center;
   cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   #contact button {
+    max-width: 31.5rem;
     margin-top: 4.9rem;
-    padding: 0.75rem 6.7rem;
+    padding: 0.75rem 1rem;
   }
 }
 @media screen and (max-width: 350px) {
