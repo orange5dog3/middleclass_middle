@@ -1461,22 +1461,6 @@ ul .slide-dots li.slick-active button {
   padding: 1rem;
   cursor: pointer;
 }
-.news-symbol p {
-  color: #55A500;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.65;
-  padding-right: 2.5rem;
-}
-.news-symbol img {
-  position: absolute;
-  right: 0;
-  top: 50%;
-}
-.news-symbol:hover {
-  -webkit-animation: shake-horizontal 0.3s ease-in-out;
-          animation: shake-horizontal 0.3s ease-in-out;
-}
 @-webkit-keyframes shake-horizontal {
   0% {
     -webkit-transform: translateX(0);
@@ -1520,6 +1504,22 @@ ul .slide-dots li.slick-active button {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
+}
+.news-symbol a:hover {
+  -webkit-animation: shake-horizontal 0.3s ease-in-out;
+          animation: shake-horizontal 0.3s ease-in-out;
+}
+.news-symbol p {
+  color: #55A500;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.65;
+  padding-right: 2.5rem;
+}
+.news-symbol img {
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 #company {
