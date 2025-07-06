@@ -668,7 +668,7 @@ ul .slide-dots{
         padding: 2rem 2rem 1.2rem;
         width: 100%;
     }
-    @media screen and (max-width: 955px) and (min-width: 766px) {
+    @media screen and (max-width: 955px) and (min-width: 768px) {
         padding:50px 26px 42px calc(200 / 920 * 100%);
     }
 
@@ -680,7 +680,7 @@ ul .slide-dots{
             @include text-style(2.0rem,calc(25 / 20));
             width: 22.5rem;
         }
-        @media screen and (max-width: 955px) and (min-width: 766px) {
+        @media screen and (max-width: 955px) and (min-width: 786px) {
             @include text-style(2.3rem,calc(33 / 23));
         }
         @media screen and (max-width: 350px){
@@ -695,7 +695,7 @@ ul .slide-dots{
             margin-top: 1.4rem;
         }
 
-        @media screen and (max-width: 1000px) and (min-width: 766px) {
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             .service-middle_none {
                 display: none;
             }
@@ -719,7 +719,7 @@ ul .slide-dots{
         padding:50px calc(220 / 920 * 100%) 42px 39px;
         margin-right: calc(-180 / 920 * 100%); 
         margin-left: auto;
-        @media screen and (max-width: 955px) and (min-width: 766px) {
+        @media screen and (max-width: 955px) and (min-width: 768px) {
             padding:50px calc(200 / 920 * 100%) 42px 30px;
         }
 
@@ -740,7 +740,7 @@ ul .slide-dots{
 
 // --------------------works--------------------
 #works {
-    padding: 8.2rem 0 9.7rem;
+    padding: 8.1rem 0 9.7rem;
     @include sp {
         padding: 5rem 0 4.2rem;
     }
@@ -775,7 +775,7 @@ ul .slide-dots{
         @include sp {
             margin-top: 1rem;
         }
-        @media screen and (max-width: 1000px) and (min-width: 766px) {
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             @include text-style(1.25rem, calc(20 / 12.5));
         }
     }
@@ -844,6 +844,10 @@ ul .slide-dots{
     img {
         width: 100%;
     }
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 
@@ -882,7 +886,7 @@ ul .slide-dots{
 
 .news-content-item {
     background-color: $main-bg-color;
-    padding:1rem 2rem 1.2rem 2rem;
+    padding:1rem 2rem 2.5rem 2rem;
 }
 
 .news-content-article {
@@ -925,15 +929,15 @@ ul .slide-dots{
 .news-symbol {
     position: relative;
     text-align: right;
-    margin-top: 0.8rem;
+    margin-top: 2.5rem;
     @include sp {
-        margin-top: 0.9rem;
+        margin-top: 2.4rem;
     }
 
     a {
         display: inline-block;
         position: relative;
-        padding: 1rem;
+        padding: 0rem 1rem 0rem 1rem;
         cursor: pointer;
         @keyframes shake-horizontal {
             0% { transform: translateX(0); }
@@ -952,7 +956,7 @@ ul .slide-dots{
         color: $accent-sb-color;
         @include text-style(2.0rem, calc(33 / 20));
         padding-right: 2.5rem;
-       
+        line-height: 1;
     }
 
     img {
@@ -1071,7 +1075,7 @@ ul .slide-dots{
 
 // --------------------contact--------------------
 #contact {
-    padding: 8.3rem 0 7.8rem;
+    padding: 8.1rem 0 7.8rem;
     @include text-style(2.0rem,calc( 33 / 20));
     @include sp {
         padding: 5.2rem 0 5rem;
@@ -1320,7 +1324,7 @@ ul .slide-dots{
             margin-top: 0;
         }
         @media screen and (max-width: 350px) {
-            @include text-style(1.2rem,calc(20 / 12));
+            @include text-style(1.4rem,calc(20 / 14));
         }
 
 
@@ -1530,22 +1534,12 @@ ul .slide-dots{
 }
 
 // --------------------footer--------------------
-footer {
-    padding-inline: 2rem;
-
-    a:hover {
-        opacity: 0.5;
-    }
-}
-
-
-
 footer p{
     text-align: center;
     @include text-style(2.0rem,calc(33 / 20));
     padding: 3rem 0;
     @include sp {
         @include text-style(2.0rem,calc(25 / 20));
-        padding: 2.3rem 0;
+        padding: 2.3rem 3rem;
     }
 }

@@ -41,6 +41,7 @@ $(function() {
         
         // ハンバーガーメニューの開閉に応じてupper-arrowの表示を切り替え
         if ($(".hamburger").hasClass("active")) {
+            $("#upper-arrow").hide();
         } else {
             $("#upper-arrow").show();
         }
@@ -78,10 +79,15 @@ $(function() {
         const fvHeight = $('#firstview').outerHeight();
         const scrollTop = $(window).scrollTop();
 
-        if (scrollTop > fvHeight) {
-            $('#upper-arrow').fadeIn();
+        // ハンバーガーメニューが開いている時は upper arrow を表示しない
+        if ($(".hamburger").hasClass("active")) {
+            $('#upper-arrow').hide();
         } else {
-            $('#upper-arrow').fadeOut();
+            if (scrollTop > fvHeight) {
+                $('#upper-arrow').fadeIn();
+            } else {
+                $('#upper-arrow').fadeOut();
+            }
         }
     });
 });
