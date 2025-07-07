@@ -886,7 +886,7 @@ ul .slide-dots{
 
 .news-content-item {
     background-color: $main-bg-color;
-    padding:1rem 2rem 2.5rem 2rem;
+    padding:1rem 2rem 1.4rem 2rem;
 }
 
 .news-content-article {
@@ -937,7 +937,7 @@ ul .slide-dots{
     a {
         display: inline-block;
         position: relative;
-        padding: 0rem 1rem 0rem 1rem;
+        padding: 0 1rem 1.5rem 0.3rem;
         cursor: pointer;
         @keyframes shake-horizontal {
             0% { transform: translateX(0); }
@@ -962,7 +962,7 @@ ul .slide-dots{
     img {
         position: absolute;
         right: 0;
-        top: 50%;
+        top: 30%;
     }
 }
 
@@ -1469,7 +1469,7 @@ ul .slide-dots{
 }
 
 // --------------------ending--------------------
-#ending {
+.footer-top {
     text-align: center;
     padding: 7rem 0 7rem;
     @include sp {
@@ -1477,7 +1477,7 @@ ul .slide-dots{
     }
 }
 
-.ending-title {
+.footer-title {
     display: inline-block;
     @include text-style(2.0rem,calc(33 / 20));
     a {
@@ -1489,7 +1489,7 @@ ul .slide-dots{
     }
 }
 
-.ending-link-list {
+.footer-link-list {
     @include text-style(1.8rem,calc(33 / 18));
     display: inline-flex;
     justify-content: center;
@@ -1519,7 +1519,7 @@ ul .slide-dots{
     }
 }
 
-.ending-icon-list {
+.footer-icon-list {
     display: flex;
     justify-content: center;
     gap: 1rem;
