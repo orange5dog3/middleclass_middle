@@ -1401,7 +1401,7 @@ ul .slide-dots li.slick-active button {
 
 .news-content-item {
   background-color: #FFFFFF;
-  padding: 1rem 2rem 2.5rem 2rem;
+  padding: 1rem 2rem 1.4rem 2rem;
 }
 
 .news-content-article {
@@ -1461,7 +1461,7 @@ ul .slide-dots li.slick-active button {
 .news-symbol a {
   display: inline-block;
   position: relative;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0 1rem 1.5rem 0.3rem;
   cursor: pointer;
 }
 @-webkit-keyframes shake-horizontal {
@@ -1523,7 +1523,7 @@ ul .slide-dots li.slick-active button {
 .news-symbol img {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 30%;
 }
 
 #company {
@@ -2145,30 +2145,30 @@ ul .slide-dots li.slick-active button {
   color: #4D9600;
 }
 
-#ending {
+.footer-top {
   text-align: center;
   padding: 7rem 0 7rem;
 }
 @media screen and (max-width: 767px) {
-  #ending {
+  .footer-top {
     padding: 4rem 0 4rem;
   }
 }
 
-.ending-title {
+.footer-title {
   display: inline-block;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.65;
 }
-.ending-title a {
+.footer-title a {
   padding: 1rem;
 }
-.ending-title a:hover {
+.footer-title a:hover {
   opacity: 0.5;
 }
 
-.ending-link-list {
+.footer-link-list {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.8333333333;
@@ -2186,7 +2186,7 @@ ul .slide-dots li.slick-active button {
           column-gap: 3.1rem;
 }
 @media screen and (max-width: 767px) {
-  .ending-link-list {
+  .footer-link-list {
     margin-top: 1rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2197,20 +2197,20 @@ ul .slide-dots li.slick-active button {
     row-gap: 1rem;
   }
 }
-.ending-link-list a {
+.footer-link-list a {
   padding: 1rem;
   line-height: 1;
 }
 @media screen and (max-width: 767px) {
-  .ending-link-list a {
+  .footer-link-list a {
     padding: 0.6rem;
   }
 }
-.ending-link-list a:hover {
+.footer-link-list a:hover {
   opacity: 0.5;
 }
 
-.ending-icon-list {
+.footer-icon-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2219,10 +2219,10 @@ ul .slide-dots li.slick-active button {
           justify-content: center;
   gap: 1rem;
 }
-.ending-icon-list a {
+.footer-icon-list a {
   padding: 1rem;
 }
-.ending-icon-list a:hover {
+.footer-icon-list a:hover {
   opacity: 0.5;
 }
 
